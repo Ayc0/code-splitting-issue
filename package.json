@@ -15,9 +15,9 @@
   "devDependencies": {
     "@parcel/config-default": "^2.15.4",
     "@parcel/core": "^2.15.4",
+    "@rspack/core": "^1.4.10",
     "esbuild": "^0.25.8",
     "parcel": "^2.15.4",
-    "rspack": "^0.1.1",
     "vite": "^7.0.6"
   }
 }
