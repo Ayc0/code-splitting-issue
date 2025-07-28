@@ -28,6 +28,9 @@ export const toRemoveFromBundle = "SHOULD BE REMOVED FROM BUNDLE ASYNC";
 
 To run tests, you can run `pnpm test`
 
+> [!Note]
+> To run those tests, you need at least Node 24.4.0 as it depends on the new `Symbol.dispose` & `using` keywords, and [`fs.mkdtempDisposable()`](https://nodejs.org/api/fs.html#fspromisesmkdtempdisposableprefix-options) released in 24.4.0.
+
 ```
 > node --test tests/\*.test.js
 
