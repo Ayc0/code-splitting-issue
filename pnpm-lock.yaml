@@ -14,6 +14,9 @@ importers:
       '@parcel/core':
         specifier: ^2.15.4
         version: 2.15.4(@swc/helpers@0.5.17)
+      '@rsbuild/core':
+        specifier: ^1.4.11
+        version: 1.4.11
       '@rspack/core':
         specifier: ^1.4.10
         version: 1.4.10(@swc/helpers@0.5.17)
@@ -31,7 +34,7 @@ importers:
         version: 4.46.1
       vite:
         specifier: ^7.0.6
-        version: 7.0.6(lightningcss@1.30.1)
+        version: 7.0.6(jiti@2.5.1)(lightningcss@1.30.1)
 
 packages:
 
@@ -843,6 +846,11 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@rsbuild/core@1.4.11':
+    resolution: {integrity: sha512-G5x7jUGxVw0Z984IEKmOP/tW8gslhUjN81D3fuogKb95hlESWpc+LuckuA5iO1ydbLVrhuYKLv1tC8wTAIDsqA==}
+    engines: {node: '>=16.10.0'}
+    hasBin: true
+
   '@rspack/binding-darwin-arm64@1.4.10':
     resolution: {integrity: sha512-PraYGuVSzvEwdoYC8T70qI/8j1QeUe2sysiWmjSdxUpxJsDfw35hK9TfxULeAJULlAUAiiXs03hdZk29DBc3ow==}
     cpu: [arm64]
@@ -1038,6 +1046,9 @@ packages:
     resolution: {integrity: sha512-Vw8qHK3bZM9y/P10u3Vib8o/DdkvA2OtPtZvD871QKjy74Wj1WSKFILMPRPSdUSx5RFK1arlJzEtA4PkFgnbuA==}
     engines: {node: '>=18'}
 
+  core-js@3.44.0:
+    resolution: {integrity: sha512-aFCtd4l6GvAXwVEh3XbbVqJGHDJt0OZRa+5ePGx3LLwi12WfexqQxcsohb2wgsa/92xtl19Hd66G/L+TaAxDMw==}
+
   detect-libc@1.0.3:
     resolution: {integrity: sha512-pGjwhsmsp4kL2RTz08wcOlGN83otlqHeD/Z5T8GXZB+/YcpQ/dgo+lbU8ZsGxV0HIvqqxo9l7mqYwyYMD9bKDg==}
     engines: {node: '>=0.10'}
@@ -1107,6 +1118,10 @@ packages:
   is-number@7.0.0:
     resolution: {integrity: sha512-41Cifkg6e8TylSpdtTpeLVMqvSBEVzTttHvERD741+pnZ8ANv0004MRL43QKPDlK9cGvNp6NZWZUBlbGXYxxng==}
     engines: {node: '>=0.12.0'}
+
+  jiti@2.5.1:
+    resolution: {integrity: sha512-twQoecYPiVA5K/h6SxtORw/Bs3ar+mLUtoPSc7iMXzQzK8d7eJ/R09wmTwAjiamETn1cXYPGfNnu7DMoHgu12w==}
+    hasBin: true
 
   json5@2.2.3:
     resolution: {integrity: sha512-XmOWe7eyHYH14cLdVPoyg+GOH3rYX++KpzrylJwSW98t3Nk+U8XOl8FWKOgwtzdb8lXGf6zYwDUzeHMWfxasyg==}
@@ -2281,6 +2296,14 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.46.1':
     optional: true
 
+  '@rsbuild/core@1.4.11':
+    dependencies:
+      '@rspack/core': 1.4.10(@swc/helpers@0.5.17)
+      '@rspack/lite-tapable': 1.0.1
+      '@swc/helpers': 0.5.17
+      core-js: 3.44.0
+      jiti: 2.5.1
+
   '@rspack/binding-darwin-arm64@1.4.10':
     optional: true
 
@@ -2440,6 +2463,8 @@ snapshots:
 
   commander@12.1.0: {}
 
+  core-js@3.44.0: {}
+
   detect-libc@1.0.3: {}
 
   detect-libc@2.0.4: {}
@@ -2509,6 +2534,8 @@ snapshots:
       is-extglob: 2.1.1
 
   is-number@7.0.0: {}
+
+  jiti@2.5.1: {}
 
   json5@2.2.3: {}
 
@@ -2734,7 +2761,7 @@ snapshots:
 
   utility-types@3.11.0: {}
 
-  vite@7.0.6(lightningcss@1.30.1):
+  vite@7.0.6(jiti@2.5.1)(lightningcss@1.30.1):
     dependencies:
       esbuild: 0.25.8
       fdir: 6.4.6(picomatch@4.0.3)
@@ -2744,6 +2771,7 @@ snapshots:
       tinyglobby: 0.2.14
     optionalDependencies:
       fsevents: 2.3.3
+      jiti: 2.5.1
       lightningcss: 1.30.1
 
   weak-lru-cache@1.2.2: {}
