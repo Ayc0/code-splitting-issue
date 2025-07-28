@@ -8,7 +8,7 @@ import { rspack } from '@rspack/core';
 test("builds and tree-shakes using rspack", async (t) => {
     await using dir = await fs.mkdtempDisposable('vite');
 
-    const outDir = path.join(process.cwd(), dir.path, 'dist')
+    const outDir = path.join(process.cwd(), dir.path, 'dist');
 
     let compiler = rspack({
         entry: './src/index.js',
@@ -55,8 +55,10 @@ test("builds and tree-shakes using rspack", async (t) => {
     for (let asset of stats.toJson().assets) {
         const code = await fs.readFile(path.join(outDir, asset.name), 'utf8');
         if (asset.name === 'index.js') {
+            assert.match(code, /TO KEEP IN BUNDLE SYNC/) // ✅ Passes
             assert.doesNotMatch(code, /SHOULD BE REMOVED FROM BUNDLE SYNC/) // ✅ Passes
         } else {
+            assert.match(code, /TO KEEP IN BUNDLE ASYNC/) // ✅ Passes
             assert.doesNotMatch(code, /SHOULD BE REMOVED FROM BUNDLE ASYNC/) // ✅ Passes
         }
     }

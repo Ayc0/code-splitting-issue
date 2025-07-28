@@ -17,8 +17,10 @@ test("builds and tree-shakes using esbuild", async (t) => {
     for (let outputFile of result.outputFiles) {
         const code = outputFile.text;
         if (outputFile.path.endsWith('index.js')) {
+            assert.match(code, /TO KEEP IN BUNDLE SYNC/) // ✅ Passes
             assert.doesNotMatch(code, /SHOULD BE REMOVED FROM BUNDLE SYNC/) // ✅ Passes
         } else {
+            assert.match(code, /TO KEEP IN BUNDLE ASYNC/) // ✅ Passes
             assert.doesNotMatch(code, /SHOULD BE REMOVED FROM BUNDLE ASYNC/) // ❌ Throws
         }
     }

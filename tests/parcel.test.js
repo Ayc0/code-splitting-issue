@@ -25,8 +25,10 @@ test("builds and tree-shakes using parcel", async (t) => {
     for (let bundle of bundleGraph.getBundles()) {
         const code = await fs.readFile(bundle.filePath, 'utf8');
         if (bundle.filePath.endsWith('index.js')) {
+            assert.match(code, /TO KEEP IN BUNDLE SYNC/) // ✅ Passes
             assert.doesNotMatch(code, /SHOULD BE REMOVED FROM BUNDLE SYNC/) // ✅ Passes
         } else {
+            assert.match(code, /TO KEEP IN BUNDLE ASYNC/) // ✅ Passes
             assert.doesNotMatch(code, /SHOULD BE REMOVED FROM BUNDLE ASYNC/) // ✅ Passes
         }
     }
