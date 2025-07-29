@@ -20,12 +20,12 @@ And we test this using 4 different scenarios
 
 ### Tests
 
-|                                                           | `esbuild` | `parcel` | `rollup` | `rspack` | `vite` | `rolldown` | `rsbuild` |
-| --------------------------------------------------------- | --------- | -------- | -------- | -------- | ------ | ---------- | --------- |
-| `import { bar } from './foo'`                             | ✅        | ✅       | ✅       | ✅       | ✅     | ✅         | ✅        |
-| `const { bar } = await import('./foo')`                   | ❌        | ✅       | ✅       | ✅       | ✅     | ✅         | ✅        |
-| `import('./foo').then(module => console.log(module.bar))` | ❌        | ✅       | ✅       | ❌       | ❌     | ✅         | ❌        |
-| `import('./foo').then(({ bar }) => console.log(bar))`     | ❌        | ✅       | ✅       | ❌       | ✅     | ✅         | ❌        |
+|                                              | `esbuild` | `parcel` | `rollup` | `rspack` | `vite` | `rolldown` | `rsbuild` |
+| -------------------------------------------- | --------- | -------- | -------- | -------- | ------ | ---------- | --------- |
+| `import { bar } from './foo'`                | ✅        | ✅       | ✅       | ✅       | ✅     | ✅         | ✅        |
+| `const { bar } = await import('./foo')`      | ❌        | ✅       | ✅       | ✅       | ✅     | ✅         | ✅        |
+| `import('./foo').then(module => module.bar)` | ❌        | ✅       | ✅       | ❌       | ❌     | ✅         | ❌        |
+| `import('./foo').then(({ bar }) => bar)`     | ❌        | ✅       | ✅       | ❌       | ✅     | ✅         | ❌        |
 
 #### Raw tests
 
