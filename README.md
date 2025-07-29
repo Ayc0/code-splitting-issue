@@ -20,12 +20,12 @@ And we test this using 4 different scenarios
 
 ### Tests
 
-|                                              | `esbuild` | `parcel` | `rollup` | `rspack` | `vite` | `rolldown` | `rsbuild` |
-| -------------------------------------------- | --------- | -------- | -------- | -------- | ------ | ---------- | --------- |
-| `import { bar } from './foo'`                | ✅        | ✅       | ✅       | ✅       | ✅     | ✅         | ✅        |
-| `const { bar } = await import('./foo')`      | ❌        | ✅       | ✅       | ✅       | ✅     | ✅         | ✅        |
-| `import('./foo').then(module => module.bar)` | ❌        | ✅       | ✅       | ❌       | ❌     | ✅         | ❌        |
-| `import('./foo').then(({ bar }) => bar)`     | ❌        | ✅       | ✅       | ❌       | ✅     | ✅         | ❌        |
+|                                                              | `esbuild` | `parcel` | `rollup` | `rspack` | `vite` | `rolldown` | `rsbuild` |
+| ------------------------------------------------------------ | --------- | -------- | -------- | -------- | ------ | ---------- | --------- |
+| <pre>import { bar } from './foo'</pre>                       | ✅        | ✅       | ✅       | ✅       | ✅     | ✅         | ✅        |
+| <pre>const { bar } =&#13;  await import('./foo')</pre>       | ❌        | ✅       | ✅       | ✅       | ✅     | ✅         | ✅        |
+| <pre>import('./foo')&#13;  .then(module => module.bar)</pre> | ❌        | ✅       | ✅       | ❌       | ❌     | ✅         | ❌        |
+| <pre>import('./foo')&#13;  .then(({ bar }) => bar)</pre>     | ❌        | ✅       | ✅       | ❌       | ✅     | ✅         | ❌        |
 
 #### Raw tests
 
