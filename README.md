@@ -20,14 +20,14 @@ And we test this using 4 different scenarios
 
 ### Tests
 
-|                                                              | `esbuild` | `parcel` | `rollup` | `rspack` | `vite` | `rolldown` |    `rsbuild`    |
-| ------------------------------------------------------------ | :-------: | :------: | :------: | :------: | :----: | :--------: | :-------------: |
-| Compilation time                                             |  28.8ms   |  957ms   |  49.0ms  |  86.6ms  | 121ms  |   22.4ms   | 146ms <tr></tr> |
-| <pre>const { bar } = require('./foo')</pre>                  |    ❌     |    ✅    |    ❌    |    ❌    |   ❌   |     ❌     |  ✅ <tr></tr>   |
-| <pre>import { bar } from './foo'</pre>                       |    ✅     |    ✅    |    ✅    |    ✅    |   ✅   |     ✅     |  ✅ <tr></tr>   |
-| <pre>const { bar } =&#13;  await import('./foo')</pre>       |    ❌     |    ✅    |    ✅    |    ✅    |   ✅   |     ✅     |  ✅ <tr></tr>   |
-| <pre>import('./foo')&#13;  .then(module => module.bar)</pre> |    ❌     |    ✅    |    ✅    |    ❌    |   ❌   |     ✅     |  ❌ <tr></tr>   |
-| <pre>import('./foo')&#13;  .then(({ bar }) => bar)</pre>     |    ❌     |    ✅    |    ✅    |    ❌    |   ✅   |     ✅     |       ❌        |
+|                                                              |   `esbuild`    |     `parcel`     |    `rollup`    |    `rspack`    |    `vite`    |  `rolldown`  |         `rsbuild`         |
+| ------------------------------------------------------------ | :------------: | :--------------: | :------------: | :------------: | :----------: | :----------: | :-----------------------: |
+| Compilation time                                             | 31ms<br>(±8ms) | 547ms<br>(±36ms) | 46ms<br>(±7ms) | 62ms<br>(±7ms) | 123ms (±8ms) | 38ms (±13ms) | 78ms<br>(±12ms) <tr></tr> |
+| <pre>const { bar } = require('./foo')</pre>                  |       ❌       |        ✅        |       ❌       |       ❌       |      ❌      |      ❌      |       ✅ <tr></tr>        |
+| <pre>import { bar } from './foo'</pre>                       |       ✅       |        ✅        |       ✅       |       ✅       |      ✅      |      ✅      |       ✅ <tr></tr>        |
+| <pre>const { bar } =&#13;  await import('./foo')</pre>       |       ❌       |        ✅        |       ✅       |       ✅       |      ✅      |      ✅      |       ✅ <tr></tr>        |
+| <pre>import('./foo')&#13;  .then(module => module.bar)</pre> |       ❌       |        ✅        |       ✅       |       ❌       |      ❌      |      ✅      |       ❌ <tr></tr>        |
+| <pre>import('./foo')&#13;  .then(({ bar }) => bar)</pre>     |       ❌       |        ✅        |       ✅       |       ❌       |      ✅      |      ✅      |            ❌             |
 
 #### Raw tests
 
@@ -117,6 +117,78 @@ If you want to test this for yourself, you can run `pnpm test`
   ✔ ❌ FAILURE: tree shakes async modules import() whole module (0.085167ms)
   ✔ tree shakes async modules import() + picked (0.04725ms)
 ✔ builds and tree-shakes using vite (115.024625ms)
+```
+
+</details>
+
+#### Benchmark
+
+For more precise performance measures, you can run `pnpm run benchmark` that will start the tests 25 times and compute a few metrics.
+Those have been ported in the table before, but the last benchmark is available under `benchmark-results-2025-07-29T21:08:01.343Z.csv`
+
+<details><summary>Values</summary>
+
+```
+🎉 Benchmark completed in 27.89 seconds
+📄 Results saved to: benchmark-results-2025-07-29T21:08:01.343Z.csv
+
+📊 Summary Statistics:
+==================================================
+esbuild:
+  Average: 30.74ms
+  Median:  29.90ms
+  Stddev:  8.16ms
+  Min:     20.21ms
+  Max:     54.36ms
+  Runs:    25/25
+
+parcel:
+  Average: 547.04ms
+  Median:  545.32ms
+  Stddev:  35.86ms
+  Min:     499.00ms
+  Max:     625.70ms
+  Runs:    25/25
+
+rolldown:
+  Average: 38.05ms
+  Median:  37.21ms
+  Stddev:  12.83ms
+  Min:     12.30ms
+  Max:     65.26ms
+  Runs:    25/25
+
+rollup:
+  Average: 45.86ms
+  Median:  43.76ms
+  Stddev:  7.19ms
+  Min:     34.64ms
+  Max:     63.95ms
+  Runs:    25/25
+
+rsbuild:
+  Average: 78.44ms
+  Median:  77.25ms
+  Stddev:  11.90ms
+  Min:     65.47ms
+  Max:     116.25ms
+  Runs:    25/25
+
+rspack:
+  Average: 61.86ms
+  Median:  59.83ms
+  Stddev:  7.02ms
+  Min:     53.28ms
+  Max:     78.04ms
+  Runs:    25/25
+
+vite:
+  Average: 123.36ms
+  Median:  119.62ms
+  Stddev:  7.77ms
+  Min:     114.72ms
+  Max:     138.90ms
+  Runs:    25/25
 ```
 
 </details>
