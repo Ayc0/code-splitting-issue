@@ -7,29 +7,42 @@ This repo aims to check that tree-shaking for lazy-loaded assets works
 This repository mostly works with 2 files:
 
 - `index.js`
-- `file-async.js`
+- `to-import.js`
 
-(In practice a 3rd file `file-sync.js` is used to test as a baseline that tree-shaking works for direct imports)
+In the imported file, we define 2 variables:
 
-```js
-// index.js
-import("./file-async").then((module) => console.log(module.toKeepInBundle));
-```
+- `toKeepInBundle`
+- `toRemoveFromBundle`
 
-```js
-// file-async.js
-export const toKeepInBundle = "TO KEEP IN BUNDLE ASYNC";
+And in the index files, we only import `toKeepInBundle` and we check if `toRemoveFromBundle` is in the final output (by checking its value, not key)
 
-// Often never tree-shaken (because of `import()`)
-export const toRemoveFromBundle = "SHOULD BE REMOVED FROM BUNDLE ASYNC";
-```
+And we test this using 4 different scenarios:
+
+- direct import `import { toKeepInBundle } from './to-import'`,
+- top level await import(): `const { toKeepInBundle } = await import('./to-import')`
+- dynamic import of the whole module: `import('./to-import).then(module => console.log(module.toKeepInBundle))`
+- dynamic import of the module + directly using the relevant variable: `import('./to-import).then(({ toKeepInBundle }) => console.log(toKeepInBundle))`
 
 ### Tests
 
-To run tests, you can run `pnpm test`
+| Bundler    | sync | top level await | import() whole module | import() + pick |
+| ---------- | ---- | --------------- | --------------------- | --------------- |
+| `esbuild`  | ✅   | ❌              | ❌                    | ❌              |
+| `parcel`   | ✅   | ✅              | ✅                    | ✅              |
+| `rolldown` | ✅   | ✅              | ✅                    | ✅              |
+| `rollup`   | ✅   | ✅              | ✅                    | ✅              |
+| `rsbuild`  | ✅   | ✅              | ❌                    | ❌              |
+| `rspack`   | ✅   | ✅              | ❌                    | ❌              |
+| `vite`     | ✅   | ✅              | ❌                    | ✅              |
+
+#### Raw tests
+
+If you want to test this for yourself, you can run `pnpm test`
 
 > [!Note]
 > To run those tests, you need at least Node 24.4.0 as it depends on the new `Symbol.dispose` & `using` keywords, and [`fs.mkdtempDisposable()`](https://nodejs.org/api/fs.html#fspromisesmkdtempdisposableprefix-options) released in 24.4.0.
+
+<details><summary>Output of the tests</summary>
 
 ```
 > node --test tests/\*.test.js
@@ -90,3 +103,9 @@ To run tests, you can run `pnpm test`
   ✔ tree shakes async modules import() + picked (0.087875ms)
 ✖ builds and tree-shakes using vite (120.876541ms)
 ```
+
+</details>
+
+### Conclusion
+
+If you want to achieve maximum tree-shaking, prefer top-level awaits: this is the most stable across bundlers.
