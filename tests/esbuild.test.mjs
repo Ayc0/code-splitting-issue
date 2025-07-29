@@ -20,42 +20,54 @@ test("builds and tree-shakes using esbuild", async (t) => {
     const builtFileAsyncPicked = result.outputFiles.find((outputFile) => outputFile.path.includes('file-async-picked'))
 
     t.test("properly bundles important variables", () => {
-        assert.match(builtIndex.text, /TO KEEP IN BUNDLE SYNC REQUIRE DESTRUCTURING/) // ✅ Passes
-        assert.match(builtIndex.text, /TO KEEP IN BUNDLE SYNC REQUIRE MODULE/) // ✅ Passes
-        assert.match(builtIndex.text, /TO KEEP IN BUNDLE SYNC REQUIRE CHAINING/) // ✅ Passes
+        assert.match(builtIndex.text, /TO KEEP IN BUNDLE SYNC REQUIRE DESTRUCTURING/)
+        assert.match(builtIndex.text, /TO KEEP IN BUNDLE SYNC REQUIRE MODULE/)
+        assert.match(builtIndex.text, /TO KEEP IN BUNDLE SYNC REQUIRE CHAINING/)
 
-        assert.match(builtIndex.text, /TO KEEP IN BUNDLE SYNC IMPORT/) // ✅ Passes
-        assert.match(builtFileAsyncAwait.text, /TO KEEP IN BUNDLE TOP LEVEL AWAITED/) // ✅ Passes
-        assert.match(builtFileAsyncModule.text, /TO KEEP IN BUNDLE ASYNC WHOLE MODULE/) // ✅ Passes
-        assert.match(builtFileAsyncPicked.text, /TO KEEP IN BUNDLE ASYNC IMPORTED PICKED/) // ✅ Passes
+        assert.match(builtIndex.text, /TO KEEP IN BUNDLE SYNC IMPORT/)
+        assert.match(builtFileAsyncAwait.text, /TO KEEP IN BUNDLE TOP LEVEL AWAITED/)
+        assert.match(builtFileAsyncModule.text, /TO KEEP IN BUNDLE ASYNC WHOLE MODULE/)
+        assert.match(builtFileAsyncPicked.text, /TO KEEP IN BUNDLE ASYNC IMPORTED PICKED/)
     })
 
-    t.test("tree shakes sync require destructuring", () => {
-        assert.doesNotMatch(builtIndex.text, /SHOULD BE REMOVED FROM BUNDLE SYNC REQUIRE DESTRUCTURING/) // ❌ Throws
+    t.test("❌ FAILURE: tree shakes sync require destructuring", () => {
+        assert.throws(() => {
+            assert.doesNotMatch(builtIndex.text, /SHOULD BE REMOVED FROM BUNDLE SYNC REQUIRE DESTRUCTURING/)
+        })
     })
 
-    t.test("tree shakes sync require module", () => {
-        assert.doesNotMatch(builtIndex.text, /SHOULD BE REMOVED FROM BUNDLE SYNC REQUIRE MODULE/) // ❌ Throws
+    t.test("❌ FAILURE: tree shakes sync require module", () => {
+        assert.throws(() => {
+            assert.doesNotMatch(builtIndex.text, /SHOULD BE REMOVED FROM BUNDLE SYNC REQUIRE MODULE/)
+        })
     })
 
-    t.test("tree shakes sync require chaining", () => {
-        assert.doesNotMatch(builtIndex.text, /SHOULD BE REMOVED FROM BUNDLE SYNC REQUIRE CHAINING/) // ❌ Throws
+    t.test("❌ FAILURE: tree shakes sync require chaining", () => {
+        assert.throws(() => {
+            assert.doesNotMatch(builtIndex.text, /SHOULD BE REMOVED FROM BUNDLE SYNC REQUIRE CHAINING/)
+        })
     })
 
     t.test("tree shakes sync modules", () => {
-        assert.doesNotMatch(builtIndex.text, /SHOULD BE REMOVED FROM BUNDLE SYNC IMPORT/) // ✅ Passes
+        assert.doesNotMatch(builtIndex.text, /SHOULD BE REMOVED FROM BUNDLE SYNC IMPORT/)
     })
 
-    t.test("tree shakes async modules top level awaited", () => {
-        assert.doesNotMatch(builtFileAsyncAwait.text, /SHOULD BE REMOVED FROM BUNDLE TOP LEVEL AWAITED/) // ❌ Throws
+    t.test("❌ FAILURE: tree shakes async modules top level awaited", () => {
+        assert.throws(() => {
+            assert.doesNotMatch(builtFileAsyncAwait.text, /SHOULD BE REMOVED FROM BUNDLE TOP LEVEL AWAITED/)
+        })
     })
 
-    t.test("tree shakes async modules import() whole module", () => {
-        assert.doesNotMatch(builtFileAsyncModule.text, /SHOULD BE REMOVED FROM BUNDLE ASYNC WHOLE MODULE/) // ❌ Throws
+    t.test("❌ FAILURE: tree shakes async modules import() whole module", () => {
+        assert.throws(() => {
+            assert.doesNotMatch(builtFileAsyncModule.text, /SHOULD BE REMOVED FROM BUNDLE ASYNC WHOLE MODULE/)
+        })
     })
 
-    t.test("tree shakes async modules import() + picked", () => {
-        assert.doesNotMatch(builtFileAsyncPicked.text, /SHOULD BE REMOVED FROM BUNDLE ASYNC IMPORTED PICKED/) // ❌ Throws
+    t.test("❌ FAILURE: tree shakes async modules import() + picked", () => {
+        assert.throws(() => {
+            assert.doesNotMatch(builtFileAsyncPicked.text, /SHOULD BE REMOVED FROM BUNDLE ASYNC IMPORTED PICKED/)
+        })
     })
 
 });
