@@ -23,6 +23,7 @@ And we test this using 4 different scenarios
 |                                                              | `esbuild` | `parcel` | `rollup` | `rspack` | `vite` | `rolldown` |    `rsbuild`    |
 | ------------------------------------------------------------ | :-------: | :------: | :------: | :------: | :----: | :--------: | :-------------: |
 | Compilation time                                             |  28.8ms   |  957ms   |  49.0ms  |  86.6ms  | 121ms  |   22.4ms   | 146ms <tr></tr> |
+| <pre>const { bar } = require('./foo')</pre>                  |    ❌     |    ✅    |    ❌    |    ❌    |   ❌   |     ❌     |  ✅ <tr></tr>   |
 | <pre>import { bar } from './foo'</pre>                       |    ✅     |    ✅    |    ✅    |    ✅    |   ✅   |     ✅     |  ✅ <tr></tr>   |
 | <pre>const { bar } =&#13;  await import('./foo')</pre>       |    ❌     |    ✅    |    ✅    |    ✅    |   ✅   |     ✅     |  ✅ <tr></tr>   |
 | <pre>import('./foo')&#13;  .then(module => module.bar)</pre> |    ❌     |    ✅    |    ✅    |    ❌    |   ❌   |     ✅     |  ❌ <tr></tr>   |
