@@ -25,5 +25,5 @@ test("builds and tree-shakes using vite", async (t) => {
     assert.match(builtFileAsync.code, /TO KEEP IN BUNDLE ASYNC/) // ✅ Passes
 
     assert.doesNotMatch(builtIndex.code, /SHOULD BE REMOVED FROM BUNDLE SYNC/) // ✅ Passes
-    assert.doesNotMatch(builtFileAsync.code, /SHOULD BE REMOVED FROM BUNDLE ASYNC/) // ❌ Throws
+    assert.doesNotMatch(builtFileAsync.code, /SHOULD BE REMOVED FROM BUNDLE ASYNC/) // ❌ Throws related to https://github.com/vitejs/vite/issues/14145
 });

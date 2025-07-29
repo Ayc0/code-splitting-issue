@@ -14,14 +14,12 @@ test("builds and tree-shakes using esbuild", async (t) => {
         write: false,
     });
 
-    for (let outputFile of result.outputFiles) {
-        const code = outputFile.text;
-        if (outputFile.path.endsWith('index.js')) {
-            assert.match(code, /TO KEEP IN BUNDLE SYNC/) // ✅ Passes
-            assert.doesNotMatch(code, /SHOULD BE REMOVED FROM BUNDLE SYNC/) // ✅ Passes
-        } else {
-            assert.match(code, /TO KEEP IN BUNDLE ASYNC/) // ✅ Passes
-            assert.doesNotMatch(code, /SHOULD BE REMOVED FROM BUNDLE ASYNC/) // ❌ Throws
-        }
-    }
+    const builtIndex = result.outputFiles.find((outputFile) => outputFile.path.includes('index'))
+    const builtFileAsync = result.outputFiles.find((outputFile) => outputFile.path.includes('file-async'))
+
+    assert.match(builtIndex.text, /TO KEEP IN BUNDLE SYNC/) // ✅ Passes
+    assert.match(builtFileAsync.text, /TO KEEP IN BUNDLE ASYNC/) // ✅ Passes
+
+    assert.doesNotMatch(builtIndex.text, /SHOULD BE REMOVED FROM BUNDLE SYNC/) // ✅ Passes
+    assert.doesNotMatch(builtFileAsync.text, /SHOULD BE REMOVED FROM BUNDLE ASYNC/) // ❌ Throws
 });

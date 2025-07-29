@@ -28,14 +28,18 @@ test("builds and tree-shakes using rsbuild", async (t) => {
 
     const { stats } = await compiler.build();
 
-    for (let asset of stats.toJson().assets) {
-        const code = await fs.readFile(path.join(outDir, asset.name), 'utf8');
-        if (asset.name.includes('js/index.')) {
-            assert.match(code, /TO KEEP IN BUNDLE SYNC/) // ✅ Passes
-            assert.doesNotMatch(code, /SHOULD BE REMOVED FROM BUNDLE SYNC/) // ✅ Passes
-        } else {
-            assert.match(code, /TO KEEP IN BUNDLE ASYNC/) // ✅ Passes
-            assert.doesNotMatch(code, /SHOULD BE REMOVED FROM BUNDLE ASYNC/) // ❌ Throws
-        }
-    }
+    const assets = stats.toJson().assets
+
+    const builtIndexAsset = assets.find((asset) => asset.name.includes('js/index'))
+    const builtFileAsyncAsset = assets.find((asset) => asset.name.includes('js/async'))
+
+    const getCode = (asset) => fs.readFile(path.join(outDir, asset.name), 'utf8')
+    const builtIndexCode = await getCode(builtIndexAsset)
+    const builtFileAsyncCode = await getCode(builtFileAsyncAsset)
+
+    assert.match(builtIndexCode, /TO KEEP IN BUNDLE SYNC/) // ✅ Passes
+    assert.match(builtFileAsyncCode, /TO KEEP IN BUNDLE ASYNC/) // ✅ Passes
+
+    assert.doesNotMatch(builtIndexCode, /SHOULD BE REMOVED FROM BUNDLE SYNC/) // ✅ Passes
+    assert.doesNotMatch(builtFileAsyncCode, /SHOULD BE REMOVED FROM BUNDLE ASYNC/) // ❌ Throws
 });

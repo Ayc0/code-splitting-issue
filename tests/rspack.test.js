@@ -52,14 +52,18 @@ test("builds and tree-shakes using rspack", async (t) => {
         });
     });
 
-    for (let asset of stats.toJson().assets) {
-        const code = await fs.readFile(path.join(outDir, asset.name), 'utf8');
-        if (asset.name === 'index.js') {
-            assert.match(code, /TO KEEP IN BUNDLE SYNC/) // ✅ Passes
-            assert.doesNotMatch(code, /SHOULD BE REMOVED FROM BUNDLE SYNC/) // ✅ Passes
-        } else {
-            assert.match(code, /TO KEEP IN BUNDLE ASYNC/) // ✅ Passes
-            assert.doesNotMatch(code, /SHOULD BE REMOVED FROM BUNDLE ASYNC/) // ✅ Passes
-        }
-    }
+    const assets = stats.toJson().assets
+
+    const builtIndexAsset = assets.find((asset) => asset.name === 'index.js')
+    const builtFileAsyncAsset = assets.find((asset) => asset.name !== 'index.js') // Not the greatest match for works here
+
+    const getCode = (asset) => fs.readFile(path.join(outDir, asset.name), 'utf8')
+    const builtIndexCode = await getCode(builtIndexAsset)
+    const builtFileAsyncCode = await getCode(builtFileAsyncAsset)
+
+    assert.match(builtIndexCode, /TO KEEP IN BUNDLE SYNC/) // ✅ Passes
+    assert.match(builtFileAsyncCode, /TO KEEP IN BUNDLE ASYNC/) // ✅ Passes
+
+    assert.doesNotMatch(builtIndexCode, /SHOULD BE REMOVED FROM BUNDLE SYNC/) // ✅ Passes
+    assert.doesNotMatch(builtFileAsyncCode, /SHOULD BE REMOVED FROM BUNDLE ASYNC/) // ❌ Throws
 });
