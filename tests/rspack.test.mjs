@@ -16,16 +16,6 @@ test("builds and tree-shakes using rspack", async (t) => {
             path: outDir,
         },
         mode: 'production',
-        module: {
-            rules: [
-                {
-                    test: /\.js$/,
-                    resolve: {
-                        fullySpecified: false
-                    }
-                },
-            ]
-        }
     });
 
     const stats = await new Promise((resolve, reject) => {
