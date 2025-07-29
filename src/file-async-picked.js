@@ -1,0 +1,3 @@
+export const toKeepInBundle = "TO KEEP IN BUNDLE ASYNC IMPORTED PICKED";
+
+export const toRemoveFromBundle = "SHOULD BE REMOVED FROM BUNDLE ASYNC IMPORTED PICKED";
