@@ -1,5 +1,4 @@
-import { toKeepInBundle as toKeepInBundleSyncImport } from "./file-sync-import";
-console.log(toKeepInBundleSyncImport);
+// REQUIRE
 
 const { toKeepInBundle: toKeepInBundleSyncDestructuring } = require('./file-sync-require-destructuring')
 console.log(toKeepInBundleSyncDestructuring);
@@ -9,6 +8,11 @@ console.log(module.toKeepInBundle);
 
 const toKeepInBundleSyncChaining = require('./file-sync-require-chaining').toKeepInBundle
 console.log(toKeepInBundleSyncChaining);
+
+// IMPORT
+
+import { toKeepInBundle as toKeepInBundleSyncImport } from "./file-sync-import";
+console.log(toKeepInBundleSyncImport);
 
 import(/* webpackChunkName: "file-async-module" */ "./file-async-module").then((module) => module.toKeepInBundle).then(console.log);
 

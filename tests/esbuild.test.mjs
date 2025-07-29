@@ -20,10 +20,26 @@ test("builds and tree-shakes using esbuild", async (t) => {
     const builtFileAsyncPicked = result.outputFiles.find((outputFile) => outputFile.path.includes('file-async-picked'))
 
     t.test("properly bundles important variables", () => {
+        assert.match(builtIndex.text, /TO KEEP IN BUNDLE SYNC REQUIRE DESTRUCTURING/) // ✅ Passes
+        assert.match(builtIndex.text, /TO KEEP IN BUNDLE SYNC REQUIRE MODULE/) // ✅ Passes
+        assert.match(builtIndex.text, /TO KEEP IN BUNDLE SYNC REQUIRE CHAINING/) // ✅ Passes
+
         assert.match(builtIndex.text, /TO KEEP IN BUNDLE SYNC IMPORT/) // ✅ Passes
         assert.match(builtFileAsyncAwait.text, /TO KEEP IN BUNDLE TOP LEVEL AWAITED/) // ✅ Passes
         assert.match(builtFileAsyncModule.text, /TO KEEP IN BUNDLE ASYNC WHOLE MODULE/) // ✅ Passes
         assert.match(builtFileAsyncPicked.text, /TO KEEP IN BUNDLE ASYNC IMPORTED PICKED/) // ✅ Passes
+    })
+
+    t.test("tree shakes sync require destructuring", () => {
+        assert.doesNotMatch(builtIndex.text, /SHOULD BE REMOVED FROM BUNDLE SYNC REQUIRE DESTRUCTURING/) // ❌ Throws
+    })
+
+    t.test("tree shakes sync require module", () => {
+        assert.doesNotMatch(builtIndex.text, /SHOULD BE REMOVED FROM BUNDLE SYNC REQUIRE MODULE/) // ❌ Throws
+    })
+
+    t.test("tree shakes sync require chaining", () => {
+        assert.doesNotMatch(builtIndex.text, /SHOULD BE REMOVED FROM BUNDLE SYNC REQUIRE CHAINING/) // ❌ Throws
     })
 
     t.test("tree shakes sync modules", () => {
