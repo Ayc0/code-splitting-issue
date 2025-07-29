@@ -3,18 +3,18 @@
   "private": true,
   "author": "Ayc0",
   "license": "MIT",
-  "type": "module",
   "packageManager": "pnpm@10.13.1",
   "volta": {
     "node": "24.4.1",
     "pnpm": "10.13.1"
   },
   "scripts": {
-    "test": "node --test tests/*.test.js"
+    "test": "node --test tests/*.test.mjs"
   },
   "devDependencies": {
     "@parcel/config-default": "^2.15.4",
     "@parcel/core": "^2.15.4",
+    "@rollup/plugin-commonjs": "^28.0.6",
     "@rsbuild/core": "^1.4.11",
     "@rspack/core": "^1.4.10",
     "esbuild": "^0.25.8",

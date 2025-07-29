@@ -1,0 +1,5 @@
+module.exports = {
+    toKeepInBundle: "TO KEEP IN BUNDLE SYNC REQUIRE DESTRUCTURING",
+    toRemoveFromBundle: "SHOULD BE REMOVED FROM BUNDLE SYNC REQUIRE DESTRUCTURING"
+}
+
