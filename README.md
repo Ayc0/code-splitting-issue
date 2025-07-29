@@ -38,7 +38,7 @@ If you want to test this for yourself, you can run `pnpm test`
 <details><summary>Output of the tests</summary>
 
 ```
-> node --test tests/\*.test.js
+> node --test tests/\*.test.mjs
 
 ▶ builds and tree-shakes using esbuild
   ✔ properly bundles important variables (0.684042ms)
