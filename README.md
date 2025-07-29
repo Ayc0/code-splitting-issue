@@ -16,24 +16,16 @@ In the imported file, we define 2 variables:
 
 And in the index files, we only import `toKeepInBundle` and we check if `toRemoveFromBundle` is in the final output (by checking its value, not key)
 
-And we test this using 4 different scenarios:
-
-- direct import `import { toKeepInBundle } from './to-import'`,
-- top level await import(): `const { toKeepInBundle } = await import('./to-import')`
-- dynamic import of the whole module: `import('./to-import).then(module => console.log(module.toKeepInBundle))`
-- dynamic import of the module + directly using the relevant variable: `import('./to-import).then(({ toKeepInBundle }) => console.log(toKeepInBundle))`
+And we test this using 4 different scenarios
 
 ### Tests
 
-| Bundler    | sync | top level await | import() whole module | import() + pick |
-| ---------- | ---- | --------------- | --------------------- | --------------- |
-| `esbuild`  | ✅   | ❌              | ❌                    | ❌              |
-| `parcel`   | ✅   | ✅              | ✅                    | ✅              |
-| `rolldown` | ✅   | ✅              | ✅                    | ✅              |
-| `rollup`   | ✅   | ✅              | ✅                    | ✅              |
-| `rsbuild`  | ✅   | ✅              | ❌                    | ❌              |
-| `rspack`   | ✅   | ✅              | ❌                    | ❌              |
-| `vite`     | ✅   | ✅              | ❌                    | ✅              |
+|                                                                                  | `esbuild` | `parcel` | `rolldown` | `rollup` | `rsbuild` | `rspack` | `vite` |
+| -------------------------------------------------------------------------------- | --------- | -------- | ---------- | -------- | --------- | -------- | ------ |
+| `import { toKeepInBundle } from './to-import'`                                   | ✅        | ✅       | ✅         | ✅       | ✅        | ✅       | ✅     |
+| `const { toKeepInBundle } = await import('./to-import')`                         | ❌        | ✅       | ✅         | ✅       | ✅        | ✅       | ✅     |
+| `import('./to-import).then(module => console.log(module.toKeepInBundle))`        | ❌        | ✅       | ✅         | ✅       | ❌        | ❌       | ❌     |
+| `import('./to-import).then(({ toKeepInBundle }) => console.log(toKeepInBundle))` | ❌        | ✅       | ✅         | ✅       | ❌        | ❌       | ✅     |
 
 #### Raw tests
 
