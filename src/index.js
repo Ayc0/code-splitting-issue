@@ -1,4 +1,4 @@
-import { toKeepInBundle as toKeepInBundleSync } from "./file-sync";
+import { toKeepInBundle as toKeepInBundleSync } from "./file-sync-import";
 console.log(toKeepInBundleSync);
 
 import(/* webpackChunkName: "file-async-module" */ "./file-async-module").then((module) => module.toKeepInBundle).then(console.log);

@@ -37,14 +37,14 @@ test("builds and tree-shakes using parcel", async (t) => {
     const builtFileAsyncPickedCode = await getCode(builtFileAsyncPicked)
 
     t.test("properly bundles important variables", () => {
-        assert.match(builtIndexCode, /TO KEEP IN BUNDLE SYNC/) // ✅ Passes
+        assert.match(builtIndexCode, /TO KEEP IN BUNDLE SYNC IMPORT/) // ✅ Passes
         assert.match(builtFileAsyncAwaitCode, /TO KEEP IN BUNDLE TOP LEVEL AWAITED/) // ✅ Passes
         assert.match(builtFileAsyncModuleCode, /TO KEEP IN BUNDLE ASYNC WHOLE MODULE/) // ✅ Passes
         assert.match(builtFileAsyncPickedCode, /TO KEEP IN BUNDLE ASYNC IMPORTED PICKED/) // ✅ Passes
     })
 
     t.test("tree shakes sync modules", () => {
-        assert.doesNotMatch(builtIndexCode, /SHOULD BE REMOVED FROM BUNDLE SYNC/) // ✅ Passes
+        assert.doesNotMatch(builtIndexCode, /SHOULD BE REMOVED FROM BUNDLE SYNC IMPORT/) // ✅ Passes
     })
 
     t.test("tree shakes async modules top level awaited", () => {

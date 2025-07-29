@@ -16,14 +16,14 @@ test("builds and tree-shakes using rollup", async (t) => {
     const builtFileAsyncPicked = result.output.find((output) => output.name === 'file-async-picked');
 
     t.test("properly bundles important variables", () => {
-        assert.match(builtIndex.code, /TO KEEP IN BUNDLE SYNC/); // ✅ Passes
+        assert.match(builtIndex.code, /TO KEEP IN BUNDLE SYNC IMPORT/); // ✅ Passes
         assert.match(builtFileAsyncAwait.code, /TO KEEP IN BUNDLE TOP LEVEL AWAITED/); // ✅ Passes
         assert.match(builtFileAsyncModule.code, /TO KEEP IN BUNDLE ASYNC WHOLE MODULE/); // ✅ Passes
         assert.match(builtFileAsyncPicked.code, /TO KEEP IN BUNDLE ASYNC IMPORTED PICKED/); // ✅ Passes
     });
 
     t.test("tree shakes sync modules", () => {
-        assert.doesNotMatch(builtIndex.code, /SHOULD BE REMOVED FROM BUNDLE SYNC/); // ✅ Passes
+        assert.doesNotMatch(builtIndex.code, /SHOULD BE REMOVED FROM BUNDLE SYNC IMPORT/); // ✅ Passes
     });
 
     t.test("tree shakes async modules top level awaited", () => {
