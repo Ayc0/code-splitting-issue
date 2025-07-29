@@ -22,7 +22,7 @@ And we test this using 4 different scenarios
 
 |                                                              |   `esbuild`    |     `parcel`     |    `rollup`    |    `rspack`    |    `vite`    |  `rolldown`  |         `rsbuild`         |
 | ------------------------------------------------------------ | :------------: | :--------------: | :------------: | :------------: | :----------: | :----------: | :-----------------------: |
-| Compilation time                                             | 31ms<br>(±8ms) | 547ms<br>(±36ms) | 46ms<br>(±7ms) | 62ms<br>(±7ms) | 123ms (±8ms) | 38ms (±13ms) | 78ms<br>(±12ms) <tr></tr> |
+| Compilation time (avg on 25 runs)                            | 31ms<br>(±8ms) | 547ms<br>(±36ms) | 46ms<br>(±7ms) | 62ms<br>(±7ms) | 123ms (±8ms) | 38ms (±13ms) | 78ms<br>(±12ms) <tr></tr> |
 | <pre>const { bar } = require('./foo')</pre>                  |       ❌       |        ✅        |       ❌       |       ❌       |      ❌      |      ❌      |       ✅ <tr></tr>        |
 | <pre>import { bar } from './foo'</pre>                       |       ✅       |        ✅        |       ✅       |       ✅       |      ✅      |      ✅      |       ✅ <tr></tr>        |
 | <pre>const { bar } =&#13;  await import('./foo')</pre>       |       ❌       |        ✅        |       ✅       |       ✅       |      ✅      |      ✅      |       ✅ <tr></tr>        |
