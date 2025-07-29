@@ -1,10 +1,11 @@
 import { toKeepInBundle as toKeepInBundleSync } from "./file-sync";
 console.log(toKeepInBundleSync);
 
-import("./file-async-module").then((module) => console.log(module.toKeepInBundle));
+import(/* webpackChunkName: "file-async-module" */ "./file-async-module").then((module) => console.log(module.toKeepInBundle));
 
-import("./file-async-picked").then(({ toKeepInBundle }) => console.log(toKeepInBundle));
+import(/* webpackChunkName: "file-async-picked" */ "./file-async-picked").then(({ toKeepInBundle }) => console.log(toKeepInBundle));
 
-
-const { toKeepInBundle: toKeepInBundleAwait } = await import("./file-async-await");
-console.log(toKeepInBundleAwait);
+(async () => {
+    const { toKeepInBundle: toKeepInBundleAwait } = await import(/* webpackChunkName: "file-async-await" */ "./file-async-await");
+    console.log(toKeepInBundleAwait);
+})()

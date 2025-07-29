@@ -11,9 +11,8 @@ test("builds and tree-shakes using rspack", async (t) => {
     const outDir = path.join(process.cwd(), dir.path, 'dist');
 
     let compiler = rspack({
-        entry: './src/index.js',
+        entry: { index: './src/index.js' },
         output: {
-            filename: 'index.js',
             path: outDir,
         },
         mode: 'production',
@@ -32,10 +31,6 @@ test("builds and tree-shakes using rspack", async (t) => {
     const stats = await new Promise((resolve, reject) => {
         compiler.run((err, stats) => {
             if (err) {
-                console.error(err.stack || err);
-                if (err.details) {
-                    console.error(err.details);
-                }
                 reject(err);
                 return;
             }
@@ -43,7 +38,6 @@ test("builds and tree-shakes using rspack", async (t) => {
             const info = stats.toJson();
 
             if (stats.hasErrors()) {
-                console.error(info.errors);
                 reject(info.errors);
                 return;
             }
@@ -53,17 +47,38 @@ test("builds and tree-shakes using rspack", async (t) => {
     });
 
     const assets = stats.toJson().assets
-
-    const builtIndexAsset = assets.find((asset) => asset.name === 'index.js')
-    const builtFileAsyncAsset = assets.find((asset) => asset.name !== 'index.js') // Not the greatest match for works here
-
     const getCode = (asset) => fs.readFile(path.join(outDir, asset.name), 'utf8')
-    const builtIndexCode = await getCode(builtIndexAsset)
-    const builtFileAsyncCode = await getCode(builtFileAsyncAsset)
 
-    assert.match(builtIndexCode, /TO KEEP IN BUNDLE SYNC/) // ✅ Passes
-    assert.match(builtFileAsyncCode, /TO KEEP IN BUNDLE ASYNC/) // ✅ Passes
+    const builtIndexAsset = assets.find((asset) => asset.name.includes('index'));
+    const builtFileAsyncAwaitAsset = assets.find((asset) => asset.name.includes('file-async-await'));
+    const builtFileAsyncModuleAsset = assets.find((asset) => asset.name.includes('file-async-module'));
+    const builtFileAsyncPickedAsset = assets.find((asset) => asset.name.includes('file-async-picked'));
 
-    assert.doesNotMatch(builtIndexCode, /SHOULD BE REMOVED FROM BUNDLE SYNC/) // ✅ Passes
-    assert.doesNotMatch(builtFileAsyncCode, /SHOULD BE REMOVED FROM BUNDLE ASYNC/) // ❌ Throws
+    const builtIndexCode = await getCode(builtIndexAsset);
+    const builtFileAsyncAwaitCode = await getCode(builtFileAsyncAwaitAsset);
+    const builtFileAsyncModuleCode = await getCode(builtFileAsyncModuleAsset);
+    const builtFileAsyncPickedCode = await getCode(builtFileAsyncPickedAsset);
+
+    t.test("properly bundles important variables", () => {
+        assert.match(builtIndexCode, /TO KEEP IN BUNDLE SYNC/); // ✅ Passes
+        assert.match(builtFileAsyncAwaitCode, /TO KEEP IN BUNDLE TOP LEVEL AWAITED/); // ✅ Passes
+        assert.match(builtFileAsyncModuleCode, /TO KEEP IN BUNDLE ASYNC WHOLE MODULE/); // ✅ Passes
+        assert.match(builtFileAsyncPickedCode, /TO KEEP IN BUNDLE ASYNC IMPORTED PICKED/); // ✅ Passes
+    });
+
+    t.test("tree shakes sync modules", () => {
+        assert.doesNotMatch(builtIndexCode, /SHOULD BE REMOVED FROM BUNDLE SYNC/); // ✅ Passes
+    });
+
+    t.test("tree shakes async modules top level awaited", () => {
+        assert.doesNotMatch(builtFileAsyncAwaitCode, /SHOULD BE REMOVED FROM BUNDLE TOP LEVEL AWAITED/); // ✅ Passes
+    });
+
+    t.test("tree shakes async modules import() whole module", () => {
+        assert.doesNotMatch(builtFileAsyncModuleCode, /SHOULD BE REMOVED FROM BUNDLE ASYNC WHOLE MODULE/); // ❌ Throws
+    });
+
+    t.test("tree shakes async modules import() + picked", () => {
+        assert.doesNotMatch(builtFileAsyncPickedCode, /SHOULD BE REMOVED FROM BUNDLE ASYNC IMPORTED PICKED/); // ❌ Throws
+    });
 });
