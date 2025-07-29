@@ -29,6 +29,11 @@ And we test this using 4 different scenarios
 | <pre>import('./foo')&#13;  .then(module => module.bar)</pre> |       ❌       |        ✅        |       ✅       |       ❌       |      ❌      |      ✅      |       ❌ <tr></tr>        |
 | <pre>import('./foo')&#13;  .then(({ bar }) => bar)</pre>     |       ❌       |        ✅        |       ✅       |       ❌       |      ✅      |      ✅      |            ❌             |
 
+> [!Note]
+> For `require()`, Rollup was computed using the plugin `@rollup/plugin-commonjs` with the option `transformMixedEsModules: true`
+> And Vite also uses the same plugin (and not the default `build.commonjsOptions` object, for some reason it didn’t work).
+> But Rolldown didn’t need that (it worked out of the box).
+
 #### Raw tests
 
 If you want to test this for yourself, you can run `pnpm test`
