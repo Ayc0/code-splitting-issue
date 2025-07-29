@@ -130,7 +130,6 @@ function displaySummary(results) {
         console.log(`  Stddev:  ${stddev.toFixed(2)}ms`);
         console.log(`  Min:     ${min.toFixed(2)}ms`);
         console.log(`  Max:     ${max.toFixed(2)}ms`);
-        console.log(`  Runs:    ${timings.length}/${NUM_RUNS}`);
         console.log('');
     }
 }

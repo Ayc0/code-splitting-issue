@@ -140,7 +140,6 @@ esbuild:
   Stddev:  8.16ms
   Min:     20.21ms
   Max:     54.36ms
-  Runs:    25/25
 
 parcel:
   Average: 547.04ms
@@ -148,7 +147,6 @@ parcel:
   Stddev:  35.86ms
   Min:     499.00ms
   Max:     625.70ms
-  Runs:    25/25
 
 rolldown:
   Average: 38.05ms
@@ -156,7 +154,6 @@ rolldown:
   Stddev:  12.83ms
   Min:     12.30ms
   Max:     65.26ms
-  Runs:    25/25
 
 rollup:
   Average: 45.86ms
@@ -164,7 +161,6 @@ rollup:
   Stddev:  7.19ms
   Min:     34.64ms
   Max:     63.95ms
-  Runs:    25/25
 
 rsbuild:
   Average: 78.44ms
@@ -172,7 +168,6 @@ rsbuild:
   Stddev:  11.90ms
   Min:     65.47ms
   Max:     116.25ms
-  Runs:    25/25
 
 rspack:
   Average: 61.86ms
@@ -180,7 +175,6 @@ rspack:
   Stddev:  7.02ms
   Min:     53.28ms
   Max:     78.04ms
-  Runs:    25/25
 
 vite:
   Average: 123.36ms
@@ -188,7 +182,6 @@ vite:
   Stddev:  7.77ms
   Min:     114.72ms
   Max:     138.90ms
-  Runs:    25/25
 ```
 
 </details>
