@@ -20,14 +20,14 @@ And we test this using 4 different scenarios
 
 ### Tests
 
-|                                                              |   `esbuild`    |     `parcel`     |    `rollup`    |                               `rspack`                               |    `vite`    |  `rolldown`  |         `rsbuild`         |
-| ------------------------------------------------------------ | :------------: | :--------------: | :------------: | :------------------------------------------------------------------: | :----------: | :----------: | :-----------------------: |
-| Compilation time (avg on 25 runs)                            | 31ms<br>(±8ms) | 547ms<br>(±36ms) | 46ms<br>(±7ms) |                            62ms<br>(±7ms)                            | 123ms (±8ms) | 38ms (±13ms) | 78ms<br>(±12ms) <tr></tr> |
-| <pre>const { bar } = require('./foo')</pre>                  |       ❌       |        ✅        |       ❌       | ⚠️<br>[#11226](https://github.com/web-infra-dev/rspack/issues/11226) |      ❌      |      ❌      |       ⚠️ <tr></tr>        |
-| <pre>import { bar } from './foo'</pre>                       |       ✅       |        ✅        |       ✅       |                                  ✅                                  |      ✅      |      ✅      |       ✅ <tr></tr>        |
-| <pre>const { bar } =&#13;  await import('./foo')</pre>       |       ❌       |        ✅        |       ✅       |                                  ✅                                  |      ✅      |      ✅      |       ✅ <tr></tr>        |
-| <pre>import('./foo')&#13;  .then(module => module.bar)</pre> |       ❌       |        ✅        |       ✅       | ❌<br>[#11225](https://github.com/web-infra-dev/rspack/issues/11225) |      ❌      |      ✅      |       ❌ <tr></tr>        |
-| <pre>import('./foo')&#13;  .then(({ bar }) => bar)</pre>     |       ❌       |        ✅        |       ✅       | ❌<br>[#11225](https://github.com/web-infra-dev/rspack/issues/11225) |      ✅      |      ✅      |            ❌             |
+|                                                              |                          `esbuild`                          |     `parcel`     |    `rollup`    |                               `rspack`                               |    `vite`    |  `rolldown`  |         `rsbuild`         |
+| ------------------------------------------------------------ | :---------------------------------------------------------: | :--------------: | :------------: | :------------------------------------------------------------------: | :----------: | :----------: | :-----------------------: |
+| Compilation time (avg on 25 runs)                            |                       31ms<br>(±8ms)                        | 547ms<br>(±36ms) | 46ms<br>(±7ms) |                            62ms<br>(±7ms)                            | 123ms (±8ms) | 38ms (±13ms) | 78ms<br>(±12ms) <tr></tr> |
+| <pre>const { bar } = require('./foo')</pre>                  |                             ❌                              |        ✅        |       ❌       | ⚠️<br>[#11226](https://github.com/web-infra-dev/rspack/issues/11226) |      ❌      |      ❌      |       ⚠️ <tr></tr>        |
+| <pre>import { bar } from './foo'</pre>                       |                             ✅                              |        ✅        |       ✅       |                                  ✅                                  |      ✅      |      ✅      |       ✅ <tr></tr>        |
+| <pre>const { bar } =&#13;  await import('./foo')</pre>       | ❌<br>[#4255](https://github.com/evanw/esbuild/issues/4255) |        ✅        |       ✅       |                                  ✅                                  |      ✅      |      ✅      |       ✅ <tr></tr>        |
+| <pre>import('./foo')&#13;  .then(module => module.bar)</pre> | ❌<br>[#4255](https://github.com/evanw/esbuild/issues/4255) |        ✅        |       ✅       | ❌<br>[#11225](https://github.com/web-infra-dev/rspack/issues/11225) |      ❌      |      ✅      |       ❌ <tr></tr>        |
+| <pre>import('./foo')&#13;  .then(({ bar }) => bar)</pre>     | ❌<br>[#4255](https://github.com/evanw/esbuild/issues/4255) |        ✅        |       ✅       | ❌<br>[#11225](https://github.com/web-infra-dev/rspack/issues/11225) |      ✅      |      ✅      |            ❌             |
 
 > [!Note]
 > For `require()`, Rollup was computed using the plugin `@rollup/plugin-commonjs` with the option `transformMixedEsModules: true`\
