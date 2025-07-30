@@ -63,10 +63,8 @@ test("builds and tree-shakes using rsbuild", async (t) => {
         })
     })
 
-    t.test("❌ FAILURE: tree shakes sync require chaining", () => {
-        assert.throws(() => {
-            assert.doesNotMatch(builtIndexCode, /SHOULD BE REMOVED FROM BUNDLE SYNC REQUIRE CHAINING/)
-        })
+    t.test("tree shakes sync require chaining", () => {
+        assert.doesNotMatch(builtIndexCode, /SHOULD BE REMOVED FROM BUNDLE SYNC REQUIRE CHAINING/)
     })
 
     t.test("tree shakes sync modules", () => {
