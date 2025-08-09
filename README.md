@@ -128,7 +128,7 @@ If you want to test this for yourself, you can run `pnpm test`
 
 #### Benchmark
 
-For more precise performance measures, you can run `pnpm run benchmark` that will start the tests 25 times and compute a few metrics.
+For more precise performance measures, you can run `pnpm run benchmark` that will start the tests 25 times (+ once for cold start, not included in the count) and compute a few metrics.
 Those have been ported in the table before, but the last benchmark is available under `benchmark-results-2025-07-29T21:08:01.343Z.csv`
 
 <details><summary>Values</summary>
