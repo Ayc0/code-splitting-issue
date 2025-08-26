@@ -164,7 +164,7 @@ async function main() {
 
     // Generate CSV
     const csvContent = generateCSV(results);
-    const csvFilename = `benchmark-results-${new Date().toISOString()}.csv`;
+    const csvFilename = `benchmarks/results-${new Date().toISOString()}.csv`;
 
     try {
         fs.writeFileSync(csvFilename, csvContent);

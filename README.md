@@ -20,14 +20,14 @@ And we test this using 4 different scenarios
 
 ### Tests
 
-|                                                              |                          `esbuild`                          |     `parcel`     |    `rollup`    |                               `rspack`                               |    `vite`    |  `rolldown`  |         `rsbuild`         |
-| ------------------------------------------------------------ | :---------------------------------------------------------: | :--------------: | :------------: | :------------------------------------------------------------------: | :----------: | :----------: | :-----------------------: |
-| Compilation time (avg on 25 runs)                            |                       31ms<br>(±8ms)                        | 547ms<br>(±36ms) | 46ms<br>(±7ms) |                            62ms<br>(±7ms)                            | 123ms (±8ms) | 38ms (±13ms) | 78ms<br>(±12ms) <tr></tr> |
-| <pre>const { bar } = require('./foo')</pre>                  |                             ❌                              |        ✅        |       ❌       | ⚠️<br>[#11226](https://github.com/web-infra-dev/rspack/issues/11226) |      ❌      |      ❌      |       ⚠️ <tr></tr>        |
-| <pre>import { bar } from './foo'</pre>                       |                             ✅                              |        ✅        |       ✅       |                                  ✅                                  |      ✅      |      ✅      |       ✅ <tr></tr>        |
-| <pre>const { bar } =&#13;  await import('./foo')</pre>       | ❌<br>[#4255](https://github.com/evanw/esbuild/issues/4255) |        ✅        |       ✅       |                                  ✅                                  |      ✅      |      ✅      |       ✅ <tr></tr>        |
-| <pre>import('./foo')&#13;  .then(module => module.bar)</pre> | ❌<br>[#4255](https://github.com/evanw/esbuild/issues/4255) |        ✅        |       ✅       | ❌<br>[#11225](https://github.com/web-infra-dev/rspack/issues/11225) |      ❌      |      ✅      |       ❌ <tr></tr>        |
-| <pre>import('./foo')&#13;  .then(({ bar }) => bar)</pre>     | ❌<br>[#4255](https://github.com/evanw/esbuild/issues/4255) |        ✅        |       ✅       | ❌<br>[#11225](https://github.com/web-infra-dev/rspack/issues/11225) |      ✅      |      ✅      |            ❌             |
+|                                                              |                          `esbuild`                          |     `parcel`     |    `rollup`     |                               `rspack`                               |    `vite`     |  `rolldown`  |         `rsbuild`         |
+| ------------------------------------------------------------ | :---------------------------------------------------------: | :--------------: | :-------------: | :------------------------------------------------------------------: | :-----------: | :----------: | :-----------------------: |
+| Compilation time (avg on 25 runs)                            |                       27ms<br>(±7ms)                        | 582ms<br>(±21ms) | 54ms<br>(±16ms) |                           71ms<br>(±10ms)                            | 148ms (±21ms) | 31ms (±18ms) | 86ms<br>(±14ms) <tr></tr> |
+| <pre>const { bar } = require('./foo')</pre>                  |                             ❌                              |        ✅        |       ❌        | ⚠️<br>[#11226](https://github.com/web-infra-dev/rspack/issues/11226) |      ❌       |      ❌      |       ⚠️ <tr></tr>        |
+| <pre>import { bar } from './foo'</pre>                       |                             ✅                              |        ✅        |       ✅        |                                  ✅                                  |      ✅       |      ✅      |       ✅ <tr></tr>        |
+| <pre>const { bar } =&#13;  await import('./foo')</pre>       | ❌<br>[#4255](https://github.com/evanw/esbuild/issues/4255) |        ✅        |       ✅        |                                  ✅                                  |      ✅       |      ✅      |       ✅ <tr></tr>        |
+| <pre>import('./foo')&#13;  .then(module => module.bar)</pre> | ❌<br>[#4255](https://github.com/evanw/esbuild/issues/4255) |        ✅        |       ✅        | ❌<br>[#11225](https://github.com/web-infra-dev/rspack/issues/11225) |      ❌       |      ✅      |       ❌ <tr></tr>        |
+| <pre>import('./foo')&#13;  .then(({ bar }) => bar)</pre>     | ❌<br>[#4255](https://github.com/evanw/esbuild/issues/4255) |        ✅        |       ✅        | ❌<br>[#11225](https://github.com/web-infra-dev/rspack/issues/11225) |      ✅       |      ✅      |            ❌             |
 
 > [!Note]
 > For `require()`, Rollup was computed using the plugin `@rollup/plugin-commonjs` with the option `transformMixedEsModules: true`\
@@ -47,81 +47,81 @@ If you want to test this for yourself, you can run `pnpm test`
 > node --test tests/\*.test.mjs
 
 ▶ builds and tree-shakes using esbuild
-  ✔ properly bundles important variables (0.800541ms)
-  ✔ ❌ FAILURE: tree shakes sync require destructuring (0.901875ms)
-  ✔ ❌ FAILURE: tree shakes sync require module (0.216916ms)
-  ✔ ❌ FAILURE: tree shakes sync require chaining (0.180833ms)
-  ✔ tree shakes sync modules (0.071833ms)
-  ✔ ❌ FAILURE: tree shakes async modules top level awaited (0.116709ms)
-  ✔ ❌ FAILURE: tree shakes async modules import() whole module (0.123833ms)
-  ✔ ❌ FAILURE: tree shakes async modules import() + picked (0.712708ms)
-✔ builds and tree-shakes using esbuild (29.283791ms)
+  ✔ properly bundles important variables (0.734208ms)
+  ✔ ❌ FAILURE: tree shakes sync require destructuring (0.781625ms)
+  ✔ ❌ FAILURE: tree shakes sync require module (0.305583ms)
+  ✔ ❌ FAILURE: tree shakes sync require chaining (0.233834ms)
+  ✔ tree shakes sync modules (0.074ms)
+  ✔ ❌ FAILURE: tree shakes async modules top level awaited (0.124125ms)
+  ✔ ❌ FAILURE: tree shakes async modules import() whole module (0.128042ms)
+  ✔ ❌ FAILURE: tree shakes async modules import() + picked (0.106084ms)
+✔ builds and tree-shakes using esbuild (22.699708ms)
 
 ▶ builds and tree-shakes using parcel
-  ✔ properly bundles important variables (0.962625ms)
-  ✔ tree shakes sync require destructuring (0.09975ms)
-  ✔ tree shakes sync require module (0.051458ms)
-  ✔ tree shakes sync require chaining (0.053292ms)
-  ✔ tree shakes sync modules (0.046375ms)
-  ✔ tree shakes async modules top level awaited (0.039916ms)
-  ✔ tree shakes async modules import() whole module (0.042042ms)
-  ✔ tree shakes async modules import() + picked (0.04475ms)
-✔ builds and tree-shakes using parcel (583.063958ms)
+  ✔ properly bundles important variables (0.899ms)
+  ✔ tree shakes sync require destructuring (0.083667ms)
+  ✔ tree shakes sync require module (0.046916ms)
+  ✔ tree shakes sync require chaining (0.046625ms)
+  ✔ tree shakes sync modules (0.044791ms)
+  ✔ tree shakes async modules top level awaited (0.0365ms)
+  ✔ tree shakes async modules import() whole module (0.041042ms)
+  ✔ tree shakes async modules import() + picked (0.041209ms)
+✔ builds and tree-shakes using parcel (604.39475ms)
 
 ▶ builds and tree-shakes using rolldown
-  ✔ properly bundles important variables (1.507125ms)
-  ✔ ❌ FAILURE: tree shakes sync require destructuring (0.939125ms)
-  ✔ ❌ FAILURE: tree shakes sync require module (0.421ms)
-  ✔ ❌ FAILURE: tree shakes sync require chaining (0.310792ms)
-  ✔ tree shakes sync modules (0.087833ms)
-  ✔ tree shakes async modules top level awaited (0.064291ms)
-  ✔ tree shakes async modules import() whole module (0.060166ms)
-  ✔ tree shakes async modules import() + picked (0.084917ms)
-✔ builds and tree-shakes using rolldown (26.31975ms)
+  ✔ properly bundles important variables (2.446666ms)
+  ✔ ❌ FAILURE: tree shakes sync require destructuring (2.313667ms)
+  ✔ ❌ FAILURE: tree shakes sync require module (0.328041ms)
+  ✔ ❌ FAILURE: tree shakes sync require chaining (0.276416ms)
+  ✔ tree shakes sync modules (0.086583ms)
+  ✔ tree shakes async modules top level awaited (0.072333ms)
+  ✔ tree shakes async modules import() whole module (0.060875ms)
+  ✔ tree shakes async modules import() + picked (0.07425ms)
+✔ builds and tree-shakes using rolldown (24.0595ms)
 
 ▶ builds and tree-shakes using rollup
-  ✔ properly bundles important variables (0.742917ms)
-  ✔ ❌ FAILURE: tree shakes sync require destructuring (0.865542ms)
-  ✔ ❌ FAILURE: tree shakes sync require module (0.210458ms)
-  ✔ ❌ FAILURE: tree shakes sync require chaining (0.1815ms)
-  ✔ tree shakes sync modules (0.065958ms)
-  ✔ tree shakes async modules top level awaited (0.059167ms)
-  ✔ tree shakes async modules import() whole module (0.053792ms)
-  ✔ tree shakes async modules import() + picked (0.055708ms)
-✔ builds and tree-shakes using rollup (48.903208ms)
+  ✔ properly bundles important variables (1.0855ms)
+  ✔ ❌ FAILURE: tree shakes sync require destructuring (1.206875ms)
+  ✔ ❌ FAILURE: tree shakes sync require module (0.259333ms)
+  ✔ ❌ FAILURE: tree shakes sync require chaining (0.198916ms)
+  ✔ tree shakes sync modules (0.071792ms)
+  ✔ tree shakes async modules top level awaited (0.059958ms)
+  ✔ tree shakes async modules import() whole module (0.055042ms)
+  ✔ tree shakes async modules import() + picked (0.061625ms)
+✔ builds and tree-shakes using rollup (44.270875ms)
 
 ▶ builds and tree-shakes using rsbuild
-  ✔ properly bundles important variables (1.046083ms)
-  ✔ ❌ FAILURE: tree shakes sync require destructuring (0.593209ms)
-  ✔ ❌ FAILURE: tree shakes sync require module (0.199833ms)
-  ✔ tree shakes sync require chaining (0.102959ms)
-  ✔ tree shakes sync modules (0.069875ms)
-  ✔ tree shakes async modules top level awaited (0.054916ms)
-  ✔ ❌ FAILURE: tree shakes async modules import() whole module (0.147541ms)
-  ✔ ❌ FAILURE: tree shakes async modules import() + picked (0.113959ms)
-✔ builds and tree-shakes using rsbuild (79.585958ms)
+  ✔ properly bundles important variables (1.045666ms)
+  ✔ ❌ FAILURE: tree shakes sync require destructuring (0.569167ms)
+  ✔ ❌ FAILURE: tree shakes sync require module (0.143916ms)
+  ✔ tree shakes sync require chaining (0.05775ms)
+  ✔ tree shakes sync modules (0.054542ms)
+  ✔ tree shakes async modules top level awaited (0.05ms)
+  ✔ ❌ FAILURE: tree shakes async modules import() whole module (0.109ms)
+  ✔ ❌ FAILURE: tree shakes async modules import() + picked (0.1125ms)
+✔ builds and tree-shakes using rsbuild (73.223167ms)
 
 ▶ builds and tree-shakes using rspack
-  ✔ properly bundles important variables (1.154ms)
-  ✔ ❌ FAILURE: tree shakes sync require destructuring (0.582709ms)
-  ✔ ❌ FAILURE: tree shakes sync require module (0.156333ms)
-  ✔ ❌ FAILURE: tree shakes sync require chaining (0.068333ms)
-  ✔ tree shakes sync modules (0.063625ms)
-  ✔ tree shakes async modules top level awaited (0.056167ms)
-  ✔ ❌ FAILURE: tree shakes async modules import() whole module (0.137ms)
-  ✔ ❌ FAILURE: tree shakes async modules import() + picked (0.151834ms)
-✔ builds and tree-shakes using rspack (65.446334ms)
+  ✔ properly bundles important variables (1.048042ms)
+  ✔ ❌ FAILURE: tree shakes sync require destructuring (0.59025ms)
+  ✔ ❌ FAILURE: tree shakes sync require module (0.155542ms)
+  ✔ tree shakes sync require chaining (0.066916ms)
+  ✔ tree shakes sync modules (0.0735ms)
+  ✔ tree shakes async modules top level awaited (0.061125ms)
+  ✔ ❌ FAILURE: tree shakes async modules import() whole module (0.130458ms)
+  ✔ ❌ FAILURE: tree shakes async modules import() + picked (0.150875ms)
+✔ builds and tree-shakes using rspack (62.813125ms)
 
 ▶ builds and tree-shakes using vite
-  ✔ properly bundles important variables (0.983042ms)
-  ✔ ❌ FAILURE: tree shakes sync require destructuring (0.547958ms)
-  ✔ ❌ FAILURE: tree shakes sync require module (0.230208ms)
-  ✔ ❌ FAILURE: tree shakes sync require chaining (0.140417ms)
-  ✔ tree shakes sync modules (0.062541ms)
-  ✔ tree shakes async modules top level awaited (0.057208ms)
-  ✔ ❌ FAILURE: tree shakes async modules import() whole module (0.106416ms)
-  ✔ tree shakes async modules import() + picked (0.052708ms)
-✔ builds and tree-shakes using vite (142.683083ms)
+  ✔ properly bundles important variables (1.716084ms)
+  ✔ ❌ FAILURE: tree shakes sync require destructuring (0.60125ms)
+  ✔ ❌ FAILURE: tree shakes sync require module (0.150416ms)
+  ✔ ❌ FAILURE: tree shakes sync require chaining (0.125292ms)
+  ✔ tree shakes sync modules (0.062834ms)
+  ✔ tree shakes async modules top level awaited (0.055625ms)
+  ✔ ❌ FAILURE: tree shakes async modules import() whole module (0.102ms)
+  ✔ tree shakes async modules import() + picked (0.054917ms)
+✔ builds and tree-shakes using vite (142.726875ms)
 ```
 
 </details>
@@ -129,64 +129,64 @@ If you want to test this for yourself, you can run `pnpm test`
 #### Benchmark
 
 For more precise performance measures, you can run `pnpm run benchmark` that will start the tests 25 times (+ once for cold start, not included in the count) and compute a few metrics.
-Those have been ported in the table before, but the last benchmark is available under `benchmark-results-2025-07-29T21:08:01.343Z.csv`
+Those have been ported in the table before, but the last benchmark is available under `benchmarks/results-2025-07-29T21:08:01.343Z.csv`
 
 <details><summary>Values</summary>
 
 ```
-🎉 Benchmark completed in 27.89 seconds
-📄 Results saved to: benchmark-results-2025-07-29T21:08:01.343Z.csv
+🎉 Benchmark completed in 31.36 seconds
+📄 Results saved to: benchmarks/results-2025-08-26T11:25:08.774Z.csv
 
 📊 Summary Statistics:
 ==================================================
 esbuild:
-  Average: 30.74ms
-  Median:  29.90ms
-  Stddev:  8.16ms
-  Min:     20.21ms
-  Max:     54.36ms
+  Average: 27.30ms
+  Median:  25.03ms
+  Stddev:  7.04ms
+  Min:     19.23ms
+  Max:     45.17ms
 
 parcel:
-  Average: 547.04ms
-  Median:  545.32ms
-  Stddev:  35.86ms
-  Min:     499.00ms
-  Max:     625.70ms
+  Average: 582.25ms
+  Median:  575.07ms
+  Stddev:  21.04ms
+  Min:     564.34ms
+  Max:     664.65ms
 
 rolldown:
-  Average: 38.05ms
-  Median:  37.21ms
-  Stddev:  12.83ms
-  Min:     12.30ms
-  Max:     65.26ms
+  Average: 31.12ms
+  Median:  24.29ms
+  Stddev:  18.84ms
+  Min:     12.05ms
+  Max:     101.80ms
 
 rollup:
-  Average: 45.86ms
-  Median:  43.76ms
-  Stddev:  7.19ms
-  Min:     34.64ms
-  Max:     63.95ms
+  Average: 53.63ms
+  Median:  48.42ms
+  Stddev:  15.69ms
+  Min:     43.63ms
+  Max:     123.31ms
 
 rsbuild:
-  Average: 78.44ms
-  Median:  77.25ms
-  Stddev:  11.90ms
-  Min:     65.47ms
-  Max:     116.25ms
+  Average: 86.06ms
+  Median:  81.71ms
+  Stddev:  14.58ms
+  Min:     74.08ms
+  Max:     125.52ms
 
 rspack:
-  Average: 61.86ms
-  Median:  59.83ms
-  Stddev:  7.02ms
-  Min:     53.28ms
-  Max:     78.04ms
+  Average: 70.63ms
+  Median:  67.07ms
+  Stddev:  9.68ms
+  Min:     63.03ms
+  Max:     106.78ms
 
 vite:
-  Average: 123.36ms
-  Median:  119.62ms
-  Stddev:  7.77ms
-  Min:     114.72ms
-  Max:     138.90ms
+  Average: 147.69ms
+  Median:  140.65ms
+  Stddev:  20.88ms
+  Min:     133.76ms
+  Max:     235.06ms
 ```
 
 </details>
