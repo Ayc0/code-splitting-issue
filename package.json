@@ -16,11 +16,11 @@
     "@parcel/config-default": "^2.15.4",
     "@parcel/core": "^2.15.4",
     "@rollup/plugin-commonjs": "^28.0.6",
-    "@rsbuild/core": "^1.5.0",
-    "@rspack/core": "^1.5.2",
+    "@rsbuild/core": "^1.5.5",
+    "@rspack/core": "^1.5.3",
     "esbuild": "^0.25.9",
     "parcel": "^2.15.4",
-    "rolldown": "1.0.0-beta.35",
+    "rolldown": "1.0.0-beta.36",
     "rollup": "^4.50.1",
     "vite": "^7.1.5"
   }
