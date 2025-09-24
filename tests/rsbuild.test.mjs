@@ -75,11 +75,9 @@ test("builds and tree-shakes using rsbuild", async (t) => {
         assert.doesNotMatch(builtFileAsyncAwaitCode, /SHOULD BE REMOVED FROM BUNDLE TOP LEVEL AWAITED/);
     });
 
-    t.test("❌ FAILURE: tree shakes async modules import() whole module", () => {
-        assert.throws(() => {
-            assert.doesNotMatch(builtFileAsyncModuleCode, /SHOULD BE REMOVED FROM BUNDLE ASYNC WHOLE MODULE/)
-        })
-    });
+    t.test("tree shakes async modules import() whole module", () => {
+        assert.doesNotMatch(builtFileAsyncModuleCode, /SHOULD BE REMOVED FROM BUNDLE ASYNC WHOLE MODULE/)
+    })
 
     t.test("❌ FAILURE: tree shakes async modules import() + picked", () => {
         assert.throws(() => {
