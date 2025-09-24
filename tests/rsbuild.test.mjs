@@ -79,9 +79,7 @@ test("builds and tree-shakes using rsbuild", async (t) => {
         assert.doesNotMatch(builtFileAsyncModuleCode, /SHOULD BE REMOVED FROM BUNDLE ASYNC WHOLE MODULE/)
     })
 
-    t.test("❌ FAILURE: tree shakes async modules import() + picked", () => {
-        assert.throws(() => {
-            assert.doesNotMatch(builtFileAsyncPickedCode, /SHOULD BE REMOVED FROM BUNDLE ASYNC IMPORTED PICKED/)
-        })
+    t.test("tree shakes async modules import() + picked", () => {
+        assert.doesNotMatch(builtFileAsyncPickedCode, /SHOULD BE REMOVED FROM BUNDLE ASYNC IMPORTED PICKED/)
     });
 });
