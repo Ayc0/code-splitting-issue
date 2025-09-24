@@ -3,10 +3,10 @@
   "private": true,
   "author": "Ayc0",
   "license": "MIT",
-  "packageManager": "pnpm@10.13.1",
+  "packageManager": "pnpm@10.17.1",
   "volta": {
     "node": "24.4.1",
-    "pnpm": "10.13.1"
+    "pnpm": "10.17.1"
   },
   "scripts": {
     "test": "node --test tests/*.test.mjs",
