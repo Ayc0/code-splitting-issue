@@ -3,10 +3,10 @@
   "private": true,
   "author": "Ayc0",
   "license": "MIT",
-  "packageManager": "pnpm@10.13.1",
+  "packageManager": "pnpm@10.17.1",
   "volta": {
     "node": "24.4.1",
-    "pnpm": "10.13.1"
+    "pnpm": "10.17.1"
   },
   "scripts": {
     "test": "node --test tests/*.test.mjs",
@@ -16,12 +16,12 @@
     "@parcel/config-default": "^2.16.0",
     "@parcel/core": "^2.16.0",
     "@rollup/plugin-commonjs": "^28.0.6",
-    "@rsbuild/core": "^1.5.10",
-    "@rspack/core": "^1.5.5",
+    "@rsbuild/core": "^1.5.11",
+    "@rspack/core": "^1.5.6",
     "esbuild": "^0.25.10",
     "parcel": "^2.16.0",
     "rolldown": "1.0.0-beta.39",
-    "rollup": "^4.52.0",
+    "rollup": "^4.52.2",
     "vite": "^7.1.7"
   }
 }
