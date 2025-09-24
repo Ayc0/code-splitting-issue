@@ -27,12 +27,15 @@ And we test this using 4 different scenarios
 | <pre>import { bar } from './foo'</pre>                       |                             ✅                              |        ✅        |       ✅        |                                       ✅                                       |      ✅       |      ✅      |        ✅ <tr></tr>        |
 | <pre>const { bar } =&#13;  await import('./foo')</pre>       | ❌<br>[#4255](https://github.com/evanw/esbuild/issues/4255) |        ✅        |       ✅        |                                       ✅                                       |      ✅       |      ✅      |        ✅ <tr></tr>        |
 | <pre>import('./foo')&#13;  .then(module => module.bar)</pre> | ❌<br>[#4255](https://github.com/evanw/esbuild/issues/4255) |        ✅        |       ✅        | ✅<br>`>=1.5.6` ([#11665](https://github.com/web-infra-dev/rspack/pull/11665)) |      ❌       |      ✅      | ✅<br>`>=1.5.11` <tr></tr> |
-| <pre>import('./foo')&#13;  .then(({ bar }) => bar)</pre>     | ❌<br>[#4255](https://github.com/evanw/esbuild/issues/4255) |        ✅        |       ✅        | ✅<br>`>=1.5.6` ([#11665](https://github.com/web-infra-dev/rspack/pull/11665)) |      ✅       |      ✅      |             ❌             |
+| <pre>import('./foo')&#13;  .then(({ bar }) => bar)</pre>     | ❌<br>[#4255](https://github.com/evanw/esbuild/issues/4255) |        ✅        |       ✅        | ✅<br>`>=1.5.6` ([#11665](https://github.com/web-infra-dev/rspack/pull/11665)) |      ✅       |      ✅      |      ✅<br>`>=1.5.11`      |
 
 > [!Note]
 > For `require()`, Rollup was computed using the plugin `@rollup/plugin-commonjs` with the option `transformMixedEsModules: true`\
 > And Vite also uses the same plugin (and not the default `build.commonjsOptions` object, for some reason it didn’t work).\
 > But Rolldown didn’t need that (it worked out of the box).
+
+> [!Note]
+> For rsbuild and the `import('./foo').then(({ bar }) => bar)` test, it requires to have `browserslist` setup to something like `Chrome >= 55`
 
 #### Raw tests
 
@@ -98,7 +101,7 @@ If you want to test this for yourself, you can run `pnpm test`
   ✔ tree shakes sync modules (0.056333ms)
   ✔ tree shakes async modules top level awaited (0.049042ms)
   ✔ tree shakes async modules import() whole module (0.054416ms)
-  ✔ ❌ FAILURE: tree shakes async modules import() + picked (0.116208ms)
+  ✔ tree shakes async modules import() + picked (0.051917ms)
 ✔ builds and tree-shakes using rsbuild (79.944416ms)
 
 ▶ builds and tree-shakes using rspack

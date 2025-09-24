@@ -12,6 +12,9 @@
     "test": "node --test tests/*.test.mjs",
     "benchmark": "node benchmark.mjs"
   },
+  "browserslist": [
+    "last 1 Chrome version"
+  ],
   "devDependencies": {
     "@parcel/config-default": "^2.16.0",
     "@parcel/core": "^2.16.0",
