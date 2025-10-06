@@ -19,7 +19,7 @@
     "@parcel/config-default": "^2.16.0",
     "@parcel/core": "^2.16.0",
     "@rollup/plugin-commonjs": "^28.0.6",
-    "@rsbuild/core": "^1.5.12",
+    "@rsbuild/core": "^1.5.13",
     "@rspack/core": "^1.5.7",
     "esbuild": "^0.25.10",
     "parcel": "^2.16.0",
