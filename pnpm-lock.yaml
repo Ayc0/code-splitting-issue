@@ -18,8 +18,8 @@ importers:
         specifier: ^28.0.6
         version: 28.0.6(rollup@4.52.4)
       '@rsbuild/core':
-        specifier: ^1.5.13
-        version: 1.5.13
+        specifier: ^1.5.16
+        version: 1.5.16
       '@rspack/core':
         specifier: ^1.5.8
         version: 1.5.8(@swc/helpers@0.5.17)
@@ -889,8 +889,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@rsbuild/core@1.5.13':
-    resolution: {integrity: sha512-P+TCvZCVpBYZ3GDdnzR/tZKicE41khJIqIRlJYnEc9dwUfX1/eqRf8lA8yrsbB5iZbSfj1iOoH1N25cCQ3hhuA==}
+  '@rsbuild/core@1.5.16':
+    resolution: {integrity: sha512-AMvyPmpyAF5RfSY70oWiByP/h0mbi3KOgHUsuYapWXtfPTYM/fpvfuEgqc4DZI5YCzZsY5JcEAfG1EmR7I0AXw==}
     engines: {node: '>=18.12.0'}
     hasBin: true
 
@@ -2391,7 +2391,7 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.52.4':
     optional: true
 
-  '@rsbuild/core@1.5.13':
+  '@rsbuild/core@1.5.16':
     dependencies:
       '@rspack/core': 1.5.8(@swc/helpers@0.5.17)
       '@rspack/lite-tapable': 1.0.1
