@@ -20,7 +20,7 @@
     "@parcel/core": "^2.16.0",
     "@rollup/plugin-commonjs": "^28.0.9",
     "@rsbuild/core": "^1.5.17",
-    "@rspack/core": "^1.5.8",
+    "@rspack/core": "^1.6.0",
     "esbuild": "^0.25.11",
     "parcel": "^2.16.0",
     "rolldown": "1.0.0-beta.45",
