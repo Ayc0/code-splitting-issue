@@ -27,8 +27,8 @@ importers:
         specifier: ^0.25.11
         version: 0.25.11
       parcel:
-        specifier: ^2.16.0
-        version: 2.16.0(@swc/helpers@0.5.17)
+        specifier: ^2.16.1
+        version: 2.16.1(@swc/helpers@0.5.17)
       rolldown:
         specifier: 1.0.0-beta.45
         version: 1.0.0-beta.45
@@ -37,7 +37,7 @@ importers:
         version: 4.52.5
       vite:
         specifier: ^7.1.12
-        version: 7.1.12(jiti@2.6.1)(lightningcss@1.30.1)
+        version: 7.1.12(jiti@2.6.1)(lightningcss@1.30.2)
 
 packages:
 
@@ -307,43 +307,86 @@ packages:
     resolution: {integrity: sha512-8kY+TUhir7qm+TgSMeMd8CP2PVoZjXamiZ8+mbXws4jKw6IrIVDQf8TkBZKGk7ncKJEteiX4ybbmiPjho8cHuA==}
     engines: {node: '>= 16.0.0', parcel: ^2.16.0}
 
+  '@parcel/bundler-default@2.16.1':
+    resolution: {integrity: sha512-ruy+Yt96Jre2+5PSE4qcH7ETarIuQ+OIY8hejOQ53inVgu9QlvBJf/L2PhNkumHN2zA6m5f0m/MhB+amaee5ew==}
+    engines: {node: '>= 16.0.0', parcel: ^2.16.1}
+
   '@parcel/cache@2.16.0':
     resolution: {integrity: sha512-stBGOio+z2qjnSJNl1vJTNqjgLyzDFp+tUOKgaLJ8Vmn67jYccoGLTNApw2mhB3HtQuoz/5eudGHSvhqMpMyTg==}
     engines: {node: '>= 16.0.0'}
     peerDependencies:
       '@parcel/core': ^2.16.0
 
+  '@parcel/cache@2.16.1':
+    resolution: {integrity: sha512-qDlHQQ7RDfSi5MBnuFGCfQYiQQomsA5aZLntO5MCRD62VnMf9qz/RrCqpGFGOooljMoUaeVl0Q8ARvorRJJi8w==}
+    engines: {node: '>= 16.0.0'}
+    peerDependencies:
+      '@parcel/core': ^2.16.1
+
   '@parcel/codeframe@2.16.0':
     resolution: {integrity: sha512-wXpHOOE5o0c55AiUMCwkIrVCFeJzBfZpjhn07WQUUk57gGts5R67bMsoeoizvBhI748l6iSU7rPZSSrXc8NoRg==}
+    engines: {node: '>= 16.0.0'}
+
+  '@parcel/codeframe@2.16.1':
+    resolution: {integrity: sha512-KLy9Fvf37SX6/wek2SUPw8A/W0kChcNXPUNeCIYWUFI4USAZ5KvesXS5RHUnrJTaR0XzD0Qia+MFJPgp6kuazQ==}
     engines: {node: '>= 16.0.0'}
 
   '@parcel/compressor-raw@2.16.0':
     resolution: {integrity: sha512-tl8/iCPlInfD3YLo1s/kA9/o7XdrYNBuGsAj4VOFqplH+2FINb48XPzp7Z4VGOB2q8qokt2gohTGfuNPGIX2pw==}
     engines: {node: '>= 16.0.0', parcel: ^2.16.0}
 
+  '@parcel/compressor-raw@2.16.1':
+    resolution: {integrity: sha512-44sHWuEyGwUvs2bG1t/hsBP0lR06HO2btrXhkUGL+HX6D8cZrkZfSBFnUrGYZURYRybyx8qkhcogf5SU5rbwAQ==}
+    engines: {node: '>= 16.0.0', parcel: ^2.16.1}
+
   '@parcel/config-default@2.16.0':
     resolution: {integrity: sha512-az5gWXyztHekV1Dpz3nNT3iz5SqHh2924XCb2w+VyNDtnLhLNQ+X7NJd0na+EbWd9KBJYEdVYDPVDy1bEei0lQ==}
     peerDependencies:
       '@parcel/core': ^2.16.0
 
+  '@parcel/config-default@2.16.1':
+    resolution: {integrity: sha512-jBgbHW73MrEdiKH6LISLw5TZ2oVvyLm3GaYzwNkcRTUtSh6aRVjxvCWePdxy41dcwnMC/ABLsamtN4wokAKKSQ==}
+    peerDependencies:
+      '@parcel/core': ^2.16.1
+
   '@parcel/core@2.16.0':
     resolution: {integrity: sha512-erH9GdLe8Boie0mCO8hXn8Qt/pCACsOFlKp8UHNMlPaizUtCDkCOQqwmSi+VyrJ3dMMCOc/qBwTSGAJaJE8/Kw==}
+    engines: {node: '>= 16.0.0'}
+
+  '@parcel/core@2.16.1':
+    resolution: {integrity: sha512-tza8oKYaPopGBwroGJKv7BrTg1lxTycS7SANIizxMB9FxDsAkq4vPny5/KHpFBcW3UTCGBvvNAG1oaVzeWF5Pg==}
     engines: {node: '>= 16.0.0'}
 
   '@parcel/diagnostic@2.16.0':
     resolution: {integrity: sha512-z5MeMwFegaA23wseltLykVV9OxsKkY3BiEje/Dt7ttVivwNWFKHDuXB8vbZTDArUooixUH3s/RJhTFI46VJc2A==}
     engines: {node: '>= 16.0.0'}
 
+  '@parcel/diagnostic@2.16.1':
+    resolution: {integrity: sha512-PJl7/QGsPboAMVFZId31iGMMY70AllZNOtYka9rTZRjTiBhZw4VrAG/RdqqKzjVuL6fZhurmfcwWzj+3gx8ccg==}
+    engines: {node: '>= 16.0.0'}
+
   '@parcel/error-overlay@2.16.0':
     resolution: {integrity: sha512-ZcXOZc548Tjms0z7uaE4iUKHul32CpX5dCnEdum9PExxCLNCCxm4JgoO+dWeZXjNQDi8Opz9N3GU4wnF7WVzhg==}
+    engines: {node: '>= 16.0.0'}
+
+  '@parcel/error-overlay@2.16.1':
+    resolution: {integrity: sha512-9vZq5ijoAn+JjodXc5FNy6ZQ2qpqSAaKDs+wCi4JrZMJJx7+dXZ31xtbpmP2SzG2Wppf8KhS/dOGmtQh65jT8Q==}
     engines: {node: '>= 16.0.0'}
 
   '@parcel/events@2.16.0':
     resolution: {integrity: sha512-PI7dryJLPYCe4jNzo7XWAzbUPUuD50Nd76GTdzaHhmcQfZnPrtWAu73UmP3yYqpbv97TtWSiCJyrJWPTDU/REA==}
     engines: {node: '>= 16.0.0'}
 
+  '@parcel/events@2.16.1':
+    resolution: {integrity: sha512-+U7Trb2W8fm8w/OjwQpWN/Tepiwim/YNXuyPrhikFnsrg6QDdDTD/8/km4ah8Bzr0u4hIrn1k32InwDMCF5sig==}
+    engines: {node: '>= 16.0.0'}
+
   '@parcel/feature-flags@2.16.0':
     resolution: {integrity: sha512-GiRpLx0x8dZdWCpftk6OE0lp0Cc8oUyBssPiobigpSA8vgxrCz/zLbs83R/K70p+wPBb+ye4eEiR67+KCwcSXg==}
+    engines: {node: '>= 16.0.0'}
+
+  '@parcel/feature-flags@2.16.1':
+    resolution: {integrity: sha512-MY/z4gKZWk0MKvP+gpU42kiE9W4f9NM1fSCa1OcdqF7IUJDDM41CDJ9rbwSQrroDddIViaNzsLo7aSYVI/C7aA==}
     engines: {node: '>= 16.0.0'}
 
   '@parcel/fs@2.16.0':
@@ -352,33 +395,67 @@ packages:
     peerDependencies:
       '@parcel/core': ^2.16.0
 
+  '@parcel/fs@2.16.1':
+    resolution: {integrity: sha512-/akyrCaurd8rfgXuT6tDAK6I1JfW56TFJmzfIwuFSPbRy3YVu4JKN1g2PShpOLPdnqfWZNCcsd+yuuMFVhA2HA==}
+    engines: {node: '>= 16.0.0'}
+    peerDependencies:
+      '@parcel/core': ^2.16.1
+
   '@parcel/graph@3.6.0':
     resolution: {integrity: sha512-ShxOzS0FdyXJ7gwit7CSPuQCbU0bXkB+kZyrXgj0UmgIDYDMYO02T+UIlH4AReEzqcZq3An+sDOx+UKRM8j8Uw==}
+    engines: {node: '>= 16.0.0'}
+
+  '@parcel/graph@3.6.1':
+    resolution: {integrity: sha512-82sjbjrSPK5BXH0tb65tQl/qvo/b2vsyA5F6z3SaQ/c3A5bmv5RxTvse1AgOb0St0lZ7ALaZibj1qZFBUyjdqw==}
     engines: {node: '>= 16.0.0'}
 
   '@parcel/logger@2.16.0':
     resolution: {integrity: sha512-/K6UVVCtS1KOkH9xxuH9u2xV3348mb+Fb33K/OUs5wnpfmo0TtrzodjLyMpQG6KrofmYKSNzA5petp7+cf3aug==}
     engines: {node: '>= 16.0.0'}
 
+  '@parcel/logger@2.16.1':
+    resolution: {integrity: sha512-w9Qpp5S79fqn6nh/VqVYG4kCbIeW45zdPvYJMFgE90zhBRLrOnqw06cRZQdKj24C7/kdqOFFbrJ3B5uTsYeS0w==}
+    engines: {node: '>= 16.0.0'}
+
   '@parcel/markdown-ansi@2.16.0':
     resolution: {integrity: sha512-NxlmF/JAmsq9Yf/8q2+WEHFkcQ/cDoVOUx6ETDM8icDaQ8kXJbZSKAMOWnsB1EF0757UST77kX9zw/V6tyXqnw==}
+    engines: {node: '>= 16.0.0'}
+
+  '@parcel/markdown-ansi@2.16.1':
+    resolution: {integrity: sha512-4Qww9KkGrVrY/JyD2NtrdUmyufKOqGg3t6hkE4UqQBPb+GZd+TQi6i1mjWvOE6r9AF53x5PAZZ13f/HfllU2qA==}
     engines: {node: '>= 16.0.0'}
 
   '@parcel/namer-default@2.16.0':
     resolution: {integrity: sha512-pRb6Bz32Xl65CZ1LzKAa8ADGyPyrJ724tq2IToqH5JQ8bFGNXF7Tg/qrv582CjHS5dJb/HB7LizfWaliHiG5DA==}
     engines: {node: '>= 16.0.0', parcel: ^2.16.0}
 
+  '@parcel/namer-default@2.16.1':
+    resolution: {integrity: sha512-vs4djcAt3HoQri6g8itdCzFTiFXwcVNfFDqa9By1pTdq/aKWapJWZaes2KCf2ey2FoEafS0tOIA90n124PM00A==}
+    engines: {node: '>= 16.0.0', parcel: ^2.16.1}
+
   '@parcel/node-resolver-core@3.7.0':
     resolution: {integrity: sha512-YIK7wtjO7biRoXNRdFR0uSYPY0FwvCA77xlJCOTX1+jeACj8BPwLKOMFJKCA89pBr7iHyTNzZ3ppVGsX8flMag==}
+    engines: {node: '>= 16.0.0'}
+
+  '@parcel/node-resolver-core@3.7.1':
+    resolution: {integrity: sha512-xY+mzz1a5L22HvwkCHtt1fRZa8pD8znXLB8NLnqdu/xa7FGwWNgA2ukFPSlNGwwI5aw3jQylERP8Mr6/qLsefQ==}
     engines: {node: '>= 16.0.0'}
 
   '@parcel/optimizer-css@2.16.0':
     resolution: {integrity: sha512-QTrMOVknU4DmKzmnTxQx69ZZxoDYyTIWhpflDLSvUaLSXk2yi0SMBMcsEdA0W4bhORn6nj8toGwi04vbGVuQtA==}
     engines: {node: '>= 16.0.0', parcel: ^2.16.0}
 
+  '@parcel/optimizer-css@2.16.1':
+    resolution: {integrity: sha512-MIbeqxqcbtGksiNzIvFeMU++gsBl8MafQRghQxsB1kAMl49i+Cnj/Kp3qKkHd+Bb2XXlx7TagGtXCnCrtxdJjw==}
+    engines: {node: '>= 16.0.0', parcel: ^2.16.1}
+
   '@parcel/optimizer-html@2.16.0':
     resolution: {integrity: sha512-T8VvsdCwLb/l3a/eHF2lJfeGO6Z4znKjvnBAvtyLwtFVVNnJasJLo9Cuan4bcnVM8etzbxjg1Qs/9c1hzWsBYg==}
     engines: {node: '>= 16.0.0', parcel: ^2.16.0}
+
+  '@parcel/optimizer-html@2.16.1':
+    resolution: {integrity: sha512-AwrecuOOuWqlon+rWJsQuXyJ70ivTbjm505NTBKoQYdVeEbO6pZYYeuF8ZKh0Qq+zOCy47397RgEuiuwLf9t2g==}
+    engines: {node: '>= 16.0.0', parcel: ^2.16.1}
 
   '@parcel/optimizer-image@2.16.0':
     resolution: {integrity: sha512-CVAitXbtKfVxxmOjieeI/YSwSFKx+In3MjP4jFpuYwgDT0TsgsyweBkADQMfEcBjeIPiCXLzzf/GSVIDY7hgwA==}
@@ -386,13 +463,27 @@ packages:
     peerDependencies:
       '@parcel/core': ^2.16.0
 
+  '@parcel/optimizer-image@2.16.1':
+    resolution: {integrity: sha512-vlQW0DJQ0XTmM/rNwJUuLbTeB31CwyH2yb2RMZfByAGGodpy2vxt51NS/KyV1mNcJRBtW2Li+XVzYSb14dF5Bw==}
+    engines: {node: '>= 16.0.0', parcel: ^2.16.1}
+    peerDependencies:
+      '@parcel/core': ^2.16.1
+
   '@parcel/optimizer-svg@2.16.0':
     resolution: {integrity: sha512-fx9VK28bXaFz0dWs3rIOQM0t8nAWXE62o4JIcIAZND5/6ij1y4/Fap791agvH4SKxNPFu/a/KEmF50SRfcSwkw==}
     engines: {node: '>= 16.0.0', parcel: ^2.16.0}
 
+  '@parcel/optimizer-svg@2.16.1':
+    resolution: {integrity: sha512-dpAlCrbITPQr5RpuSjr91pfkQumxOzyiaRM39kMwjsTrYa2/F/JCoPKJZMSMyODvB9MZAz2qfGkWbj/Xb+a1NQ==}
+    engines: {node: '>= 16.0.0', parcel: ^2.16.1}
+
   '@parcel/optimizer-swc@2.16.0':
     resolution: {integrity: sha512-AwakRkMBzDWNrXbm5eJtuBvjCSyp6J730MCltZtiSWLtFbvkXMCt1BQ6Ug91NHq/zA2HTo3RYh96wTMRSRQa2w==}
     engines: {node: '>= 16.0.0', parcel: ^2.16.0}
+
+  '@parcel/optimizer-swc@2.16.1':
+    resolution: {integrity: sha512-mZtrISSio541K4IH0cT90c143YOvAhOs04RrBGs12WjtHOVTASt0V3gVhstP4W3HvtVNbkJ4mAtUiuC7xtuHJw==}
+    engines: {node: '>= 16.0.0', parcel: ^2.16.1}
 
   '@parcel/package-manager@2.16.0':
     resolution: {integrity: sha512-YDOLTcDFYJn3VeEYktO8Yrpw+kaWsLGHOUhPPrw3uaQsqNPi4wIRMsuhcFa9fAL5OlFX56I9iD/yciUiULOFXw==}
@@ -400,72 +491,140 @@ packages:
     peerDependencies:
       '@parcel/core': ^2.16.0
 
+  '@parcel/package-manager@2.16.1':
+    resolution: {integrity: sha512-HDMT0+L7kMBG+YgkxaNv/1nobFRgygte9e0QuYiSVMngdbYvXw9Yy8tEDeWEAOKWs0rGtPXJD6k9gP8/Aa3VQw==}
+    engines: {node: '>= 16.0.0'}
+    peerDependencies:
+      '@parcel/core': ^2.16.1
+
   '@parcel/packager-css@2.16.0':
     resolution: {integrity: sha512-T36uCm/RUZ6h33O8NsjOoTH0if/FWyXuBWenVeQgQZrlYR+wZBsZSV8CElBMCmrFJ5BdSG1RybXPwvkATpJeig==}
     engines: {node: '>= 16.0.0', parcel: ^2.16.0}
+
+  '@parcel/packager-css@2.16.1':
+    resolution: {integrity: sha512-N4Ex89dqoprdDoSusM2qveQcpl9zdaQmZtW81xIMFK5+ruaBcKy6Rzyao8LWnbg4wfeNVE0zVkZEq7k3oxbCBA==}
+    engines: {node: '>= 16.0.0', parcel: ^2.16.1}
 
   '@parcel/packager-html@2.16.0':
     resolution: {integrity: sha512-d9NBtvJAGM8shnLfwDwF0VMP5P2F5Euvjbrv4FaqbivypzDBhjalE+EnC6eGtLNTCTg9o1CxxZmsTC/FVdu2yQ==}
     engines: {node: '>= 16.0.0', parcel: ^2.16.0}
 
+  '@parcel/packager-html@2.16.1':
+    resolution: {integrity: sha512-QleJQl63DC2AaIQ2rHS3d46zhGrIoxBz1QKDfgYoG+YxpG8nAKFgI3YBCMNwUYU4pVpNWxmLP/MRKNz9hVxL9Q==}
+    engines: {node: '>= 16.0.0', parcel: ^2.16.1}
+
   '@parcel/packager-js@2.16.0':
     resolution: {integrity: sha512-2YHeFFFsh8KSqlfMfGVlAsDjwHZkGp99GRN+WnGAHlYzmDODve92yb94d5Zs22cDRzP6v/E5NMTYWu1dlUg/Wg==}
     engines: {node: '>= 16.0.0', parcel: ^2.16.0}
+
+  '@parcel/packager-js@2.16.1':
+    resolution: {integrity: sha512-jTxUhGVqZdierdjeGCJiuVBSBU8iVqp3A0BT/RCpcB0YYY3dymDHTQrAFw8h2kJ0ZcfQEr6BeFIU4RBTuM1xow==}
+    engines: {node: '>= 16.0.0', parcel: ^2.16.1}
 
   '@parcel/packager-raw@2.16.0':
     resolution: {integrity: sha512-jY/t/PXpNTK6EwLBSTJPGTB8FYmhqHtj4Am/JVQkJkxgB8h8diivxsReZYNfDt9J9pVxSk+lcZCdOZXf1ZtmWw==}
     engines: {node: '>= 16.0.0', parcel: ^2.16.0}
 
+  '@parcel/packager-raw@2.16.1':
+    resolution: {integrity: sha512-EYTGl4uKGu0HVFlCZtUcwo+aNr8/9BiXZyY1crd4SRF1cioKYpgLZKv31z1uNiaDrTxIRH8hWNnjPWAxj382NA==}
+    engines: {node: '>= 16.0.0', parcel: ^2.16.1}
+
   '@parcel/packager-svg@2.16.0':
     resolution: {integrity: sha512-NVmpVjRe2Lr7htrxsscy4ExSRUN+YiMvPmxp9ZxoDnrGerqa66B5/Rh7HOhx7Vo9wuH5LCpFAWYhgkhXH6qrqQ==}
     engines: {node: '>= 16.0.0', parcel: ^2.16.0}
+
+  '@parcel/packager-svg@2.16.1':
+    resolution: {integrity: sha512-DQJtFyjurSDu135vvDd0DDFjyaTS8eX9Gl8wS33fPh31PgeqbSYGSe6vtlIw5NHWSTgqvxGmwAf1HYY9WgEGTw==}
+    engines: {node: '>= 16.0.0', parcel: ^2.16.1}
 
   '@parcel/packager-wasm@2.16.0':
     resolution: {integrity: sha512-r+oCqaFfUB1f6CEQyWbkAjwfGrt2flNA3JguBJ8zCyDrx3fWI+isYufg2CP92ZJyOBTIU63iCi88YgcMLynL1g==}
     engines: {node: '>=16.0.0', parcel: ^2.16.0}
 
+  '@parcel/packager-wasm@2.16.1':
+    resolution: {integrity: sha512-Do/5Cr4yckpWqeQyhiPqwDbbg+nwj20BGIP9edYIL9XAmCh8ARBwntFWmcSpeNdGp+DSJKQ28SgWCT/5cyyoig==}
+    engines: {node: '>=16.0.0', parcel: ^2.16.1}
+
   '@parcel/plugin@2.16.0':
     resolution: {integrity: sha512-Rdk5e/VGmMp6s2DmC0AbjWYmea3Vv8Tx1SC5ln+lf+qRlhndrbFV9o5QKirTY9C8GWd20qH1ZqOxPDEzK/YSGA==}
+    engines: {node: '>= 16.0.0'}
+
+  '@parcel/plugin@2.16.1':
+    resolution: {integrity: sha512-/5hdgMFjd4pRZelfzWVAEWEH51qCHGB6I3z4mV3i8Teh0zsOgoHJrn1t+sVYkhKPDOMs16XAkx2iCMvEcktDrA==}
     engines: {node: '>= 16.0.0'}
 
   '@parcel/profiler@2.16.0':
     resolution: {integrity: sha512-xm6fVTA1V/Co7JuJfkNtZJsKsvq0RSpoE7JjiNtKLCMh+Lim6w7dxc6CEBqGImhR/9YbwteY6/gVFwkvCdLvLg==}
     engines: {node: '>= 16.0.0'}
 
-  '@parcel/reporter-cli@2.16.0':
-    resolution: {integrity: sha512-76U06/aSGTO8UTEBJb+tIvNAH/2aOfWVTsP4QQym//Lf8fmXJnLaCDsJmiNAXjW44rnzjNQ7qzRrbwH7W5u7FA==}
-    engines: {node: '>= 16.0.0', parcel: ^2.16.0}
+  '@parcel/profiler@2.16.1':
+    resolution: {integrity: sha512-9VKswpixK5CggxqoEoThiusnRbqU48QIWwmGQhaTV9iBYi9m/LhEYUoTa8K/KQ70yJknghMMNc1JfAvt2bfh5w==}
+    engines: {node: '>= 16.0.0'}
+
+  '@parcel/reporter-cli@2.16.1':
+    resolution: {integrity: sha512-+P4Nvg5a2GnOpsIf93U75JjPgltrAmGTCVyRpbeBo45uFBvHGKPX5O7Vn7rl1wWunNobOAxn6F9JxPCApcw79A==}
+    engines: {node: '>= 16.0.0', parcel: ^2.16.1}
 
   '@parcel/reporter-dev-server@2.16.0':
     resolution: {integrity: sha512-n5XXh1S/oMQ8ItSm/nG5sPFb+1WBZPGtvDUd8gxvmO8lfZ7fo53l0TS5KshMvNqx0F208Erwi+/II78piqCrYA==}
     engines: {node: '>= 16.0.0', parcel: ^2.16.0}
 
-  '@parcel/reporter-tracer@2.16.0':
-    resolution: {integrity: sha512-OHNQiz9c2F7nak8ztkuK+9ui9e5f9Qz5uEYPNHssyEIj4zLeenhnFEVSzUVXJdrqY0A3+xE8bFuQLi+PS+nbFQ==}
-    engines: {node: '>= 16.0.0', parcel: ^2.16.0}
+  '@parcel/reporter-dev-server@2.16.1':
+    resolution: {integrity: sha512-xTVhfnt3Se5BTLC/Dp4pBmytqdZcVyqDExJ39N9mi76/CW0XNDcMqRFACxQltu/ahxmUYYyFtpiXis5Daf9xzQ==}
+    engines: {node: '>= 16.0.0', parcel: ^2.16.1}
+
+  '@parcel/reporter-tracer@2.16.1':
+    resolution: {integrity: sha512-MDDzZx5j0yer+jTP/gBEPiMDzOAeKy7I0pLyPuntwKWnAiaG+TRaQPp8xXQhW6ZxIQIqsHkfUJoTksuFTla+tA==}
+    engines: {node: '>= 16.0.0', parcel: ^2.16.1}
 
   '@parcel/resolver-default@2.16.0':
     resolution: {integrity: sha512-HvzVXPn8j/ElbNkqAHa7wHOzqCWTwAEv4pWJVnguuqL9m7ZC2INDsp3XJR1LOA5UqBYRhkBrvWK69v4sA21a9w==}
     engines: {node: '>= 16.0.0', parcel: ^2.16.0}
 
+  '@parcel/resolver-default@2.16.1':
+    resolution: {integrity: sha512-UmnZClD4nWusNTpfC7WaNUfPNnNbjgrIR1l3kOAU+X/b/HJWczzMNIZGTw3rypV0df6XpQlrUrHc85NJ6aRlLA==}
+    engines: {node: '>= 16.0.0', parcel: ^2.16.1}
+
   '@parcel/runtime-browser-hmr@2.16.0':
     resolution: {integrity: sha512-tRPoFwUVtzE7ufOtIr1CHdh8SH3772FI1JlFCV0//tEWbj9iSk1bcK0g05Yj4dW4hW2SjqTcVo59Kw50Zeh7/Q==}
     engines: {node: '>= 16.0.0', parcel: ^2.16.0}
+
+  '@parcel/runtime-browser-hmr@2.16.1':
+    resolution: {integrity: sha512-W8Os+1ORHLJmzX+av76DQkyX4RLndhhB4u1o43P55UfAaV3URcc2I0tNQ/wZKA7qU2DhcdoXijMok7VRUfS0jw==}
+    engines: {node: '>= 16.0.0', parcel: ^2.16.1}
 
   '@parcel/runtime-js@2.16.0':
     resolution: {integrity: sha512-othbtwC7AG3SnDkzGpRXEwsY2/+INydJXSORogTEN/GSUQyci606pTfuU/eF9D22wVDdaVSYUhhJPTDdxksu9w==}
     engines: {node: '>= 16.0.0', parcel: ^2.16.0}
 
+  '@parcel/runtime-js@2.16.1':
+    resolution: {integrity: sha512-Ck7DJw1QmeYiQ17z0Q3mtDl6fH1VPrORmygb2CYcGAIOfIbvXV74vRss1NqpScU8QTjN0qpL4Ve8txwoISgIAg==}
+    engines: {node: '>= 16.0.0', parcel: ^2.16.1}
+
   '@parcel/runtime-rsc@2.16.0':
     resolution: {integrity: sha512-5T+mNRrsA9zxkbdaV4rxqRc7CJP77/oNpajDPWcBWDELM8q42be0Sr5zYoAG28jcnQBf88u2rqPVpNtNxoM/ZA==}
     engines: {node: '>= 12.0.0', parcel: ^2.16.0}
+
+  '@parcel/runtime-rsc@2.16.1':
+    resolution: {integrity: sha512-waNc2gBWxfaUcvPtPAtjWwRLYLuMPHyu+JMgHV7txsv3JZnPNieUvTPbqeARbpsVpk2xTgFnAGS3HBfw5QW/Eg==}
+    engines: {node: '>= 12.0.0', parcel: ^2.16.1}
 
   '@parcel/runtime-service-worker@2.16.0':
     resolution: {integrity: sha512-YOkWJbY08IiUXUSudPwJXJKn7CycTCSzsfbhdG+bhvVdPWGv7DpMoPDSq3IL9/99JZe7iXcOnibxCmoJqZA6WQ==}
     engines: {node: '>= 16.0.0', parcel: ^2.16.0}
 
+  '@parcel/runtime-service-worker@2.16.1':
+    resolution: {integrity: sha512-YiM/SS8rk/sBFdA8YFxlviO5FhAjzjBVAzzlnNG0qe3xLmqBfzHzW+RNf0/KblWRhxHCwmUDmzgE2ybaDeL3Lw==}
+    engines: {node: '>= 16.0.0', parcel: ^2.16.1}
+
   '@parcel/rust-darwin-arm64@2.16.0':
     resolution: {integrity: sha512-rdNl1jq34VflBzduQjcOH9SBJPW+Dy1w5XL7hQ5OEAOkRTP1/3mvh98iVYeB3e+RMjRNE/Ipn/rz2KXXku6e6g==}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [darwin]
+
+  '@parcel/rust-darwin-arm64@2.16.1':
+    resolution: {integrity: sha512-6J1pnznHYzH1TOQbDZmbGa6bXNW+KXbD+XIihvQOid42DLGJNXRmwMmCU3en/759lF/pfmzmR7sm6wPKaKGfbg==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [darwin]
@@ -476,8 +635,20 @@ packages:
     cpu: [x64]
     os: [darwin]
 
+  '@parcel/rust-darwin-x64@2.16.1':
+    resolution: {integrity: sha512-NDZpxleSeJ0yPx4OobDcj+z5x6RzsWmuA1RXBDuCKhf2kyXKP3+kfmrQew/7Q0r9uKA5pqCIw0W4eFqy4IoqIA==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [darwin]
+
   '@parcel/rust-linux-arm-gnueabihf@2.16.0':
     resolution: {integrity: sha512-FX/XrQm5BkLfHHBsUA1t7tYGTkNN4vr/t9ZuADUQCWng+m8g7BB78zWxkjoqayn5zTJAfjjQp42lSZzahtT59A==}
+    engines: {node: '>= 10'}
+    cpu: [arm]
+    os: [linux]
+
+  '@parcel/rust-linux-arm-gnueabihf@2.16.1':
+    resolution: {integrity: sha512-xLLcbMP38ya8/z5esp3ypN2htxO9AsY4uQqF2rigIUZ2abQwL4MPKxfVZtrExWdcrcWiFUbiwn3+GKu/0M9Yow==}
     engines: {node: '>= 10'}
     cpu: [arm]
     os: [linux]
@@ -488,8 +659,20 @@ packages:
     cpu: [arm64]
     os: [linux]
 
+  '@parcel/rust-linux-arm64-gnu@2.16.1':
+    resolution: {integrity: sha512-asZlimUq1wBmj2PDcoBSKD1SJvcLf1mXTcYGojOsA3dqkOOz7fGz7oubqZYn6IM+02cUDO4ekH+YBV6Eo7XlTg==}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [linux]
+
   '@parcel/rust-linux-arm64-musl@2.16.0':
     resolution: {integrity: sha512-bL3PzFEg0azmdFaf34yHAXukk2MjNSuiITPVOj9Cq65qAk7lb4+9nuGIwrCMr1+R1yCamrL31GgG61qp0X97xg==}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [linux]
+
+  '@parcel/rust-linux-arm64-musl@2.16.1':
+    resolution: {integrity: sha512-japSgrHYDD+uNHQ8TEdEhpiWu0zWMVBE48W3HJ5FKkwUOY51whZa8w0lhYW88ykUDYtEEd1ipvflv0fSDFY1jw==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
@@ -500,8 +683,20 @@ packages:
     cpu: [x64]
     os: [linux]
 
+  '@parcel/rust-linux-x64-gnu@2.16.1':
+    resolution: {integrity: sha512-A2LHDou7QDsKn3qlE+DHTBFqnjk0Hy1dhVEJgPgvW4N0XMa4x2JEcnLI9oFZ4KDXyMLGs0H6/smZ88zSdFoF3w==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [linux]
+
   '@parcel/rust-linux-x64-musl@2.16.0':
     resolution: {integrity: sha512-0q6ESCVe9uHVuQWuEGGDMJwjezliTsEWMcqn7oeQoKXaZJZQpW0UAuzNcNmpiHmeJdifYT9XuxVOo/a8IgOXhg==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [linux]
+
+  '@parcel/rust-linux-x64-musl@2.16.1':
+    resolution: {integrity: sha512-C+WgGbmIV1XxXUgNJdXpfZazqizYBvy7aesh8Z74QrlY99an/puQufd4kSbvwySN5iMGPSpN0VlyAUjDZLv9rQ==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
@@ -512,8 +707,23 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@parcel/rust-win32-x64-msvc@2.16.1':
+    resolution: {integrity: sha512-m8LoaBJfw5nv/4elM/jNNhWL5/HqBHNQnrbnN89e8sxn4L/zv9bPoXqHOuZglXwyB5velw1MGonX9Be/aK00ag==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [win32]
+
   '@parcel/rust@2.16.0':
     resolution: {integrity: sha512-9ZBiwCCm9OYa2f1rjkXtPUIa0qbKPmpdTqtNHC+5ieRxClvk+m/mxsO1Ag+GbNJrJ8qFYliL3Ha0ZK4d1BrVKw==}
+    engines: {node: '>= 16.0.0'}
+    peerDependencies:
+      napi-wasm: ^1.1.2
+    peerDependenciesMeta:
+      napi-wasm:
+        optional: true
+
+  '@parcel/rust@2.16.1':
+    resolution: {integrity: sha512-lQkf14MLKZSY/P8j1lrOgFvMCt95dO+VdXIIM2aHjbxnzYSIGgHIt2XDVtKULE+DexaYZbleA0tTnX8AABUIyQ==}
     engines: {node: '>= 16.0.0'}
     peerDependencies:
       napi-wasm: ^1.1.2
@@ -529,13 +739,25 @@ packages:
     resolution: {integrity: sha512-jlaFyGlRKFbAI8370bcuEzmsZENqdw9ATCowpB/XkKgUlYe6iplMlKLy4EquqSR6axqfxBRMoSCcKFkROuLI9g==}
     engines: {node: '>= 16.0.0', parcel: ^2.16.0}
 
+  '@parcel/transformer-babel@2.16.1':
+    resolution: {integrity: sha512-/wjA5RaptiRMp+IxYOMiGlKDaymiEpwMJOPFvW0kDjvhrl40SqGfP4GgY3jV3N2GdC5jBpesDvo2RYd4/xaT9g==}
+    engines: {node: '>= 16.0.0', parcel: ^2.16.1}
+
   '@parcel/transformer-css@2.16.0':
     resolution: {integrity: sha512-WSUITzJl2/2uU04WnCLAwhZJ8RAaRvNQ64fMr4LauWa72gzqXgh3+1egddBiAT7e5IndVJ0AYFywLBVegwKOOA==}
     engines: {node: '>= 16.0.0', parcel: ^2.16.0}
 
+  '@parcel/transformer-css@2.16.1':
+    resolution: {integrity: sha512-4lcrJFE1EdZ2z0Px0ynH+Eajg1vIoZzdqqz2x3UgWrkYVM4WHpZe/w7r2OCafyuobhJR4XYKTqxIYdHo4xWpiw==}
+    engines: {node: '>= 16.0.0', parcel: ^2.16.1}
+
   '@parcel/transformer-html@2.16.0':
     resolution: {integrity: sha512-CKAoB5yOovL3GyZlnm7lRUa3IfaSS/bEjjTy6F6RU7G4sMRgJu16AQfI4/uTJAA6iuW1ugNyza2DhWQ9xfbhaw==}
     engines: {node: '>= 16.0.0', parcel: ^2.16.0}
+
+  '@parcel/transformer-html@2.16.1':
+    resolution: {integrity: sha512-9OP4f5JSKeDMP1LGJx4BMcMTqiF+uc+3Sum4zrlMBN6EuhYlj02IpcsHMWxZuY0uow/nnwY+aB3X83Bk3AFC1Q==}
+    engines: {node: '>= 16.0.0', parcel: ^2.16.1}
 
   '@parcel/transformer-image@2.16.0':
     resolution: {integrity: sha512-sW4CM6P2YMUyAICCMocTLvVVqnxmlBwkP+SrIZvNElDUu0CygOa92cA3rdepHi+tF1GN6ZvNwNyQbZGAIKVxgw==}
@@ -543,48 +765,98 @@ packages:
     peerDependencies:
       '@parcel/core': ^2.16.0
 
+  '@parcel/transformer-image@2.16.1':
+    resolution: {integrity: sha512-VyV8LMIK+7jtELpHky9MhD1hZl6YQ9F7LWIsPhrJ938HJEDwEQbZmiAJmMY9IV5kBOhhF3eGXSr/uSFA/F+Wcw==}
+    engines: {node: '>= 16.0.0', parcel: ^2.16.1}
+    peerDependencies:
+      '@parcel/core': ^2.16.1
+
   '@parcel/transformer-js@2.16.0':
     resolution: {integrity: sha512-VRTFEJ/N13MFvwJPwilPET6gHJ0ZdFbCK26uO7uyL1eMGMvWStTXEQXvhLqtMfvDcQPnwkF5XGJL5JsGpcBFFA==}
     engines: {node: '>= 16.0.0', parcel: ^2.16.0}
     peerDependencies:
       '@parcel/core': ^2.16.0
 
+  '@parcel/transformer-js@2.16.1':
+    resolution: {integrity: sha512-GPQ3X9UqrlLDBg06u7rG+IZNT9Kl+7+6gY7qJkrw4If1JnmW5O+xVR8zHe/P+6BvxJnOg0iFqzUueZacYHmHzw==}
+    engines: {node: '>= 16.0.0', parcel: ^2.16.1}
+    peerDependencies:
+      '@parcel/core': ^2.16.1
+
   '@parcel/transformer-json@2.16.0':
     resolution: {integrity: sha512-qX6Zg+j7HezY+W2TNjJ+VPUsIviNdTuMn39W9M0YEd0WLKh0x7XD4oprVivvgD0Vbm04FUcTQEN1jAF3CAVeGw==}
     engines: {node: '>= 16.0.0', parcel: ^2.16.0}
+
+  '@parcel/transformer-json@2.16.1':
+    resolution: {integrity: sha512-LdRdPZiBPvSKHr0KeDnLpGxqPen1OV3nvkrjZex28TluaiHFLPOCC4AQOcJ4xhDNPCzt1bONjJ6QhkYjfogNqw==}
+    engines: {node: '>= 16.0.0', parcel: ^2.16.1}
 
   '@parcel/transformer-node@2.16.0':
     resolution: {integrity: sha512-Mavmjj6SfP0Lhu751G47EFtExZIJyD+V2C5PzdATTaT+cw0MzQgfLH8s4p0CI27MAuyFesm8WTA0lgUtcfzMSw==}
     engines: {node: '>= 16.0.0', parcel: ^2.16.0}
 
+  '@parcel/transformer-node@2.16.1':
+    resolution: {integrity: sha512-gclbMgvT8jNyTMFb5PeH0wni8N66dGMWgy381HZrRbkcb4KAw+PGLznrDng72Qyo/OxvEwK/IVkACz6EVoBygA==}
+    engines: {node: '>= 16.0.0', parcel: ^2.16.1}
+
   '@parcel/transformer-postcss@2.16.0':
     resolution: {integrity: sha512-h+Qnn49UE5RywpuXMHN8Iufjvc7MMqHQc0sPNvwoLBXJXJcb3ul7WEY+DGXs90KsUY1B6JAqKtz9+pzqXZMwIg==}
     engines: {node: '>= 16.0.0', parcel: ^2.16.0}
+
+  '@parcel/transformer-postcss@2.16.1':
+    resolution: {integrity: sha512-fw252N0Lx3sZ2+XwiwhAD1350k5wx0Ez4c83wm8cVMsMSV4qW5LHFmfh2+2iHYxbUj0vqCPCmo1hoiNvmixqKg==}
+    engines: {node: '>= 16.0.0', parcel: ^2.16.1}
 
   '@parcel/transformer-posthtml@2.16.0':
     resolution: {integrity: sha512-mvHQNzFO1xPq+/7McjxF7+Zb2zAgksNbSXKi8/OuMRiNO3eDD/r1jWRWKNQZHWUkSx/vS7JJ5Y1ACI5INLxWww==}
     engines: {node: '>= 16.0.0', parcel: ^2.16.0}
 
+  '@parcel/transformer-posthtml@2.16.1':
+    resolution: {integrity: sha512-QUdA4Q3nw2WPPkFeVzvTxq4tOkAxOmm1miP8FjXTeM6kOoYI296HIhqqMhiXj6BZ4J+zc/J+WpUCkYFDfEWScA==}
+    engines: {node: '>= 16.0.0', parcel: ^2.16.1}
+
   '@parcel/transformer-raw@2.16.0':
     resolution: {integrity: sha512-LJXwH2rQAo6mOU6uG0IGQIN7KLC2sS8bl6aqf1YMcKk6ZEvylQkP0hUvRYja2IRzPoxjpdcAP5WC4e/Z8S1Vzg==}
     engines: {node: '>= 16.0.0', parcel: ^2.16.0}
+
+  '@parcel/transformer-raw@2.16.1':
+    resolution: {integrity: sha512-wiNtbiXsXpdHNO1hGqTQNYQKKuwGcfz7pL/3Em+ucyqeaURXhRQVs5QIwCGIvHiVlS/5OrxPoVWSNA6d0oicAg==}
+    engines: {node: '>= 16.0.0', parcel: ^2.16.1}
 
   '@parcel/transformer-react-refresh-wrap@2.16.0':
     resolution: {integrity: sha512-s6O5oJ0pUtZey6unI0mz2WIOpAVLCn5+hlou4YH7FXOiMvSJ2PU2rakk+EZk6K/R+TStYM0hQKSwJkiiN0m7Rg==}
     engines: {node: '>= 16.0.0', parcel: ^2.16.0}
 
+  '@parcel/transformer-react-refresh-wrap@2.16.1':
+    resolution: {integrity: sha512-mUIA80/KtT3lz1Zep0t5VDqndSg0pqnkVdpBAn3QUABtT/2KR6Kr6YxFsxGAAN0BZ+Xnx92uPmQjhlkviVAk6g==}
+    engines: {node: '>= 16.0.0', parcel: ^2.16.1}
+
   '@parcel/transformer-svg@2.16.0':
     resolution: {integrity: sha512-c4KpIqqbsvsh/ZxLTo0d7/IEVa/jR/+LZ1kFzBWXKvMBzbvqo63J6s3VGk61gPFV9JkSW3UI5LAMbJn/HDXycw==}
     engines: {node: '>= 16.0.0', parcel: ^2.16.0}
 
+  '@parcel/transformer-svg@2.16.1':
+    resolution: {integrity: sha512-OBB0kDjDAAgNzcVqxo/igd+iQL3EDbo8C36JzvH07zR72OXErAdJhTdgtfRq4fqFtMyLyBLT/s3Z37c1GzLoCQ==}
+    engines: {node: '>= 16.0.0', parcel: ^2.16.1}
+
   '@parcel/types-internal@2.16.0':
     resolution: {integrity: sha512-tibAjOY8iyMDzFp5B9jEZPfHYlNvXpw7/msUVebAE6gZ7A8ymWXG8YzMvin6gvWIVTCsYoOkkRsZARvpRcSspQ==}
+
+  '@parcel/types-internal@2.16.1':
+    resolution: {integrity: sha512-HVCHm0uFyJMsu30bAfm/pd0RNsXRWX0mUXaDHzGJRZ2Yer53JA6elRwkgrPz1KosBA+OuNU/G8atXfCxPMXdKw==}
 
   '@parcel/types@2.16.0':
     resolution: {integrity: sha512-EKsMTqqfiutQIiYKHEJHHeugIymPqM+D+CphhyewAIjxVLk6PTjEQW0ytIbbdOXGAgnK60OFiIKqZAxZ5Hf2dw==}
 
+  '@parcel/types@2.16.1':
+    resolution: {integrity: sha512-RFeomuzV/0Ze0jyzzx0u/eB4bXX6ISxrARA3k/3c7MQ+jaoY67+ELd8FwPV6ZmLqvvYIFdGiCZl6ascCABKwgg==}
+
   '@parcel/utils@2.16.0':
     resolution: {integrity: sha512-Jc5npvJ5T45goEIbDwsQKX3AtfhLIF2t6G496XhbjcH3aeFLrnIbg1iaitQWvgxdjrt73h8PPNphDkREZ/H7WA==}
+    engines: {node: '>= 16.0.0'}
+
+  '@parcel/utils@2.16.1':
+    resolution: {integrity: sha512-aoY6SCfAY7X6L39PFOsWNNcAobmJr4AJEgco+PJ2UAPFiHhkBZfUofXCwna5GHH5uqXZx6u3rAHiCUrM3bEDXg==}
     engines: {node: '>= 16.0.0'}
 
   '@parcel/watcher-android-arm64@2.5.1':
@@ -674,6 +946,12 @@ packages:
     engines: {node: '>= 16.0.0'}
     peerDependencies:
       '@parcel/core': ^2.16.0
+
+  '@parcel/workers@2.16.1':
+    resolution: {integrity: sha512-yEUAjBrSgo5MYAAQbncYbw1m9WrNiJs+xKdfdHNUrOHlT7G+v62HJAZJWJsvyGQBE2nchSO+bEPgv+kxAF8mIA==}
+    engines: {node: '>= 16.0.0'}
+    peerDependencies:
+      '@parcel/core': ^2.16.1
 
   '@rolldown/binding-android-arm64@1.0.0-beta.45':
     resolution: {integrity: sha512-bfgKYhFiXJALeA/riil908+2vlyWGdwa7Ju5S+JgWZYdR4jtiPOGdM6WLfso1dojCh+4ZWeiTwPeV9IKQEX+4g==}
@@ -965,8 +1243,20 @@ packages:
     cpu: [arm64]
     os: [darwin]
 
+  '@swc/core-darwin-arm64@1.15.1':
+    resolution: {integrity: sha512-vEPrVxegWIjKEz+1VCVuKRY89jhokhSmQ/YXBWLnmLj9cI08G61RTZJvdsIcjYUjjTu7NgZlYVK+b2y0fbh11g==}
+    engines: {node: '>=10'}
+    cpu: [arm64]
+    os: [darwin]
+
   '@swc/core-darwin-x64@1.13.5':
     resolution: {integrity: sha512-ILd38Fg/w23vHb0yVjlWvQBoE37ZJTdlLHa8LRCFDdX4WKfnVBiblsCU9ar4QTMNdeTBEX9iUF4IrbNWhaF1Ng==}
+    engines: {node: '>=10'}
+    cpu: [x64]
+    os: [darwin]
+
+  '@swc/core-darwin-x64@1.15.1':
+    resolution: {integrity: sha512-z9QguKxE3aldvwKHHDg5OlKehasbJBF1lacn5CnN6SlrHbdwokXHFA3nIoO3Bh1Tw7bCgFtdIR4jKlTTn3kBZA==}
     engines: {node: '>=10'}
     cpu: [x64]
     os: [darwin]
@@ -977,8 +1267,20 @@ packages:
     cpu: [arm]
     os: [linux]
 
+  '@swc/core-linux-arm-gnueabihf@1.15.1':
+    resolution: {integrity: sha512-yS2FHA8E4YeiPG9YeYk/6mKiCWuXR5RdYlCmtlGzKcjWbI4GXUVe7+p9C0M6myRt3zdj3M1knmJxk52MQA9EZQ==}
+    engines: {node: '>=10'}
+    cpu: [arm]
+    os: [linux]
+
   '@swc/core-linux-arm64-gnu@1.13.5':
     resolution: {integrity: sha512-aNDfeN+9af+y+M2MYfxCzCy/VDq7Z5YIbMqRI739o8Ganz6ST+27kjQFd8Y/57JN/hcnUEa9xqdS3XY7WaVtSw==}
+    engines: {node: '>=10'}
+    cpu: [arm64]
+    os: [linux]
+
+  '@swc/core-linux-arm64-gnu@1.15.1':
+    resolution: {integrity: sha512-IFrjDu7+5Y61jLsUqBVXlXutDoPBX10eEeNTjW6C1yzm+cSTE7ayiKXMIFri4gEZ4VpXS6MUgkwjxtDpIXTh+w==}
     engines: {node: '>=10'}
     cpu: [arm64]
     os: [linux]
@@ -989,8 +1291,20 @@ packages:
     cpu: [arm64]
     os: [linux]
 
+  '@swc/core-linux-arm64-musl@1.15.1':
+    resolution: {integrity: sha512-fKzP9mRQGbhc5QhJPIsqKNNX/jyWrZgBxmo3Nz1SPaepfCUc7RFmtcJQI5q8xAun3XabXjh90wqcY/OVyg2+Kg==}
+    engines: {node: '>=10'}
+    cpu: [arm64]
+    os: [linux]
+
   '@swc/core-linux-x64-gnu@1.13.5':
     resolution: {integrity: sha512-WD530qvHrki8Ywt/PloKUjaRKgstQqNGvmZl54g06kA+hqtSE2FTG9gngXr3UJxYu/cNAjJYiBifm7+w4nbHbA==}
+    engines: {node: '>=10'}
+    cpu: [x64]
+    os: [linux]
+
+  '@swc/core-linux-x64-gnu@1.15.1':
+    resolution: {integrity: sha512-ZLjMi138uTJxb+1wzo4cB8mIbJbAsSLWRNeHc1g1pMvkERPWOGlem+LEYkkzaFzCNv1J8aKcL653Vtw8INHQeg==}
     engines: {node: '>=10'}
     cpu: [x64]
     os: [linux]
@@ -1001,8 +1315,20 @@ packages:
     cpu: [x64]
     os: [linux]
 
+  '@swc/core-linux-x64-musl@1.15.1':
+    resolution: {integrity: sha512-jvSI1IdsIYey5kOITzyajjofXOOySVitmLxb45OPUjoNojql4sDojvlW5zoHXXFePdA6qAX4Y6KbzAOV3T3ctA==}
+    engines: {node: '>=10'}
+    cpu: [x64]
+    os: [linux]
+
   '@swc/core-win32-arm64-msvc@1.13.5':
     resolution: {integrity: sha512-cZ6UpumhF9SDJvv4DA2fo9WIzlNFuKSkZpZmPG1c+4PFSEMy5DFOjBSllCvnqihCabzXzpn6ykCwBmHpy31vQw==}
+    engines: {node: '>=10'}
+    cpu: [arm64]
+    os: [win32]
+
+  '@swc/core-win32-arm64-msvc@1.15.1':
+    resolution: {integrity: sha512-X/FcDtNrDdY9r4FcXHt9QxUqC/2FbQdvZobCKHlHe8vTSKhUHOilWl5EBtkFVfsEs4D5/yAri9e3bJbwyBhhBw==}
     engines: {node: '>=10'}
     cpu: [arm64]
     os: [win32]
@@ -1013,14 +1339,35 @@ packages:
     cpu: [ia32]
     os: [win32]
 
+  '@swc/core-win32-ia32-msvc@1.15.1':
+    resolution: {integrity: sha512-vfheiWBux8PpC87oy1cshcqzgH7alWYpnVq5jWe7xuVkjqjGGDbBUKuS84eJCdsWcVaB5EXIWLKt+11W3/BOwA==}
+    engines: {node: '>=10'}
+    cpu: [ia32]
+    os: [win32]
+
   '@swc/core-win32-x64-msvc@1.13.5':
     resolution: {integrity: sha512-YrKdMVxbYmlfybCSbRtrilc6UA8GF5aPmGKBdPvjrarvsmf4i7ZHGCEnLtfOMd3Lwbs2WUZq3WdMbozYeLU93Q==}
     engines: {node: '>=10'}
     cpu: [x64]
     os: [win32]
 
+  '@swc/core-win32-x64-msvc@1.15.1':
+    resolution: {integrity: sha512-n3Ppn0LSov/IdlANq+8kxHqENuJRX5XtwQqPgQsgwKIcFq22u17NKfDs9vL5PwRsEHY6Xd67pnOqQX0h4AvbuQ==}
+    engines: {node: '>=10'}
+    cpu: [x64]
+    os: [win32]
+
   '@swc/core@1.13.5':
     resolution: {integrity: sha512-WezcBo8a0Dg2rnR82zhwoR6aRNxeTGfK5QCD6TQ+kg3xx/zNT02s/0o+81h/3zhvFSB24NtqEr8FTw88O5W/JQ==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      '@swc/helpers': '>=0.5.17'
+    peerDependenciesMeta:
+      '@swc/helpers':
+        optional: true
+
+  '@swc/core@1.15.1':
+    resolution: {integrity: sha512-s9GN3M2jA32k+StvuS9uGe4ztf5KVGBdlJMMC6LR6Ah23Lq/CWKVcC3WeQi8qaAcLd+DiddoNCNMUWymLv+wWQ==}
     engines: {node: '>=10'}
     peerDependencies:
       '@swc/helpers': '>=0.5.17'
@@ -1050,6 +1397,10 @@ packages:
   base-x@3.0.11:
     resolution: {integrity: sha512-xz7wQ8xDhdyP7tQxwdteLYeFfS68tSMNCZ/Y37WJ4bhGfKPpqEIlmIyueQHqOyoPhE6xNUqjzRr8ra0eF9VRvA==}
 
+  baseline-browser-mapping@2.8.25:
+    resolution: {integrity: sha512-2NovHVesVF5TXefsGX1yzx1xgr7+m9JQenvz6FQY3qd+YXkKkYiv+vTCc7OriP9mcDZpTC5mAOYN4ocd29+erA==}
+    hasBin: true
+
   baseline-browser-mapping@2.8.6:
     resolution: {integrity: sha512-wrH5NNqren/QMtKUEEJf7z86YjfqW/2uw3IL3/xpqZUC95SSVIFXYQeeGjL6FT/X68IROu6RMehZQS5foy2BXw==}
     hasBin: true
@@ -1063,8 +1414,16 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
 
+  browserslist@4.27.0:
+    resolution: {integrity: sha512-AXVQwdhot1eqLihwasPElhX2tAZiBjWdJ9i/Zcj2S6QYIjkx62OKSfnobkriB81C3l4w0rVy3Nt4jaTBltYEpw==}
+    engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
+    hasBin: true
+
   caniuse-lite@1.0.30001743:
     resolution: {integrity: sha512-e6Ojr7RV14Un7dz6ASD0aZDmQPT/A+eZU+nuTNfjqmRrmkmQlnTNWH0SKmqagx9PeW87UVqapSurtAXifmtdmw==}
+
+  caniuse-lite@1.0.30001754:
+    resolution: {integrity: sha512-x6OeBXueoAceOmotzx3PO4Zpt4rzpeIFsSr6AAePTZxSkXiYDUmpypEl7e2+8NCd9bD7bXjqyef8CJYPC1jfxg==}
 
   chalk@4.1.2:
     resolution: {integrity: sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==}
@@ -1104,6 +1463,10 @@ packages:
     resolution: {integrity: sha512-vEtk+OcP7VBRtQZ1EJ3bdgzSfBjgnEalLTp5zjJrS+2Z1w2KZly4SBdac/WDU3hhsNAZ9E8SC96ME4Ey8MZ7cg==}
     engines: {node: '>=8'}
 
+  detect-libc@2.1.2:
+    resolution: {integrity: sha512-Btj2BOOO83o3WyH59e8MgXsxEQVcarkUOpEYrubB0urwnN10yQ364rsiByU11nZlqWYZm05i/of7io4mzihBtQ==}
+    engines: {node: '>=8'}
+
   dotenv-expand@11.0.7:
     resolution: {integrity: sha512-zIHwmZPRshsCdpMDyVsqGmgyP0yT8GAgXUnkdAoJisxvf33k7yO6OuoKmcTGuXPWSsm8Oh88nZicRLA9Y0rUeA==}
     engines: {node: '>=12'}
@@ -1114,6 +1477,9 @@ packages:
 
   electron-to-chromium@1.5.222:
     resolution: {integrity: sha512-gA7psSwSwQRE60CEoLz6JBCQPIxNeuzB2nL8vE03GK/OHxlvykbLyeiumQy1iH5C2f3YbRAZpGCMT12a/9ih9w==}
+
+  electron-to-chromium@1.5.249:
+    resolution: {integrity: sha512-5vcfL3BBe++qZ5kuFhD/p8WOM1N9m3nwvJPULJx+4xf2usSlZFJ0qoNYO2fOX4hi3ocuDcmDobtA+5SFr4OmBg==}
 
   esbuild@0.25.11:
     resolution: {integrity: sha512-KohQwyzrKTQmhXDW1PjCv3Tyspn9n5GcY2RTDqeORIdIJY8yKIF7sTSopFmn/wpMPW4rdPXI0UE5LJLuq3bx0Q==}
@@ -1181,8 +1547,20 @@ packages:
     engines: {node: '>=6'}
     hasBin: true
 
+  lightningcss-android-arm64@1.30.2:
+    resolution: {integrity: sha512-BH9sEdOCahSgmkVhBLeU7Hc9DWeZ1Eb6wNS6Da8igvUwAe0sqROHddIlvU06q3WyXVEOYDZ6ykBZQnjTbmo4+A==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [arm64]
+    os: [android]
+
   lightningcss-darwin-arm64@1.30.1:
     resolution: {integrity: sha512-c8JK7hyE65X1MHMN+Viq9n11RRC7hgin3HhYKhrMyaXflk5GVplZ60IxyoVtzILeKr+xAJwg6zK6sjTBJ0FKYQ==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [arm64]
+    os: [darwin]
+
+  lightningcss-darwin-arm64@1.30.2:
+    resolution: {integrity: sha512-ylTcDJBN3Hp21TdhRT5zBOIi73P6/W0qwvlFEk22fkdXchtNTOU4Qc37SkzV+EKYxLouZ6M4LG9NfZ1qkhhBWA==}
     engines: {node: '>= 12.0.0'}
     cpu: [arm64]
     os: [darwin]
@@ -1193,8 +1571,20 @@ packages:
     cpu: [x64]
     os: [darwin]
 
+  lightningcss-darwin-x64@1.30.2:
+    resolution: {integrity: sha512-oBZgKchomuDYxr7ilwLcyms6BCyLn0z8J0+ZZmfpjwg9fRVZIR5/GMXd7r9RH94iDhld3UmSjBM6nXWM2TfZTQ==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [x64]
+    os: [darwin]
+
   lightningcss-freebsd-x64@1.30.1:
     resolution: {integrity: sha512-kmW6UGCGg2PcyUE59K5r0kWfKPAVy4SltVeut+umLCFoJ53RdCUWxcRDzO1eTaxf/7Q2H7LTquFHPL5R+Gjyig==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [x64]
+    os: [freebsd]
+
+  lightningcss-freebsd-x64@1.30.2:
+    resolution: {integrity: sha512-c2bH6xTrf4BDpK8MoGG4Bd6zAMZDAXS569UxCAGcA7IKbHNMlhGQ89eRmvpIUGfKWNVdbhSbkQaWhEoMGmGslA==}
     engines: {node: '>= 12.0.0'}
     cpu: [x64]
     os: [freebsd]
@@ -1205,8 +1595,20 @@ packages:
     cpu: [arm]
     os: [linux]
 
+  lightningcss-linux-arm-gnueabihf@1.30.2:
+    resolution: {integrity: sha512-eVdpxh4wYcm0PofJIZVuYuLiqBIakQ9uFZmipf6LF/HRj5Bgm0eb3qL/mr1smyXIS1twwOxNWndd8z0E374hiA==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [arm]
+    os: [linux]
+
   lightningcss-linux-arm64-gnu@1.30.1:
     resolution: {integrity: sha512-gB72maP8rmrKsnKYy8XUuXi/4OctJiuQjcuqWNlJQ6jZiWqtPvqFziskH3hnajfvKB27ynbVCucKSm2rkQp4Bw==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [arm64]
+    os: [linux]
+
+  lightningcss-linux-arm64-gnu@1.30.2:
+    resolution: {integrity: sha512-UK65WJAbwIJbiBFXpxrbTNArtfuznvxAJw4Q2ZGlU8kPeDIWEX1dg3rn2veBVUylA2Ezg89ktszWbaQnxD/e3A==}
     engines: {node: '>= 12.0.0'}
     cpu: [arm64]
     os: [linux]
@@ -1217,8 +1619,20 @@ packages:
     cpu: [arm64]
     os: [linux]
 
+  lightningcss-linux-arm64-musl@1.30.2:
+    resolution: {integrity: sha512-5Vh9dGeblpTxWHpOx8iauV02popZDsCYMPIgiuw97OJ5uaDsL86cnqSFs5LZkG3ghHoX5isLgWzMs+eD1YzrnA==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [arm64]
+    os: [linux]
+
   lightningcss-linux-x64-gnu@1.30.1:
     resolution: {integrity: sha512-piWx3z4wN8J8z3+O5kO74+yr6ze/dKmPnI7vLqfSqI8bccaTGY5xiSGVIJBDd5K5BHlvVLpUB3S2YCfelyJ1bw==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [x64]
+    os: [linux]
+
+  lightningcss-linux-x64-gnu@1.30.2:
+    resolution: {integrity: sha512-Cfd46gdmj1vQ+lR6VRTTadNHu6ALuw2pKR9lYq4FnhvgBc4zWY1EtZcAc6EffShbb1MFrIPfLDXD6Xprbnni4w==}
     engines: {node: '>= 12.0.0'}
     cpu: [x64]
     os: [linux]
@@ -1229,8 +1643,20 @@ packages:
     cpu: [x64]
     os: [linux]
 
+  lightningcss-linux-x64-musl@1.30.2:
+    resolution: {integrity: sha512-XJaLUUFXb6/QG2lGIW6aIk6jKdtjtcffUT0NKvIqhSBY3hh9Ch+1LCeH80dR9q9LBjG3ewbDjnumefsLsP6aiA==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [x64]
+    os: [linux]
+
   lightningcss-win32-arm64-msvc@1.30.1:
     resolution: {integrity: sha512-mSL4rqPi4iXq5YVqzSsJgMVFENoa4nGTT/GjO2c0Yl9OuQfPsIfncvLrEW6RbbB24WtZ3xP/2CCmI3tNkNV4oA==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [arm64]
+    os: [win32]
+
+  lightningcss-win32-arm64-msvc@1.30.2:
+    resolution: {integrity: sha512-FZn+vaj7zLv//D/192WFFVA0RgHawIcHqLX9xuWiQt7P0PtdFEVaxgF9rjM/IRYHQXNnk61/H/gb2Ei+kUQ4xQ==}
     engines: {node: '>= 12.0.0'}
     cpu: [arm64]
     os: [win32]
@@ -1241,8 +1667,18 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  lightningcss-win32-x64-msvc@1.30.2:
+    resolution: {integrity: sha512-5g1yc73p+iAkid5phb4oVFMB45417DkRevRbt/El/gKXJk4jid+vPFF/AXbxn05Aky8PapwzZrdJShv5C0avjw==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [x64]
+    os: [win32]
+
   lightningcss@1.30.1:
     resolution: {integrity: sha512-xi6IyHML+c9+Q3W0S4fCQJOym42pyurFiJUHEcEyHS0CeKzia4yZDEsLlqOFykxOdHpNy0NmvVO31vcSqAxJCg==}
+    engines: {node: '>= 12.0.0'}
+
+  lightningcss@1.30.2:
+    resolution: {integrity: sha512-utfs7Pr5uJyyvDETitgsaqSyjCb2qNRAtuqUeWIAKztsOYdcACf2KtARYXg2pSvhkt+9NfoaNY7fxjl6nuMjIQ==}
     engines: {node: '>= 12.0.0'}
 
   lmdb@2.8.5:
@@ -1285,14 +1721,17 @@ packages:
   node-releases@2.0.21:
     resolution: {integrity: sha512-5b0pgg78U3hwXkCM8Z9b2FJdPZlr9Psr9V2gQPESdGHqbntyFJKFW4r5TeWGFzafGY3hzs1JC62VEQMbl1JFkw==}
 
+  node-releases@2.0.27:
+    resolution: {integrity: sha512-nmh3lCkYZ3grZvqcCH+fjmQ7X+H0OeZgP40OierEaAptX4XofMh5kwNbWh7lBduUzCcV/8kZ+NDLCwm2iorIlA==}
+
   nullthrows@1.1.1:
     resolution: {integrity: sha512-2vPPEi+Z7WqML2jZYddDIfy5Dqb0r2fze2zTxNNknZaFpVHU3mFB3R+DWeJWGVx0ecvttSGlJTI+WG+8Z4cDWw==}
 
   ordered-binary@1.6.0:
     resolution: {integrity: sha512-IQh2aMfMIDbPjI/8a3Edr+PiOpcsB7yo8NdW7aHWVaoR/pcDldunMvnnwbk/auPGqmKeAdxtZl7MHX/QmPwhvQ==}
 
-  parcel@2.16.0:
-    resolution: {integrity: sha512-4sgnoYixTR6Qq6265tjmufXQj7wxvZo4VJHrYfbnfWQWfW5CgF80IiM+dy050pYgtBAMvh+8vJDDYiSto1YPUA==}
+  parcel@2.16.1:
+    resolution: {integrity: sha512-VImOEXHLdrSuG6/jX2DucrCSju/idmtLUhwS5cCy7CrWDDA1af7qdHHD038kHYXWqUIAmzHkRsp/8oRxBqNfVw==}
     engines: {node: '>= 16.0.0'}
     hasBin: true
 
@@ -1339,6 +1778,11 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
+  semver@7.7.3:
+    resolution: {integrity: sha512-SdsKMrI9TdgjdweUSR9MweHA4EJ8YxHn8DFaDisvhVlUOe4BF1tLD7GAj0lIqWVl+dPb/rExr0Btby5loQm20Q==}
+    engines: {node: '>=10'}
+    hasBin: true
+
   source-map-js@1.2.1:
     resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
     engines: {node: '>=0.10.0'}
@@ -1368,6 +1812,12 @@ packages:
 
   update-browserslist-db@1.1.3:
     resolution: {integrity: sha512-UxhIZQ+QInVdunkDAaiazvvT/+fXL5Osr0JZlJulepYu6Jd7qJtDZjlur0emRlT71EN3ScPoE7gvsuIKKNavKw==}
+    hasBin: true
+    peerDependencies:
+      browserslist: '>= 4.21.0'
+
+  update-browserslist-db@1.1.4:
+    resolution: {integrity: sha512-q0SPT4xyU84saUX+tomz1WLkxUbuaJnR1xWt17M7fJtEJigJeWUNGUqrauFXsHnqev9y9JTRGwk13tFBuKby4A==}
     hasBin: true
     peerDependencies:
       browserslist: '>= 4.21.0'
@@ -1611,6 +2061,18 @@ snapshots:
       - '@parcel/core'
       - napi-wasm
 
+  '@parcel/bundler-default@2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))':
+    dependencies:
+      '@parcel/diagnostic': 2.16.1
+      '@parcel/graph': 3.6.1
+      '@parcel/plugin': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/rust': 2.16.1
+      '@parcel/utils': 2.16.1
+      nullthrows: 1.1.1
+    transitivePeerDependencies:
+      - '@parcel/core'
+      - napi-wasm
+
   '@parcel/cache@2.16.0(@parcel/core@2.16.0(@swc/helpers@0.5.17))':
     dependencies:
       '@parcel/core': 2.16.0(@swc/helpers@0.5.17)
@@ -1621,13 +2083,34 @@ snapshots:
     transitivePeerDependencies:
       - napi-wasm
 
+  '@parcel/cache@2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))':
+    dependencies:
+      '@parcel/core': 2.16.1(@swc/helpers@0.5.17)
+      '@parcel/fs': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/logger': 2.16.1
+      '@parcel/utils': 2.16.1
+      lmdb: 2.8.5
+    transitivePeerDependencies:
+      - napi-wasm
+
   '@parcel/codeframe@2.16.0':
+    dependencies:
+      chalk: 4.1.2
+
+  '@parcel/codeframe@2.16.1':
     dependencies:
       chalk: 4.1.2
 
   '@parcel/compressor-raw@2.16.0(@parcel/core@2.16.0(@swc/helpers@0.5.17))':
     dependencies:
       '@parcel/plugin': 2.16.0(@parcel/core@2.16.0(@swc/helpers@0.5.17))
+    transitivePeerDependencies:
+      - '@parcel/core'
+      - napi-wasm
+
+  '@parcel/compressor-raw@2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))':
+    dependencies:
+      '@parcel/plugin': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
     transitivePeerDependencies:
       - '@parcel/core'
       - napi-wasm
@@ -1671,6 +2154,45 @@ snapshots:
       - '@swc/helpers'
       - napi-wasm
 
+  '@parcel/config-default@2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))(@swc/helpers@0.5.17)':
+    dependencies:
+      '@parcel/bundler-default': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/compressor-raw': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/core': 2.16.1(@swc/helpers@0.5.17)
+      '@parcel/namer-default': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/optimizer-css': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/optimizer-html': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/optimizer-image': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/optimizer-svg': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/optimizer-swc': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))(@swc/helpers@0.5.17)
+      '@parcel/packager-css': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/packager-html': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/packager-js': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/packager-raw': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/packager-svg': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/packager-wasm': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/reporter-dev-server': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/resolver-default': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/runtime-browser-hmr': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/runtime-js': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/runtime-rsc': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/runtime-service-worker': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/transformer-babel': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/transformer-css': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/transformer-html': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/transformer-image': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/transformer-js': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/transformer-json': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/transformer-node': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/transformer-postcss': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/transformer-posthtml': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/transformer-raw': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/transformer-react-refresh-wrap': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/transformer-svg': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+    transitivePeerDependencies:
+      - '@swc/helpers'
+      - napi-wasm
+
   '@parcel/core@2.16.0(@swc/helpers@0.5.17)':
     dependencies:
       '@mischnic/json-sourcemap': 0.1.1
@@ -1702,16 +2224,58 @@ snapshots:
       - '@swc/helpers'
       - napi-wasm
 
+  '@parcel/core@2.16.1(@swc/helpers@0.5.17)':
+    dependencies:
+      '@mischnic/json-sourcemap': 0.1.1
+      '@parcel/cache': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/diagnostic': 2.16.1
+      '@parcel/events': 2.16.1
+      '@parcel/feature-flags': 2.16.1
+      '@parcel/fs': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/graph': 3.6.1
+      '@parcel/logger': 2.16.1
+      '@parcel/package-manager': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))(@swc/helpers@0.5.17)
+      '@parcel/plugin': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/profiler': 2.16.1
+      '@parcel/rust': 2.16.1
+      '@parcel/source-map': 2.1.1
+      '@parcel/types': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/utils': 2.16.1
+      '@parcel/workers': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      base-x: 3.0.11
+      browserslist: 4.27.0
+      clone: 2.1.2
+      dotenv: 16.6.1
+      dotenv-expand: 11.0.7
+      json5: 2.2.3
+      msgpackr: 1.11.5
+      nullthrows: 1.1.1
+      semver: 7.7.3
+    transitivePeerDependencies:
+      - '@swc/helpers'
+      - napi-wasm
+
   '@parcel/diagnostic@2.16.0':
+    dependencies:
+      '@mischnic/json-sourcemap': 0.1.1
+      nullthrows: 1.1.1
+
+  '@parcel/diagnostic@2.16.1':
     dependencies:
       '@mischnic/json-sourcemap': 0.1.1
       nullthrows: 1.1.1
 
   '@parcel/error-overlay@2.16.0': {}
 
+  '@parcel/error-overlay@2.16.1': {}
+
   '@parcel/events@2.16.0': {}
 
+  '@parcel/events@2.16.1': {}
+
   '@parcel/feature-flags@2.16.0': {}
+
+  '@parcel/feature-flags@2.16.1': {}
 
   '@parcel/fs@2.16.0(@parcel/core@2.16.0(@swc/helpers@0.5.17))':
     dependencies:
@@ -1725,9 +2289,26 @@ snapshots:
     transitivePeerDependencies:
       - napi-wasm
 
+  '@parcel/fs@2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))':
+    dependencies:
+      '@parcel/core': 2.16.1(@swc/helpers@0.5.17)
+      '@parcel/feature-flags': 2.16.1
+      '@parcel/rust': 2.16.1
+      '@parcel/types-internal': 2.16.1
+      '@parcel/utils': 2.16.1
+      '@parcel/watcher': 2.5.1
+      '@parcel/workers': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+    transitivePeerDependencies:
+      - napi-wasm
+
   '@parcel/graph@3.6.0':
     dependencies:
       '@parcel/feature-flags': 2.16.0
+      nullthrows: 1.1.1
+
+  '@parcel/graph@3.6.1':
+    dependencies:
+      '@parcel/feature-flags': 2.16.1
       nullthrows: 1.1.1
 
   '@parcel/logger@2.16.0':
@@ -1735,7 +2316,16 @@ snapshots:
       '@parcel/diagnostic': 2.16.0
       '@parcel/events': 2.16.0
 
+  '@parcel/logger@2.16.1':
+    dependencies:
+      '@parcel/diagnostic': 2.16.1
+      '@parcel/events': 2.16.1
+
   '@parcel/markdown-ansi@2.16.0':
+    dependencies:
+      chalk: 4.1.2
+
+  '@parcel/markdown-ansi@2.16.1':
     dependencies:
       chalk: 4.1.2
 
@@ -1743,6 +2333,15 @@ snapshots:
     dependencies:
       '@parcel/diagnostic': 2.16.0
       '@parcel/plugin': 2.16.0(@parcel/core@2.16.0(@swc/helpers@0.5.17))
+      nullthrows: 1.1.1
+    transitivePeerDependencies:
+      - '@parcel/core'
+      - napi-wasm
+
+  '@parcel/namer-default@2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))':
+    dependencies:
+      '@parcel/diagnostic': 2.16.1
+      '@parcel/plugin': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
       nullthrows: 1.1.1
     transitivePeerDependencies:
       - '@parcel/core'
@@ -1756,7 +2355,20 @@ snapshots:
       '@parcel/rust': 2.16.0
       '@parcel/utils': 2.16.0
       nullthrows: 1.1.1
-      semver: 7.7.2
+      semver: 7.7.3
+    transitivePeerDependencies:
+      - '@parcel/core'
+      - napi-wasm
+
+  '@parcel/node-resolver-core@3.7.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))':
+    dependencies:
+      '@mischnic/json-sourcemap': 0.1.1
+      '@parcel/diagnostic': 2.16.1
+      '@parcel/fs': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/rust': 2.16.1
+      '@parcel/utils': 2.16.1
+      nullthrows: 1.1.1
+      semver: 7.7.3
     transitivePeerDependencies:
       - '@parcel/core'
       - napi-wasm
@@ -1774,11 +2386,33 @@ snapshots:
       - '@parcel/core'
       - napi-wasm
 
+  '@parcel/optimizer-css@2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))':
+    dependencies:
+      '@parcel/diagnostic': 2.16.1
+      '@parcel/plugin': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/source-map': 2.1.1
+      '@parcel/utils': 2.16.1
+      browserslist: 4.27.0
+      lightningcss: 1.30.2
+      nullthrows: 1.1.1
+    transitivePeerDependencies:
+      - '@parcel/core'
+      - napi-wasm
+
   '@parcel/optimizer-html@2.16.0(@parcel/core@2.16.0(@swc/helpers@0.5.17))':
     dependencies:
       '@parcel/plugin': 2.16.0(@parcel/core@2.16.0(@swc/helpers@0.5.17))
       '@parcel/rust': 2.16.0
       '@parcel/utils': 2.16.0
+    transitivePeerDependencies:
+      - '@parcel/core'
+      - napi-wasm
+
+  '@parcel/optimizer-html@2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))':
+    dependencies:
+      '@parcel/plugin': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/rust': 2.16.1
+      '@parcel/utils': 2.16.1
     transitivePeerDependencies:
       - '@parcel/core'
       - napi-wasm
@@ -1794,11 +2428,31 @@ snapshots:
     transitivePeerDependencies:
       - napi-wasm
 
+  '@parcel/optimizer-image@2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))':
+    dependencies:
+      '@parcel/core': 2.16.1(@swc/helpers@0.5.17)
+      '@parcel/diagnostic': 2.16.1
+      '@parcel/plugin': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/rust': 2.16.1
+      '@parcel/utils': 2.16.1
+      '@parcel/workers': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+    transitivePeerDependencies:
+      - napi-wasm
+
   '@parcel/optimizer-svg@2.16.0(@parcel/core@2.16.0(@swc/helpers@0.5.17))':
     dependencies:
       '@parcel/plugin': 2.16.0(@parcel/core@2.16.0(@swc/helpers@0.5.17))
       '@parcel/rust': 2.16.0
       '@parcel/utils': 2.16.0
+    transitivePeerDependencies:
+      - '@parcel/core'
+      - napi-wasm
+
+  '@parcel/optimizer-svg@2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))':
+    dependencies:
+      '@parcel/plugin': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/rust': 2.16.1
+      '@parcel/utils': 2.16.1
     transitivePeerDependencies:
       - '@parcel/core'
       - napi-wasm
@@ -1810,6 +2464,19 @@ snapshots:
       '@parcel/source-map': 2.1.1
       '@parcel/utils': 2.16.0
       '@swc/core': 1.13.5(@swc/helpers@0.5.17)
+      nullthrows: 1.1.1
+    transitivePeerDependencies:
+      - '@parcel/core'
+      - '@swc/helpers'
+      - napi-wasm
+
+  '@parcel/optimizer-swc@2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))(@swc/helpers@0.5.17)':
+    dependencies:
+      '@parcel/diagnostic': 2.16.1
+      '@parcel/plugin': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/source-map': 2.1.1
+      '@parcel/utils': 2.16.1
+      '@swc/core': 1.15.1(@swc/helpers@0.5.17)
       nullthrows: 1.1.1
     transitivePeerDependencies:
       - '@parcel/core'
@@ -1832,6 +2499,22 @@ snapshots:
       - '@swc/helpers'
       - napi-wasm
 
+  '@parcel/package-manager@2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))(@swc/helpers@0.5.17)':
+    dependencies:
+      '@parcel/core': 2.16.1(@swc/helpers@0.5.17)
+      '@parcel/diagnostic': 2.16.1
+      '@parcel/fs': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/logger': 2.16.1
+      '@parcel/node-resolver-core': 3.7.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/types': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/utils': 2.16.1
+      '@parcel/workers': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@swc/core': 1.15.1(@swc/helpers@0.5.17)
+      semver: 7.7.3
+    transitivePeerDependencies:
+      - '@swc/helpers'
+      - napi-wasm
+
   '@parcel/packager-css@2.16.0(@parcel/core@2.16.0(@swc/helpers@0.5.17))':
     dependencies:
       '@parcel/diagnostic': 2.16.0
@@ -1844,12 +2527,34 @@ snapshots:
       - '@parcel/core'
       - napi-wasm
 
+  '@parcel/packager-css@2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))':
+    dependencies:
+      '@parcel/diagnostic': 2.16.1
+      '@parcel/plugin': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/source-map': 2.1.1
+      '@parcel/utils': 2.16.1
+      lightningcss: 1.30.2
+      nullthrows: 1.1.1
+    transitivePeerDependencies:
+      - '@parcel/core'
+      - napi-wasm
+
   '@parcel/packager-html@2.16.0(@parcel/core@2.16.0(@swc/helpers@0.5.17))':
     dependencies:
       '@parcel/plugin': 2.16.0(@parcel/core@2.16.0(@swc/helpers@0.5.17))
       '@parcel/rust': 2.16.0
       '@parcel/types': 2.16.0(@parcel/core@2.16.0(@swc/helpers@0.5.17))
       '@parcel/utils': 2.16.0
+    transitivePeerDependencies:
+      - '@parcel/core'
+      - napi-wasm
+
+  '@parcel/packager-html@2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))':
+    dependencies:
+      '@parcel/plugin': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/rust': 2.16.1
+      '@parcel/types': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/utils': 2.16.1
     transitivePeerDependencies:
       - '@parcel/core'
       - napi-wasm
@@ -1868,9 +2573,30 @@ snapshots:
       - '@parcel/core'
       - napi-wasm
 
+  '@parcel/packager-js@2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))':
+    dependencies:
+      '@parcel/diagnostic': 2.16.1
+      '@parcel/plugin': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/rust': 2.16.1
+      '@parcel/source-map': 2.1.1
+      '@parcel/types': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/utils': 2.16.1
+      globals: 13.24.0
+      nullthrows: 1.1.1
+    transitivePeerDependencies:
+      - '@parcel/core'
+      - napi-wasm
+
   '@parcel/packager-raw@2.16.0(@parcel/core@2.16.0(@swc/helpers@0.5.17))':
     dependencies:
       '@parcel/plugin': 2.16.0(@parcel/core@2.16.0(@swc/helpers@0.5.17))
+    transitivePeerDependencies:
+      - '@parcel/core'
+      - napi-wasm
+
+  '@parcel/packager-raw@2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))':
+    dependencies:
+      '@parcel/plugin': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
     transitivePeerDependencies:
       - '@parcel/core'
       - napi-wasm
@@ -1885,9 +2611,26 @@ snapshots:
       - '@parcel/core'
       - napi-wasm
 
+  '@parcel/packager-svg@2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))':
+    dependencies:
+      '@parcel/plugin': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/rust': 2.16.1
+      '@parcel/types': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/utils': 2.16.1
+    transitivePeerDependencies:
+      - '@parcel/core'
+      - napi-wasm
+
   '@parcel/packager-wasm@2.16.0(@parcel/core@2.16.0(@swc/helpers@0.5.17))':
     dependencies:
       '@parcel/plugin': 2.16.0(@parcel/core@2.16.0(@swc/helpers@0.5.17))
+    transitivePeerDependencies:
+      - '@parcel/core'
+      - napi-wasm
+
+  '@parcel/packager-wasm@2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))':
+    dependencies:
+      '@parcel/plugin': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
     transitivePeerDependencies:
       - '@parcel/core'
       - napi-wasm
@@ -1899,6 +2642,13 @@ snapshots:
       - '@parcel/core'
       - napi-wasm
 
+  '@parcel/plugin@2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))':
+    dependencies:
+      '@parcel/types': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+    transitivePeerDependencies:
+      - '@parcel/core'
+      - napi-wasm
+
   '@parcel/profiler@2.16.0':
     dependencies:
       '@parcel/diagnostic': 2.16.0
@@ -1906,11 +2656,18 @@ snapshots:
       '@parcel/types-internal': 2.16.0
       chrome-trace-event: 1.0.4
 
-  '@parcel/reporter-cli@2.16.0(@parcel/core@2.16.0(@swc/helpers@0.5.17))':
+  '@parcel/profiler@2.16.1':
     dependencies:
-      '@parcel/plugin': 2.16.0(@parcel/core@2.16.0(@swc/helpers@0.5.17))
-      '@parcel/types': 2.16.0(@parcel/core@2.16.0(@swc/helpers@0.5.17))
-      '@parcel/utils': 2.16.0
+      '@parcel/diagnostic': 2.16.1
+      '@parcel/events': 2.16.1
+      '@parcel/types-internal': 2.16.1
+      chrome-trace-event: 1.0.4
+
+  '@parcel/reporter-cli@2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))':
+    dependencies:
+      '@parcel/plugin': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/types': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/utils': 2.16.1
       chalk: 4.1.2
       term-size: 2.2.1
     transitivePeerDependencies:
@@ -1927,10 +2684,20 @@ snapshots:
       - '@parcel/core'
       - napi-wasm
 
-  '@parcel/reporter-tracer@2.16.0(@parcel/core@2.16.0(@swc/helpers@0.5.17))':
+  '@parcel/reporter-dev-server@2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))':
     dependencies:
-      '@parcel/plugin': 2.16.0(@parcel/core@2.16.0(@swc/helpers@0.5.17))
-      '@parcel/utils': 2.16.0
+      '@parcel/codeframe': 2.16.1
+      '@parcel/plugin': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/source-map': 2.1.1
+      '@parcel/utils': 2.16.1
+    transitivePeerDependencies:
+      - '@parcel/core'
+      - napi-wasm
+
+  '@parcel/reporter-tracer@2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))':
+    dependencies:
+      '@parcel/plugin': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/utils': 2.16.1
       chrome-trace-event: 1.0.4
       nullthrows: 1.1.1
     transitivePeerDependencies:
@@ -1945,10 +2712,26 @@ snapshots:
       - '@parcel/core'
       - napi-wasm
 
+  '@parcel/resolver-default@2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))':
+    dependencies:
+      '@parcel/node-resolver-core': 3.7.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/plugin': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+    transitivePeerDependencies:
+      - '@parcel/core'
+      - napi-wasm
+
   '@parcel/runtime-browser-hmr@2.16.0(@parcel/core@2.16.0(@swc/helpers@0.5.17))':
     dependencies:
       '@parcel/plugin': 2.16.0(@parcel/core@2.16.0(@swc/helpers@0.5.17))
       '@parcel/utils': 2.16.0
+    transitivePeerDependencies:
+      - '@parcel/core'
+      - napi-wasm
+
+  '@parcel/runtime-browser-hmr@2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))':
+    dependencies:
+      '@parcel/plugin': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/utils': 2.16.1
     transitivePeerDependencies:
       - '@parcel/core'
       - napi-wasm
@@ -1958,6 +2741,16 @@ snapshots:
       '@parcel/diagnostic': 2.16.0
       '@parcel/plugin': 2.16.0(@parcel/core@2.16.0(@swc/helpers@0.5.17))
       '@parcel/utils': 2.16.0
+      nullthrows: 1.1.1
+    transitivePeerDependencies:
+      - '@parcel/core'
+      - napi-wasm
+
+  '@parcel/runtime-js@2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))':
+    dependencies:
+      '@parcel/diagnostic': 2.16.1
+      '@parcel/plugin': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/utils': 2.16.1
       nullthrows: 1.1.1
     transitivePeerDependencies:
       - '@parcel/core'
@@ -1973,6 +2766,16 @@ snapshots:
       - '@parcel/core'
       - napi-wasm
 
+  '@parcel/runtime-rsc@2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))':
+    dependencies:
+      '@parcel/plugin': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/rust': 2.16.1
+      '@parcel/utils': 2.16.1
+      nullthrows: 1.1.1
+    transitivePeerDependencies:
+      - '@parcel/core'
+      - napi-wasm
+
   '@parcel/runtime-service-worker@2.16.0(@parcel/core@2.16.0(@swc/helpers@0.5.17))':
     dependencies:
       '@parcel/plugin': 2.16.0(@parcel/core@2.16.0(@swc/helpers@0.5.17))
@@ -1982,28 +2785,61 @@ snapshots:
       - '@parcel/core'
       - napi-wasm
 
+  '@parcel/runtime-service-worker@2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))':
+    dependencies:
+      '@parcel/plugin': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/utils': 2.16.1
+      nullthrows: 1.1.1
+    transitivePeerDependencies:
+      - '@parcel/core'
+      - napi-wasm
+
   '@parcel/rust-darwin-arm64@2.16.0':
+    optional: true
+
+  '@parcel/rust-darwin-arm64@2.16.1':
     optional: true
 
   '@parcel/rust-darwin-x64@2.16.0':
     optional: true
 
+  '@parcel/rust-darwin-x64@2.16.1':
+    optional: true
+
   '@parcel/rust-linux-arm-gnueabihf@2.16.0':
+    optional: true
+
+  '@parcel/rust-linux-arm-gnueabihf@2.16.1':
     optional: true
 
   '@parcel/rust-linux-arm64-gnu@2.16.0':
     optional: true
 
+  '@parcel/rust-linux-arm64-gnu@2.16.1':
+    optional: true
+
   '@parcel/rust-linux-arm64-musl@2.16.0':
+    optional: true
+
+  '@parcel/rust-linux-arm64-musl@2.16.1':
     optional: true
 
   '@parcel/rust-linux-x64-gnu@2.16.0':
     optional: true
 
+  '@parcel/rust-linux-x64-gnu@2.16.1':
+    optional: true
+
   '@parcel/rust-linux-x64-musl@2.16.0':
     optional: true
 
+  '@parcel/rust-linux-x64-musl@2.16.1':
+    optional: true
+
   '@parcel/rust-win32-x64-msvc@2.16.0':
+    optional: true
+
+  '@parcel/rust-win32-x64-msvc@2.16.1':
     optional: true
 
   '@parcel/rust@2.16.0':
@@ -2016,6 +2852,17 @@ snapshots:
       '@parcel/rust-linux-x64-gnu': 2.16.0
       '@parcel/rust-linux-x64-musl': 2.16.0
       '@parcel/rust-win32-x64-msvc': 2.16.0
+
+  '@parcel/rust@2.16.1':
+    optionalDependencies:
+      '@parcel/rust-darwin-arm64': 2.16.1
+      '@parcel/rust-darwin-x64': 2.16.1
+      '@parcel/rust-linux-arm-gnueabihf': 2.16.1
+      '@parcel/rust-linux-arm64-gnu': 2.16.1
+      '@parcel/rust-linux-arm64-musl': 2.16.1
+      '@parcel/rust-linux-x64-gnu': 2.16.1
+      '@parcel/rust-linux-x64-musl': 2.16.1
+      '@parcel/rust-win32-x64-msvc': 2.16.1
 
   '@parcel/source-map@2.1.1':
     dependencies:
@@ -2035,6 +2882,20 @@ snapshots:
       - '@parcel/core'
       - napi-wasm
 
+  '@parcel/transformer-babel@2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))':
+    dependencies:
+      '@parcel/diagnostic': 2.16.1
+      '@parcel/plugin': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/source-map': 2.1.1
+      '@parcel/utils': 2.16.1
+      browserslist: 4.27.0
+      json5: 2.2.3
+      nullthrows: 1.1.1
+      semver: 7.7.3
+    transitivePeerDependencies:
+      - '@parcel/core'
+      - napi-wasm
+
   '@parcel/transformer-css@2.16.0(@parcel/core@2.16.0(@swc/helpers@0.5.17))':
     dependencies:
       '@parcel/diagnostic': 2.16.0
@@ -2043,6 +2904,19 @@ snapshots:
       '@parcel/utils': 2.16.0
       browserslist: 4.26.2
       lightningcss: 1.30.1
+      nullthrows: 1.1.1
+    transitivePeerDependencies:
+      - '@parcel/core'
+      - napi-wasm
+
+  '@parcel/transformer-css@2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))':
+    dependencies:
+      '@parcel/diagnostic': 2.16.1
+      '@parcel/plugin': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/source-map': 2.1.1
+      '@parcel/utils': 2.16.1
+      browserslist: 4.27.0
+      lightningcss: 1.30.2
       nullthrows: 1.1.1
     transitivePeerDependencies:
       - '@parcel/core'
@@ -2057,12 +2931,31 @@ snapshots:
       - '@parcel/core'
       - napi-wasm
 
+  '@parcel/transformer-html@2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))':
+    dependencies:
+      '@parcel/diagnostic': 2.16.1
+      '@parcel/plugin': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/rust': 2.16.1
+    transitivePeerDependencies:
+      - '@parcel/core'
+      - napi-wasm
+
   '@parcel/transformer-image@2.16.0(@parcel/core@2.16.0(@swc/helpers@0.5.17))':
     dependencies:
       '@parcel/core': 2.16.0(@swc/helpers@0.5.17)
       '@parcel/plugin': 2.16.0(@parcel/core@2.16.0(@swc/helpers@0.5.17))
       '@parcel/utils': 2.16.0
       '@parcel/workers': 2.16.0(@parcel/core@2.16.0(@swc/helpers@0.5.17))
+      nullthrows: 1.1.1
+    transitivePeerDependencies:
+      - napi-wasm
+
+  '@parcel/transformer-image@2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))':
+    dependencies:
+      '@parcel/core': 2.16.1(@swc/helpers@0.5.17)
+      '@parcel/plugin': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/utils': 2.16.1
+      '@parcel/workers': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
       nullthrows: 1.1.1
     transitivePeerDependencies:
       - napi-wasm
@@ -2084,6 +2977,23 @@ snapshots:
     transitivePeerDependencies:
       - napi-wasm
 
+  '@parcel/transformer-js@2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))':
+    dependencies:
+      '@parcel/core': 2.16.1(@swc/helpers@0.5.17)
+      '@parcel/diagnostic': 2.16.1
+      '@parcel/plugin': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/rust': 2.16.1
+      '@parcel/source-map': 2.1.1
+      '@parcel/utils': 2.16.1
+      '@parcel/workers': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@swc/helpers': 0.5.17
+      browserslist: 4.27.0
+      nullthrows: 1.1.1
+      regenerator-runtime: 0.14.1
+      semver: 7.7.3
+    transitivePeerDependencies:
+      - napi-wasm
+
   '@parcel/transformer-json@2.16.0(@parcel/core@2.16.0(@swc/helpers@0.5.17))':
     dependencies:
       '@parcel/plugin': 2.16.0(@parcel/core@2.16.0(@swc/helpers@0.5.17))
@@ -2092,9 +3002,24 @@ snapshots:
       - '@parcel/core'
       - napi-wasm
 
+  '@parcel/transformer-json@2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))':
+    dependencies:
+      '@parcel/plugin': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      json5: 2.2.3
+    transitivePeerDependencies:
+      - '@parcel/core'
+      - napi-wasm
+
   '@parcel/transformer-node@2.16.0(@parcel/core@2.16.0(@swc/helpers@0.5.17))':
     dependencies:
       '@parcel/plugin': 2.16.0(@parcel/core@2.16.0(@swc/helpers@0.5.17))
+    transitivePeerDependencies:
+      - '@parcel/core'
+      - napi-wasm
+
+  '@parcel/transformer-node@2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))':
+    dependencies:
+      '@parcel/plugin': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
     transitivePeerDependencies:
       - '@parcel/core'
       - napi-wasm
@@ -2113,6 +3038,20 @@ snapshots:
       - '@parcel/core'
       - napi-wasm
 
+  '@parcel/transformer-postcss@2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))':
+    dependencies:
+      '@parcel/diagnostic': 2.16.1
+      '@parcel/plugin': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/rust': 2.16.1
+      '@parcel/utils': 2.16.1
+      clone: 2.1.2
+      nullthrows: 1.1.1
+      postcss-value-parser: 4.2.0
+      semver: 7.7.3
+    transitivePeerDependencies:
+      - '@parcel/core'
+      - napi-wasm
+
   '@parcel/transformer-posthtml@2.16.0(@parcel/core@2.16.0(@swc/helpers@0.5.17))':
     dependencies:
       '@parcel/plugin': 2.16.0(@parcel/core@2.16.0(@swc/helpers@0.5.17))
@@ -2121,9 +3060,24 @@ snapshots:
       - '@parcel/core'
       - napi-wasm
 
+  '@parcel/transformer-posthtml@2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))':
+    dependencies:
+      '@parcel/plugin': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/utils': 2.16.1
+    transitivePeerDependencies:
+      - '@parcel/core'
+      - napi-wasm
+
   '@parcel/transformer-raw@2.16.0(@parcel/core@2.16.0(@swc/helpers@0.5.17))':
     dependencies:
       '@parcel/plugin': 2.16.0(@parcel/core@2.16.0(@swc/helpers@0.5.17))
+    transitivePeerDependencies:
+      - '@parcel/core'
+      - napi-wasm
+
+  '@parcel/transformer-raw@2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))':
+    dependencies:
+      '@parcel/plugin': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
     transitivePeerDependencies:
       - '@parcel/core'
       - napi-wasm
@@ -2138,11 +3092,30 @@ snapshots:
       - '@parcel/core'
       - napi-wasm
 
+  '@parcel/transformer-react-refresh-wrap@2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))':
+    dependencies:
+      '@parcel/error-overlay': 2.16.1
+      '@parcel/plugin': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/utils': 2.16.1
+      react-refresh: 0.16.0
+    transitivePeerDependencies:
+      - '@parcel/core'
+      - napi-wasm
+
   '@parcel/transformer-svg@2.16.0(@parcel/core@2.16.0(@swc/helpers@0.5.17))':
     dependencies:
       '@parcel/diagnostic': 2.16.0
       '@parcel/plugin': 2.16.0(@parcel/core@2.16.0(@swc/helpers@0.5.17))
       '@parcel/rust': 2.16.0
+    transitivePeerDependencies:
+      - '@parcel/core'
+      - napi-wasm
+
+  '@parcel/transformer-svg@2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))':
+    dependencies:
+      '@parcel/diagnostic': 2.16.1
+      '@parcel/plugin': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/rust': 2.16.1
     transitivePeerDependencies:
       - '@parcel/core'
       - napi-wasm
@@ -2154,10 +3127,25 @@ snapshots:
       '@parcel/source-map': 2.1.1
       utility-types: 3.11.0
 
+  '@parcel/types-internal@2.16.1':
+    dependencies:
+      '@parcel/diagnostic': 2.16.1
+      '@parcel/feature-flags': 2.16.1
+      '@parcel/source-map': 2.1.1
+      utility-types: 3.11.0
+
   '@parcel/types@2.16.0(@parcel/core@2.16.0(@swc/helpers@0.5.17))':
     dependencies:
       '@parcel/types-internal': 2.16.0
       '@parcel/workers': 2.16.0(@parcel/core@2.16.0(@swc/helpers@0.5.17))
+    transitivePeerDependencies:
+      - '@parcel/core'
+      - napi-wasm
+
+  '@parcel/types@2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))':
+    dependencies:
+      '@parcel/types-internal': 2.16.1
+      '@parcel/workers': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
     transitivePeerDependencies:
       - '@parcel/core'
       - napi-wasm
@@ -2169,6 +3157,19 @@ snapshots:
       '@parcel/logger': 2.16.0
       '@parcel/markdown-ansi': 2.16.0
       '@parcel/rust': 2.16.0
+      '@parcel/source-map': 2.1.1
+      chalk: 4.1.2
+      nullthrows: 1.1.1
+    transitivePeerDependencies:
+      - napi-wasm
+
+  '@parcel/utils@2.16.1':
+    dependencies:
+      '@parcel/codeframe': 2.16.1
+      '@parcel/diagnostic': 2.16.1
+      '@parcel/logger': 2.16.1
+      '@parcel/markdown-ansi': 2.16.1
+      '@parcel/rust': 2.16.1
       '@parcel/source-map': 2.1.1
       chalk: 4.1.2
       nullthrows: 1.1.1
@@ -2243,6 +3244,18 @@ snapshots:
       '@parcel/profiler': 2.16.0
       '@parcel/types-internal': 2.16.0
       '@parcel/utils': 2.16.0
+      nullthrows: 1.1.1
+    transitivePeerDependencies:
+      - napi-wasm
+
+  '@parcel/workers@2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))':
+    dependencies:
+      '@parcel/core': 2.16.1(@swc/helpers@0.5.17)
+      '@parcel/diagnostic': 2.16.1
+      '@parcel/logger': 2.16.1
+      '@parcel/profiler': 2.16.1
+      '@parcel/types-internal': 2.16.1
+      '@parcel/utils': 2.16.1
       nullthrows: 1.1.1
     transitivePeerDependencies:
       - napi-wasm
@@ -2445,31 +3458,61 @@ snapshots:
   '@swc/core-darwin-arm64@1.13.5':
     optional: true
 
+  '@swc/core-darwin-arm64@1.15.1':
+    optional: true
+
   '@swc/core-darwin-x64@1.13.5':
+    optional: true
+
+  '@swc/core-darwin-x64@1.15.1':
     optional: true
 
   '@swc/core-linux-arm-gnueabihf@1.13.5':
     optional: true
 
+  '@swc/core-linux-arm-gnueabihf@1.15.1':
+    optional: true
+
   '@swc/core-linux-arm64-gnu@1.13.5':
+    optional: true
+
+  '@swc/core-linux-arm64-gnu@1.15.1':
     optional: true
 
   '@swc/core-linux-arm64-musl@1.13.5':
     optional: true
 
+  '@swc/core-linux-arm64-musl@1.15.1':
+    optional: true
+
   '@swc/core-linux-x64-gnu@1.13.5':
+    optional: true
+
+  '@swc/core-linux-x64-gnu@1.15.1':
     optional: true
 
   '@swc/core-linux-x64-musl@1.13.5':
     optional: true
 
+  '@swc/core-linux-x64-musl@1.15.1':
+    optional: true
+
   '@swc/core-win32-arm64-msvc@1.13.5':
+    optional: true
+
+  '@swc/core-win32-arm64-msvc@1.15.1':
     optional: true
 
   '@swc/core-win32-ia32-msvc@1.13.5':
     optional: true
 
+  '@swc/core-win32-ia32-msvc@1.15.1':
+    optional: true
+
   '@swc/core-win32-x64-msvc@1.13.5':
+    optional: true
+
+  '@swc/core-win32-x64-msvc@1.15.1':
     optional: true
 
   '@swc/core@1.13.5(@swc/helpers@0.5.17)':
@@ -2487,6 +3530,23 @@ snapshots:
       '@swc/core-win32-arm64-msvc': 1.13.5
       '@swc/core-win32-ia32-msvc': 1.13.5
       '@swc/core-win32-x64-msvc': 1.13.5
+      '@swc/helpers': 0.5.17
+
+  '@swc/core@1.15.1(@swc/helpers@0.5.17)':
+    dependencies:
+      '@swc/counter': 0.1.3
+      '@swc/types': 0.1.25
+    optionalDependencies:
+      '@swc/core-darwin-arm64': 1.15.1
+      '@swc/core-darwin-x64': 1.15.1
+      '@swc/core-linux-arm-gnueabihf': 1.15.1
+      '@swc/core-linux-arm64-gnu': 1.15.1
+      '@swc/core-linux-arm64-musl': 1.15.1
+      '@swc/core-linux-x64-gnu': 1.15.1
+      '@swc/core-linux-x64-musl': 1.15.1
+      '@swc/core-win32-arm64-msvc': 1.15.1
+      '@swc/core-win32-ia32-msvc': 1.15.1
+      '@swc/core-win32-x64-msvc': 1.15.1
       '@swc/helpers': 0.5.17
 
   '@swc/counter@0.1.3': {}
@@ -2514,6 +3574,8 @@ snapshots:
     dependencies:
       safe-buffer: 5.2.1
 
+  baseline-browser-mapping@2.8.25: {}
+
   baseline-browser-mapping@2.8.6: {}
 
   braces@3.0.3:
@@ -2528,7 +3590,17 @@ snapshots:
       node-releases: 2.0.21
       update-browserslist-db: 1.1.3(browserslist@4.26.2)
 
+  browserslist@4.27.0:
+    dependencies:
+      baseline-browser-mapping: 2.8.25
+      caniuse-lite: 1.0.30001754
+      electron-to-chromium: 1.5.249
+      node-releases: 2.0.27
+      update-browserslist-db: 1.1.4(browserslist@4.27.0)
+
   caniuse-lite@1.0.30001743: {}
+
+  caniuse-lite@1.0.30001754: {}
 
   chalk@4.1.2:
     dependencies:
@@ -2555,6 +3627,8 @@ snapshots:
 
   detect-libc@2.1.0: {}
 
+  detect-libc@2.1.2: {}
+
   dotenv-expand@11.0.7:
     dependencies:
       dotenv: 16.6.1
@@ -2562,6 +3636,8 @@ snapshots:
   dotenv@16.6.1: {}
 
   electron-to-chromium@1.5.222: {}
+
+  electron-to-chromium@1.5.249: {}
 
   esbuild@0.25.11:
     optionalDependencies:
@@ -2631,34 +3707,67 @@ snapshots:
 
   json5@2.2.3: {}
 
+  lightningcss-android-arm64@1.30.2:
+    optional: true
+
   lightningcss-darwin-arm64@1.30.1:
+    optional: true
+
+  lightningcss-darwin-arm64@1.30.2:
     optional: true
 
   lightningcss-darwin-x64@1.30.1:
     optional: true
 
+  lightningcss-darwin-x64@1.30.2:
+    optional: true
+
   lightningcss-freebsd-x64@1.30.1:
+    optional: true
+
+  lightningcss-freebsd-x64@1.30.2:
     optional: true
 
   lightningcss-linux-arm-gnueabihf@1.30.1:
     optional: true
 
+  lightningcss-linux-arm-gnueabihf@1.30.2:
+    optional: true
+
   lightningcss-linux-arm64-gnu@1.30.1:
+    optional: true
+
+  lightningcss-linux-arm64-gnu@1.30.2:
     optional: true
 
   lightningcss-linux-arm64-musl@1.30.1:
     optional: true
 
+  lightningcss-linux-arm64-musl@1.30.2:
+    optional: true
+
   lightningcss-linux-x64-gnu@1.30.1:
+    optional: true
+
+  lightningcss-linux-x64-gnu@1.30.2:
     optional: true
 
   lightningcss-linux-x64-musl@1.30.1:
     optional: true
 
+  lightningcss-linux-x64-musl@1.30.2:
+    optional: true
+
   lightningcss-win32-arm64-msvc@1.30.1:
     optional: true
 
+  lightningcss-win32-arm64-msvc@1.30.2:
+    optional: true
+
   lightningcss-win32-x64-msvc@1.30.1:
+    optional: true
+
+  lightningcss-win32-x64-msvc@1.30.2:
     optional: true
 
   lightningcss@1.30.1:
@@ -2675,6 +3784,22 @@ snapshots:
       lightningcss-linux-x64-musl: 1.30.1
       lightningcss-win32-arm64-msvc: 1.30.1
       lightningcss-win32-x64-msvc: 1.30.1
+
+  lightningcss@1.30.2:
+    dependencies:
+      detect-libc: 2.1.2
+    optionalDependencies:
+      lightningcss-android-arm64: 1.30.2
+      lightningcss-darwin-arm64: 1.30.2
+      lightningcss-darwin-x64: 1.30.2
+      lightningcss-freebsd-x64: 1.30.2
+      lightningcss-linux-arm-gnueabihf: 1.30.2
+      lightningcss-linux-arm64-gnu: 1.30.2
+      lightningcss-linux-arm64-musl: 1.30.2
+      lightningcss-linux-x64-gnu: 1.30.2
+      lightningcss-linux-x64-musl: 1.30.2
+      lightningcss-win32-arm64-msvc: 1.30.2
+      lightningcss-win32-x64-msvc: 1.30.2
 
   lmdb@2.8.5:
     dependencies:
@@ -2724,33 +3849,35 @@ snapshots:
 
   node-gyp-build-optional-packages@5.1.1:
     dependencies:
-      detect-libc: 2.1.0
+      detect-libc: 2.1.2
 
   node-gyp-build-optional-packages@5.2.2:
     dependencies:
-      detect-libc: 2.1.0
+      detect-libc: 2.1.2
     optional: true
 
   node-releases@2.0.21: {}
+
+  node-releases@2.0.27: {}
 
   nullthrows@1.1.1: {}
 
   ordered-binary@1.6.0: {}
 
-  parcel@2.16.0(@swc/helpers@0.5.17):
+  parcel@2.16.1(@swc/helpers@0.5.17):
     dependencies:
-      '@parcel/config-default': 2.16.0(@parcel/core@2.16.0(@swc/helpers@0.5.17))(@swc/helpers@0.5.17)
-      '@parcel/core': 2.16.0(@swc/helpers@0.5.17)
-      '@parcel/diagnostic': 2.16.0
-      '@parcel/events': 2.16.0
-      '@parcel/feature-flags': 2.16.0
-      '@parcel/fs': 2.16.0(@parcel/core@2.16.0(@swc/helpers@0.5.17))
-      '@parcel/logger': 2.16.0
-      '@parcel/package-manager': 2.16.0(@parcel/core@2.16.0(@swc/helpers@0.5.17))(@swc/helpers@0.5.17)
-      '@parcel/reporter-cli': 2.16.0(@parcel/core@2.16.0(@swc/helpers@0.5.17))
-      '@parcel/reporter-dev-server': 2.16.0(@parcel/core@2.16.0(@swc/helpers@0.5.17))
-      '@parcel/reporter-tracer': 2.16.0(@parcel/core@2.16.0(@swc/helpers@0.5.17))
-      '@parcel/utils': 2.16.0
+      '@parcel/config-default': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))(@swc/helpers@0.5.17)
+      '@parcel/core': 2.16.1(@swc/helpers@0.5.17)
+      '@parcel/diagnostic': 2.16.1
+      '@parcel/events': 2.16.1
+      '@parcel/feature-flags': 2.16.1
+      '@parcel/fs': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/logger': 2.16.1
+      '@parcel/package-manager': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))(@swc/helpers@0.5.17)
+      '@parcel/reporter-cli': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/reporter-dev-server': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/reporter-tracer': 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
+      '@parcel/utils': 2.16.1
       chalk: 4.1.2
       commander: 12.1.0
       get-port: 4.2.0
@@ -2828,6 +3955,8 @@ snapshots:
 
   semver@7.7.2: {}
 
+  semver@7.7.3: {}
+
   source-map-js@1.2.1: {}
 
   supports-color@7.2.0:
@@ -2855,9 +3984,15 @@ snapshots:
       escalade: 3.2.0
       picocolors: 1.1.1
 
+  update-browserslist-db@1.1.4(browserslist@4.27.0):
+    dependencies:
+      browserslist: 4.27.0
+      escalade: 3.2.0
+      picocolors: 1.1.1
+
   utility-types@3.11.0: {}
 
-  vite@7.1.12(jiti@2.6.1)(lightningcss@1.30.1):
+  vite@7.1.12(jiti@2.6.1)(lightningcss@1.30.2):
     dependencies:
       esbuild: 0.25.11
       fdir: 6.5.0(picomatch@4.0.3)
@@ -2868,6 +4003,6 @@ snapshots:
     optionalDependencies:
       fsevents: 2.3.3
       jiti: 2.6.1
-      lightningcss: 1.30.1
+      lightningcss: 1.30.2
 
   weak-lru-cache@1.2.2: {}

@@ -22,7 +22,7 @@
     "@rsbuild/core": "^1.5.17",
     "@rspack/core": "^1.5.8",
     "esbuild": "^0.25.11",
-    "parcel": "^2.16.0",
+    "parcel": "^2.16.1",
     "rolldown": "1.0.0-beta.45",
     "rollup": "^4.52.5",
     "vite": "^7.1.12"
