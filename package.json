@@ -21,7 +21,7 @@
     "@rollup/plugin-commonjs": "^28.0.9",
     "@rsbuild/core": "^1.5.17",
     "@rspack/core": "^1.5.8",
-    "esbuild": "^0.25.11",
+    "esbuild": "^0.27.0",
     "parcel": "^2.16.0",
     "rolldown": "1.0.0-beta.45",
     "rollup": "^4.52.5",
