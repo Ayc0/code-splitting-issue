@@ -6,10 +6,6 @@ jobs:
   tests:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [24.4.1]
-
     steps:
       - name: Checkout
         uses: actions/checkout@v5
@@ -17,10 +13,10 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v4
 
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version-file: "package.json"
           cache: 'pnpm'
 
       - name: Install packages
