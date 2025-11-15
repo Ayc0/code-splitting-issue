@@ -137,59 +137,59 @@ Those have been ported in the table before, but the last benchmark is available 
 <details><summary>Values</summary>
 
 ```
-🎉 Benchmark completed in 18.82 seconds
-📄 Results saved to: benchmarks/results-2025-11-15T12:22:39.208Z.csv
+🎉 Benchmark completed in 18.84 seconds
+📄 Results saved to: benchmarks/results-2025-11-15T12:49:23.646Z.csv
 
 📊 Summary Statistics:
 ==================================================
-esbuild:
-  Average: 10.45ms
-  Median:  10.37ms
-  Stddev:  0.32ms
-  Min:     9.89ms
-  Max:     11.35ms
+esbuild (esbuild@0.27.0):
+  Average: 10.80ms
+  Median:  10.28ms
+  Stddev:  1.70ms
+  Min:     9.81ms
+  Max:     16.61ms
 
-parcel:
-  Average: 374.40ms
-  Median:  369.55ms
-  Stddev:  15.96ms
-  Min:     360.64ms
-  Max:     441.04ms
+parcel (@parcel/core@2.16.1):
+  Average: 379.66ms
+  Median:  372.38ms
+  Stddev:  25.38ms
+  Min:     357.03ms
+  Max:     464.67ms
 
-rollup:
-  Average: 27.40ms
-  Median:  27.33ms
+rollup (rollup@4.53.2):
+  Average: 27.19ms
+  Median:  27.20ms
+  Stddev:  0.45ms
+  Min:     26.41ms
+  Max:     28.37ms
+
+rspack (@rspack/core@1.6.3):
+  Average: 30.43ms
+  Median:  30.52ms
   Stddev:  0.71ms
-  Min:     26.20ms
-  Max:     29.34ms
+  Min:     29.29ms
+  Max:     31.84ms
 
-rspack:
-  Average: 30.82ms
-  Median:  30.59ms
-  Stddev:  1.01ms
-  Min:     29.10ms
-  Max:     33.68ms
+vite (vite@7.2.2):
+  Average: 78.70ms
+  Median:  78.49ms
+  Stddev:  1.94ms
+  Min:     73.85ms
+  Max:     83.04ms
 
-vite:
-  Average: 78.80ms
-  Median:  78.28ms
-  Stddev:  1.90ms
-  Min:     76.77ms
-  Max:     84.47ms
+rolldown (rolldown@1.0.0-beta.50):
+  Average: 6.42ms
+  Median:  6.41ms
+  Stddev:  0.26ms
+  Min:     5.90ms
+  Max:     6.97ms
 
-rolldown:
-  Average: 6.61ms
-  Median:  6.55ms
-  Stddev:  0.54ms
-  Min:     5.94ms
-  Max:     8.76ms
-
-rsbuild:
-  Average: 46.64ms
-  Median:  46.47ms
-  Stddev:  0.94ms
-  Min:     45.28ms
-  Max:     49.25ms
+rsbuild (@rsbuild/core@1.6.6):
+  Average: 46.34ms
+  Median:  46.42ms
+  Stddev:  1.14ms
+  Min:     44.24ms
+  Max:     49.32ms
 ```
 
 </details>
