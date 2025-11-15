@@ -4,7 +4,7 @@ import path from 'path';
 
 // Configuration
 const NUM_RUNS = 25;
-const BUNDLERS = ['esbuild', 'parcel', 'rolldown', 'rollup', 'rsbuild', 'rspack', 'vite'];
+const BUNDLERS = ['esbuild', 'parcel', 'rollup',  'rspack', 'vite', 'rolldown', 'rsbuild'];
 
 // Storage for all timing results
 const results = [];
