@@ -1,23 +1,59 @@
+// @ts-check
+
 import { execSync } from 'child_process';
 import fs from 'fs';
 import path from 'path';
 
+import packageJSON from './package.json' with { type: "json" };
+
+/**
+ * @typedef {{name: string, package: string, version: string, longDisplayName: string, shortDisplayName: string}} Bundler
+ */
+
 // Configuration
 const NUM_RUNS = 25;
-const BUNDLERS = ['esbuild', 'parcel', 'rolldown', 'rollup', 'rsbuild', 'rspack', 'vite'];
 
-// Storage for all timing results
+/**
+ * @type {Bundler[]}
+ */
+const BUNDLERS = [
+    { name: 'esbuild', package: 'esbuild' },
+    { name: 'parcel', package: '@parcel/core' },
+    { name: 'rollup', package: 'rollup' },
+    { name:  'rspack', package: '@rspack/core' },
+    { name: 'vite', package: 'vite' },
+    { name: 'rolldown', package: 'rolldown' },
+    { name: 'rsbuild', package: '@rsbuild/core' },
+].map(bundler => {
+    const version = packageJSON.devDependencies[bundler.package];
+    return {
+        name: bundler.name,
+        package: bundler.package,
+        version,
+        shortDisplayName: `${bundler.package}@${version}`,
+        longDisplayName: `${bundler.name} (${bundler.package}@${version})`,
+    };
+});
+
+/**
+ * @typedef {Record<string, number | null>} Result
+ */
+
+/**
+ * Storage for all timing results
+ * @type {Result[]}
+ */
 const results = [];
 
 /**
  * Extract timing from test output for a specific bundler
  * @param {string} output - The test output
- * @param {string} bundler - The bundler name
+ * @param {Bundler} bundler - The bundler name
  * @returns {number|null} - The timing in milliseconds or null if not found
  */
 function extractTiming(output, bundler) {
     // Pattern: ✔ builds and tree-shakes using [bundler] ([time]ms)
-    const pattern = new RegExp(`✔ builds and tree-shakes using ${bundler}.*\\(([0-9.]+)ms\\)`, 'i');
+    const pattern = new RegExp(`✔ builds and tree-shakes using ${bundler.name}.*\\(([0-9.]+)ms\\)`, 'i');
     const match = output.match(pattern);
 
     if (match && match[1]) {
@@ -30,7 +66,7 @@ function extractTiming(output, bundler) {
 /**
  * Run pnpm test and extract timing data
  * @param {number} runNumber - The current run number
- * @returns {Object} - Object with bundler timings
+ * @returns {Result} - Object with bundler timings
  */
 function runTest(runNumber) {
     console.log(`Running test ${runNumber}/${NUM_RUNS}...`);
@@ -43,14 +79,15 @@ function runTest(runNumber) {
             cwd: process.cwd()
         });
 
+        /** @type {Result} */
         const runResults = {};
 
         for (const bundler of BUNDLERS) {
             const timing = extractTiming(output, bundler);
-            runResults[bundler] = timing;
+            runResults[bundler.name] = timing;
 
             if (timing === null) {
-                console.warn(`⚠️  Could not extract timing for ${bundler} in run ${runNumber}`);
+                console.warn(`⚠️  Could not extract timing for ${bundler.name} in run ${runNumber}`);
             }
         }
 
@@ -59,9 +96,11 @@ function runTest(runNumber) {
         console.error(`❌ Error running test ${runNumber}:`, error.message);
 
         // Return null values for this run
+
+        /** @type {Result} */
         const runResults = {};
         for (const bundler of BUNDLERS) {
-            runResults[bundler] = null;
+            runResults[bundler.name] = null;
         }
         return runResults;
     }
@@ -78,13 +117,12 @@ function generateCSV(results) {
     }
 
     // Create header
-    const headers = [...BUNDLERS];
-    let csv = headers.join(',') + '\n';
+    let csv = [...BUNDLERS.map(bundler => bundler.shortDisplayName)].join(',') + '\n';
 
     // Add data rows
     for (const result of results) {
-        const row = headers.map(header => {
-            const value = result[header];
+        const row = BUNDLERS.map(bundler => {
+            const value = result[bundler.name];
             return value !== null && value !== undefined ? value : '';
         });
         csv += row.join(',') + '\n';
@@ -95,7 +133,7 @@ function generateCSV(results) {
 
 /**
  * Calculate and display summary statistics
- * @param {Array} results - Array of result objects
+ * @param {Result[]} results - Array of result objects
  */
 function displaySummary(results) {
     console.log('\n📊 Summary Statistics:');
@@ -103,11 +141,11 @@ function displaySummary(results) {
 
     for (const bundler of BUNDLERS) {
         const timings = results
-            .map(r => r[bundler])
+            .map(r => r[bundler.name])
             .filter(t => t !== null && t !== undefined);
 
         if (timings.length === 0) {
-            console.log(`${bundler}: No valid timings`);
+            console.log(`${bundler.name}: No valid timings`);
             continue;
         }
 
@@ -115,7 +153,7 @@ function displaySummary(results) {
         const avg = sum / timings.length;
         const min = Math.min(...timings);
         const max = Math.max(...timings);
-        const sorted = timings.toSorted((a, b) => a - b);
+        const sorted = [...timings].sort((a, b) => a - b);
         const median = sorted.length % 2 === 0
             ? (sorted[sorted.length / 2 - 1] + sorted[sorted.length / 2]) / 2
             : sorted[Math.floor(sorted.length / 2)];
@@ -124,7 +162,7 @@ function displaySummary(results) {
             timings.reduce((cumDev, t) => cumDev + Math.pow(t - avg, 2), 0) / timings.length
         );
 
-        console.log(`${bundler}:`);
+        console.log(`${bundler.longDisplayName}:`);
         console.log(`  Average: ${avg.toFixed(2)}ms`);
         console.log(`  Median:  ${median.toFixed(2)}ms`);
         console.log(`  Stddev:  ${stddev.toFixed(2)}ms`);
@@ -139,7 +177,7 @@ function displaySummary(results) {
  */
 async function main() {
     console.log('🚀 Starting bundler performance benchmark...');
-    console.log(`📊 Running ${NUM_RUNS} iterations for bundlers: ${BUNDLERS.join(', ')}`);
+    console.log(`📊 Running ${NUM_RUNS} iterations for bundlers: ${BUNDLERS.map(bundler => bundler.name).join(', ')}`);
     console.log('');
 
     // Run 1 batch of tests just to warm up the Node engine (the 1st run is always slower)
@@ -175,8 +213,6 @@ async function main() {
 
     // Display summary
     displaySummary(results);
-
-    console.log(`\n📁 CSV file location: ${path.resolve(csvFilename)}`);
 }
 
 // Run the benchmark
