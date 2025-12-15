@@ -16,7 +16,7 @@
     "last 1 Chrome version"
   ],
   "devDependencies": {
-    "@parcel/config-default": "2.16.1",
+    "@parcel/config-default": "2.16.3",
     "@parcel/core": "2.16.3",
     "@rollup/plugin-commonjs": "29.0.0",
     "@rsbuild/core": "1.6.13",
