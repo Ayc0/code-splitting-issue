@@ -1,13 +1,19 @@
 // @ts-check
 
-import { execSync } from 'child_process';
-import fs from 'fs';
-import path from 'path';
+import { execSync } from 'node:child_process';
+import fs from 'node:fs';
+import path from 'node:path';
+import os from 'node:os';
 
 import packageJSON from './package.json' with { type: "json" };
 
 /**
- * @typedef {{name: string, package: string, version: string, longDisplayName: string, shortDisplayName: string}} Bundler
+ * @typedef {{ name: string, package: string, version: string, longDisplayName: string, shortDisplayName: string }} Bundler
+ */
+
+
+/**
+ * @typedef {{ avg: number, median: number, stddev: number, min: number, max: number }} Metric
  */
 
 // Configuration
@@ -108,7 +114,7 @@ function runTest(runNumber) {
 
 /**
  * Generate CSV content from results
- * @param {Array} results - Array of result objects
+ * @param {Result[]} results - Array of result objects
  * @returns {string} - CSV content
  */
 function generateCSV(results) {
@@ -132,12 +138,15 @@ function generateCSV(results) {
 }
 
 /**
- * Calculate and display summary statistics
+ * Calculate summary statistics
  * @param {Result[]} results - Array of result objects
+ * @returns {Array<{ bundler: Bundler, metric: Metric }>}
  */
-function displaySummary(results) {
-    console.log('\n📊 Summary Statistics:');
-    console.log('='.repeat(50));
+function computeStatistics(results) {
+    /**
+     * @type {Array<{ bundler: Bundler, metric: Metric }>}
+     */
+    const statistics = [];
 
     for (const bundler of BUNDLERS) {
         const timings = results
@@ -162,14 +171,56 @@ function displaySummary(results) {
             timings.reduce((cumDev, t) => cumDev + Math.pow(t - avg, 2), 0) / timings.length
         );
 
-        console.log(`${bundler.longDisplayName}:`);
-        console.log(`  Average: ${avg.toFixed(2)}ms`);
-        console.log(`  Median:  ${median.toFixed(2)}ms`);
-        console.log(`  Stddev:  ${stddev.toFixed(2)}ms`);
-        console.log(`  Min:     ${min.toFixed(2)}ms`);
-        console.log(`  Max:     ${max.toFixed(2)}ms`);
-        console.log('');
+        statistics.push({ bundler, metric: { avg, median, stddev, min, max }});
     }
+
+    return statistics
+}
+
+/**
+ * Compute summary to display statistics
+ * @param {Result[]} results - Array of result objects
+ */
+function computeSummary(results) {
+    /**
+     * @type {string[]}
+     */
+    const output = []
+    output.push(`\n📊 Summary Statistics on ${os.cpus().length} CPUs ${os.cpus()[0].model}:`);
+    output.push('='.repeat(50));
+
+    const statistics = computeStatistics(results);
+
+    for (const statistic of statistics) {
+        output.push(`${statistic.bundler.longDisplayName}:`);
+        output.push(`  Average: ${statistic.metric.avg.toPrecision(3)}ms`);
+        output.push(`  Median:  ${statistic.metric.median.toPrecision(3)}ms`);
+        output.push(`  Stddev:  ${statistic.metric.stddev.toPrecision(3)}ms`);
+        output.push(`  Min:     ${statistic.metric.min.toPrecision(3)}ms`);
+        output.push(`  Max:     ${statistic.metric.max.toPrecision(3)}ms`);
+        output.push('');
+    }
+
+    return output.join('\n')
+}
+
+/**
+ * Update README's content automatically
+ * @param {Result[]} results - Array of result objects
+ * @param {string} scriptLogs
+ */
+function modifyReadme(results, scriptLogs) {
+    const readme = fs.readFileSync(path.resolve('./README.md'), 'utf-8')
+
+    const statistics = computeStatistics(results);
+
+    const tableLine = '| Compilation time (avg on 25 runs) | ' + statistics.map(statistic => `${statistic.metric.avg.toPrecision(3)}ms<br>(±${statistic.metric.stddev.toPrecision(3)}ms)`).join(' | ') + ' <tr></tr>  |'
+
+    const newReadme = readme
+        .replace(/^\| Compilation time.*\|$/m, tableLine)
+        .replace(/```benchmark.*```/s, `\`\`\`benchmark\n${scriptLogs}\n\`\`\``)
+
+    fs.writeFileSync(path.resolve('./README.md'), newReadme)
 }
 
 /**
@@ -198,7 +249,14 @@ async function main() {
     const endTime = Date.now();
     const totalTime = (endTime - startTime) / 1000;
 
-    console.log(`\n🎉 Benchmark completed in ${totalTime.toFixed(2)} seconds`);
+    console.log('');
+
+    /**
+     * @type {string[]}
+     */
+    const logs = [];
+
+    logs.push(`🎉 Benchmark completed in ${totalTime.toFixed(2)} seconds`);
 
     // Generate CSV
     const csvContent = generateCSV(results);
@@ -206,13 +264,20 @@ async function main() {
 
     try {
         fs.writeFileSync(csvFilename, csvContent);
-        console.log(`📄 Results saved to: ${csvFilename}`);
+        logs.push(`📄 Results saved to: ${csvFilename}`);
     } catch (error) {
         console.error('❌ Error saving CSV file:', error.message);
     }
 
     // Display summary
-    displaySummary(results);
+    logs.push(computeSummary(results));
+
+    const builtLogs = logs.join('\n');
+
+    console.log(builtLogs);
+
+    // Update README's table
+    modifyReadme(results, builtLogs);
 }
 
 // Run the benchmark
