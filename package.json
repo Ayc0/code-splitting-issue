@@ -16,15 +16,15 @@
     "last 1 Chrome version"
   ],
   "devDependencies": {
-    "@parcel/config-default": "2.16.3",
-    "@parcel/core": "2.16.3",
+    "@parcel/config-default": "2.16.4",
+    "@parcel/core": "2.16.4",
     "@rollup/plugin-commonjs": "29.0.0",
-    "@rsbuild/core": "1.7.2",
-    "@rspack/core": "1.7.2",
-    "esbuild": "0.27.2",
-    "parcel": "2.16.3",
-    "rolldown": "1.0.0-beta.60",
-    "rollup": "4.55.1",
+    "@rsbuild/core": "1.7.3",
+    "@rspack/core": "1.7.6",
+    "esbuild": "0.27.3",
+    "parcel": "2.16.4",
+    "rolldown": "1.0.0-rc.3",
+    "rollup": "4.57.1",
     "vite": "7.3.1"
   }
 }
