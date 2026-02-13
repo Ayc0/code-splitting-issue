@@ -4,7 +4,6 @@ import assert from "node:assert/strict";
 import fs from "node:fs/promises";
 
 import { build } from "vite";
-import commonjs from '@rollup/plugin-commonjs'
 
 test("builds and tree-shakes using vite", async (t) => {
     await using dir = await fs.mkdtempDisposable('vite');
@@ -15,12 +14,7 @@ test("builds and tree-shakes using vite", async (t) => {
         logLevel: 'silent',
         build: {
             outDir: path.join(process.cwd(), dir.path, 'dist'),
-        },
-        plugins: [
-            commonjs({
-                transformMixedEsModules: true
-            })
-        ]
+        }
     });
 
     const builtIndex = result.output.find((r) => r.name === 'index');
