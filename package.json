@@ -10,12 +10,14 @@
   },
   "scripts": {
     "test": "node --test tests/*.test.mjs",
+    "test:junit": "node --test --test-reporter junit  --test-reporter-destination=tests-output.xml tests/*.test.mjs",
     "benchmark": "node benchmark.mjs"
   },
   "browserslist": [
     "last 1 Chrome version"
   ],
   "devDependencies": {
+    "@datadog/datadog-ci": "^5.7.0",
     "@parcel/config-default": "2.16.4",
     "@parcel/core": "2.16.4",
     "@rollup/plugin-commonjs": "29.0.0",
