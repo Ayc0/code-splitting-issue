@@ -23,4 +23,11 @@ jobs:
         run: pnpm install
 
       - name: Run tests
-        run: pnpm test
+        run: pnpm test:junit
+
+      - name: Upload test results to Datadog
+        run: pnpm exec datadog-ci junit upload tests-output.xml
+        env:
+          DD_API_KEY: ${{secrets.DD_API_KEY}}
+          DD_SITE: datadoghq.eu
+          DD_SERVICE: node:test
