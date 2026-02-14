@@ -30,3 +30,4 @@ jobs:
         env:
           DD_API_KEY: ${{secrets.DD_API_KEY}}
           DD_SITE: datadoghq.eu
+          DD_SERVICE: node:test
