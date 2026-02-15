@@ -30,8 +30,14 @@ const BUNDLERS = [
     { name: 'vite', package: 'vite' },
     { name: 'rolldown', package: 'rolldown' },
     { name: 'rsbuild', package: '@rsbuild/core' },
+    { name: 'bun', package: 'bun' },
 ].map(bundler => {
-    const version = packageJSON.devDependencies[bundler.package];
+    let version;
+    if (bundler.package === 'bun') {
+        version = execSync('bun --version', { encoding: 'utf8', stdio: 'pipe' }).trim();
+    } else {
+        version = packageJSON.devDependencies[bundler.package];
+    }
     return {
         name: bundler.name,
         package: bundler.package,
