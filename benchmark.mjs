@@ -34,7 +34,7 @@ const BUNDLERS = [
 ].map(bundler => {
     let version;
     if (bundler.package === 'bun') {
-        version = execSync('bun --version', { encoding: 'utf8', stdio: 'pipe' }).trim();
+        version = packageJSON.engines.bun;
     } else {
         version = packageJSON.devDependencies[bundler.package];
     }
