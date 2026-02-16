@@ -10,6 +10,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
 
+      - name: Install Datadog Agent
+        run: |
+          DD_API_KEY=${{ secrets.DD_API_KEY }} \
+          DD_SITE="datadoghq.eu" \
+          DD_APM_INSTRUMENTATION_ENABLED=host \
+          DD_ENV=test \
+          DD_APM_INSTRUMENTATION_LIBRARIES=js:5 \
+          bash -c "$(curl -L https://install.datadoghq.com/scripts/install_script_agent7.sh)"
+
+      - name: Start Datadog Agent
+        run: sudo systemctl start datadog-agent
+
+      - name: Check Agent Status
+        run: sudo datadog-agent status
+
       - name: Install pnpm
         uses: pnpm/action-setup@v4
 
