@@ -10,6 +10,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
 
+      - name: Install Datadog Agent
+        run: |
+          bash -c "$(curl -L https://install.datadoghq.com/scripts/install_script_agent7.sh)" \
+          sudo systemctl stop datadog-agent
+        env:
+          DD_API_KEY: ${{secrets.DD_API_KEY}}
+          DD_SITE: datadoghq.eu
+          DD_APM_INSTRUMENTATION_ENABLED: host
+          DD_APM_INSTRUMENTATION_LIBRARIES: "js:5"
+          DD_ENV: test
+
       - name: Install pnpm
         uses: pnpm/action-setup@v4
 
@@ -21,16 +32,6 @@ jobs:
 
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
-
-      - name: Install Datadog Agent
-        run: |
-          bash -c "$(curl -L https://install.datadoghq.com/scripts/install_script_agent7.sh)"
-        env:
-          DD_API_KEY: ${{secrets.DD_API_KEY}}
-          DD_SITE: datadoghq.eu
-          DD_APM_INSTRUMENTATION_ENABLED: host
-          DD_APM_INSTRUMENTATION_LIBRARIES: "js:5"
-          DD_ENV: test
 
       - name: Start Datadog Agent
         run: sudo systemctl start datadog-agent
