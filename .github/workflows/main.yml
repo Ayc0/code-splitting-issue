@@ -46,6 +46,7 @@ jobs:
         env:
           DD_ENV: test
           DD_LOGS_INJECTION: "true"
+          DD_PROFILING_ENABLED: "true"
           DD_GIT_COMMIT_SHA: ${{ github.sha }}
           DD_GIT_REPOSITORY_URL: github.com/ayc0/code-splitting-issue
 
