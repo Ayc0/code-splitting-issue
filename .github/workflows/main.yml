@@ -33,14 +33,14 @@ jobs:
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
 
+      - name: Install packages
+        run: pnpm install
+
       - name: Start Datadog Agent
         run: sudo systemctl start datadog-agent
 
       - name: Check Agent Status
         run: sudo datadog-agent status
-
-      - name: Install packages
-        run: pnpm install
 
       - name: Run tests
         run: pnpm test:junit
