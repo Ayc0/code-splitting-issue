@@ -10,6 +10,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
 
+      - name: Install Datadog Agent
+        run: |
+          bash -c "$(curl -L https://install.datadoghq.com/scripts/install_script_agent7.sh)"
+        env:
+          DD_API_KEY: ${{secrets.DD_API_KEY}}
+          DD_SITE: datadoghq.eu
+          DD_APM_INSTRUMENTATION_ENABLED: host
+          DD_APM_INSTRUMENTATION_LIBRARIES: "js:5"
+          DD_ENV: test
+
       - name: Install pnpm
         uses: pnpm/action-setup@v4
 
@@ -25,8 +35,20 @@ jobs:
       - name: Install packages
         run: pnpm install
 
+      - name: Check Agent Status
+        run: sudo datadog-agent status
+
       - name: Run tests
         run: pnpm test:junit
+        env:
+          DD_ENV: test
+          DD_LOGS_INJECTION: "true"
+          DD_PROFILING_ENABLED: "true"
+          DD_GIT_COMMIT_SHA: ${{ github.sha }}
+          DD_GIT_REPOSITORY_URL: github.com/ayc0/code-splitting-issue
+
+      - name: Stop Datadog Agent
+        run: sudo systemctl stop datadog-agent
 
       - name: Upload test results to Datadog
         run: pnpm exec datadog-ci junit upload tests-output.xml
