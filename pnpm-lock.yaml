@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       '@datadog/datadog-ci':
-        specifier: ^5.7.0
-        version: 5.7.0
+        specifier: ^5.8.0
+        version: 5.8.0
       '@parcel/config-default':
         specifier: 2.16.4
         version: 2.16.4(@parcel/core@2.16.4(@swc/helpers@0.5.18))(@swc/helpers@0.5.18)
@@ -47,22 +47,22 @@ packages:
   '@antfu/install-pkg@1.1.0':
     resolution: {integrity: sha512-MGQsmw10ZyI+EJo45CdSER4zEb+p31LpDAFp2Z3gkSd1yqVZGi0Ebx++YTEMonJy4oChEMLsxZ64j8FH6sSqtQ==}
 
-  '@datadog/datadog-ci-base@5.7.0':
-    resolution: {integrity: sha512-iZomlZV3pXXBQmsYMd7ZyS6588ZNBc1j96tIxVviKd++LUFbrdV7q3fEbU3Qf7vTk8+jZfuWvPXSW5QnX48MDw==}
+  '@datadog/datadog-ci-base@5.8.0':
+    resolution: {integrity: sha512-pUlIZLI4WFWOTXSqPmifbsa4LedflmCzj4g7qHNkQ20ompyZJtg3RPFdXI/JA5uzOTI1ZkHeYif4WkVs3K9CLQ==}
     peerDependencies:
-      '@datadog/datadog-ci-plugin-aas': 5.7.0
-      '@datadog/datadog-ci-plugin-cloud-run': 5.7.0
-      '@datadog/datadog-ci-plugin-container-app': 5.7.0
-      '@datadog/datadog-ci-plugin-coverage': 5.7.0
-      '@datadog/datadog-ci-plugin-deployment': 5.7.0
-      '@datadog/datadog-ci-plugin-dora': 5.7.0
-      '@datadog/datadog-ci-plugin-gate': 5.7.0
-      '@datadog/datadog-ci-plugin-junit': 5.7.0
-      '@datadog/datadog-ci-plugin-lambda': 5.7.0
-      '@datadog/datadog-ci-plugin-sarif': 5.7.0
-      '@datadog/datadog-ci-plugin-sbom': 5.7.0
-      '@datadog/datadog-ci-plugin-stepfunctions': 5.7.0
-      '@datadog/datadog-ci-plugin-synthetics': 5.7.0
+      '@datadog/datadog-ci-plugin-aas': 5.8.0
+      '@datadog/datadog-ci-plugin-cloud-run': 5.8.0
+      '@datadog/datadog-ci-plugin-container-app': 5.8.0
+      '@datadog/datadog-ci-plugin-coverage': 5.8.0
+      '@datadog/datadog-ci-plugin-deployment': 5.8.0
+      '@datadog/datadog-ci-plugin-dora': 5.8.0
+      '@datadog/datadog-ci-plugin-gate': 5.8.0
+      '@datadog/datadog-ci-plugin-junit': 5.8.0
+      '@datadog/datadog-ci-plugin-lambda': 5.8.0
+      '@datadog/datadog-ci-plugin-sarif': 5.8.0
+      '@datadog/datadog-ci-plugin-sbom': 5.8.0
+      '@datadog/datadog-ci-plugin-stepfunctions': 5.8.0
+      '@datadog/datadog-ci-plugin-synthetics': 5.8.0
     peerDependenciesMeta:
       '@datadog/datadog-ci-plugin-aas':
         optional: true
@@ -91,43 +91,43 @@ packages:
       '@datadog/datadog-ci-plugin-synthetics':
         optional: true
 
-  '@datadog/datadog-ci-plugin-coverage@5.7.0':
-    resolution: {integrity: sha512-ljagFnjfQJmd3S/48HCQ6zOYGCqAFeAko8bajFNQimdEpWZBVOUWmuqJ0zuV7TFCEpoT5V19DtyPMQrv8ge2aQ==}
+  '@datadog/datadog-ci-plugin-coverage@5.8.0':
+    resolution: {integrity: sha512-SeH5iyykFZSb06nkK50FnYSRj+vtK6JcAs3ghpHTeVcUD2n5Hg6G9gQNwF5IcpEiZqt0YKPk1jlAgWMvwZSAVw==}
     peerDependencies:
-      '@datadog/datadog-ci-base': 5.7.0
+      '@datadog/datadog-ci-base': 5.8.0
 
-  '@datadog/datadog-ci-plugin-deployment@5.7.0':
-    resolution: {integrity: sha512-z+Jlag9OUltb4UCCLwaBy2a+jaWAVk3Ej4I8x0F4tSLhH/xD/Xq+JQVf06hmgVfX7Ly5pNj8487m6x7PzkiLnA==}
+  '@datadog/datadog-ci-plugin-deployment@5.8.0':
+    resolution: {integrity: sha512-aqRY+qiO3o0cJmDouEQUAtui9qOflFhFxvmDcgL5d2IvjhDx4/pFOPqoyWm9uDsGfXImYw8Nybt8Xs/oq6bIlQ==}
     peerDependencies:
-      '@datadog/datadog-ci-base': 5.7.0
+      '@datadog/datadog-ci-base': 5.8.0
 
-  '@datadog/datadog-ci-plugin-dora@5.7.0':
-    resolution: {integrity: sha512-FiCVfbKQm8vt4uuPX9MIdFs4awhF2i/ci1uLj1V7otRThfLzAVshfOVzRc1XScBoNXnKY/6C1ZXS2xn33U21yQ==}
+  '@datadog/datadog-ci-plugin-dora@5.8.0':
+    resolution: {integrity: sha512-/MFgnGQkDFBepWEIX3KyjBCucqH/nEsatVG8l+p3FACgn0souFOa5pyuUSALO/BL8qZCYxyNsIvNR0XhIpp0nA==}
     peerDependencies:
-      '@datadog/datadog-ci-base': 5.7.0
+      '@datadog/datadog-ci-base': 5.8.0
 
-  '@datadog/datadog-ci-plugin-gate@5.7.0':
-    resolution: {integrity: sha512-RkJizmYLLPKKl3/IRTWrNPtlS6jtE4WSEYUkIADUYS6TbjCNhHSBx0Oz+UAsS2dq0ap9meXlQMQTOZ8lXZrUBA==}
+  '@datadog/datadog-ci-plugin-gate@5.8.0':
+    resolution: {integrity: sha512-OifW23CSdSvHCDV8+VLNmR8jQ2NGTUsFKX8i7bzw8yAZ3c5ijJkaltt4A0iNOX/sHRhFlSR4qGOkSdtPw/2O4Q==}
     peerDependencies:
-      '@datadog/datadog-ci-base': 5.7.0
+      '@datadog/datadog-ci-base': 5.8.0
 
-  '@datadog/datadog-ci-plugin-junit@5.7.0':
-    resolution: {integrity: sha512-I2fIb6DMErFjuzDjpt600wT3mkHOEeqxOFmXGmoxW06pRM8i3GG/lT5zJBnBKz1bRKS3VkHRCfXt93riequuOg==}
+  '@datadog/datadog-ci-plugin-junit@5.8.0':
+    resolution: {integrity: sha512-BG9E8bFf/vuMHKcJJyx7UIB/U6EsI/9q1jwtboir/QhD5kqNMCVDmCm6LrzIk9PTpwXlqdysuCYbbr3HrnVw+w==}
     peerDependencies:
-      '@datadog/datadog-ci-base': 5.7.0
+      '@datadog/datadog-ci-base': 5.8.0
 
-  '@datadog/datadog-ci-plugin-sarif@5.7.0':
-    resolution: {integrity: sha512-kgN1zahz2KDnRlpczMMbs0KFSP9ei2Lfks6jiSnjxUcxPTx87TdNE2M1zcp50TjyED15rkfMjwPe/Wa2lcq6Pg==}
+  '@datadog/datadog-ci-plugin-sarif@5.8.0':
+    resolution: {integrity: sha512-XSt1B5RER1q8F8hUAjVbn/T6nM49a2gJWEVtfPRa1EGyNyBJhPyB95Yk79DxMdsV+LzlN/E3vbOJTDaFd0XxaQ==}
     peerDependencies:
-      '@datadog/datadog-ci-base': 5.7.0
+      '@datadog/datadog-ci-base': 5.8.0
 
-  '@datadog/datadog-ci-plugin-sbom@5.7.0':
-    resolution: {integrity: sha512-4zP4flPC8QEJAXJBWA0i8afO8l5LlFQTnIbh9dWNe5dDhYI3fM3JY2C5lJsqWpcG8sam1hIyztoOeUjw/tPP0A==}
+  '@datadog/datadog-ci-plugin-sbom@5.8.0':
+    resolution: {integrity: sha512-oEBlS7IyloLrz46rUctLB75ZBZT6Vo7PnzJURHGqjijQMRjlfOwgAtryThtThcE+D5ghz3ZK8SwXQgPn6Hrsng==}
     peerDependencies:
-      '@datadog/datadog-ci-base': 5.7.0
+      '@datadog/datadog-ci-base': 5.8.0
 
-  '@datadog/datadog-ci@5.7.0':
-    resolution: {integrity: sha512-jl5epHznIsLB237twnn29b2RXD+1PzPIM5hv35FLIaDXBZedufHfgRGfHm4B2s0S3HbTxN7kRe2y8w+w5Cvw8Q==}
+  '@datadog/datadog-ci@5.8.0':
+    resolution: {integrity: sha512-76axFLAaCTt+0EXOr3l44wXQ/RQxp39MrtstCXxg3yTtZRe0bdu7ckXoPMmHzmTsoty3bXpt2zJ+gLFkHKL8/A==}
     engines: {node: '>=20'}
     hasBin: true
 
@@ -1242,8 +1242,8 @@ packages:
       ajv:
         optional: true
 
-  ajv@8.17.1:
-    resolution: {integrity: sha512-B/gBuNg5SiMTrPkC+A2+cW0RszwxYmn6VYxB/inlBStS5nx6xHIt/ehKRhIMhqusl7a8LjQoZnjCs5vhwxOQ1g==}
+  ajv@8.18.0:
+    resolution: {integrity: sha512-PlXPeEWMXMZ7sPYOHqmDyCJzcfNrUr3fGNKtezX14ykXOEIvyK81d+qydx89KY5O71FKMPaQ2vBfBFI5NHR63A==}
 
   ansi-escapes@4.3.2:
     resolution: {integrity: sha512-gKXj5ALrKWQLsYG9jlTRmR/xKluxHV+Z9QEwNIgCfM1/uwPMCuzVVnh5mwTd+OuBZcwSIMbqssNWRm1lE51QaQ==}
@@ -1285,8 +1285,9 @@ packages:
   axios@1.13.5:
     resolution: {integrity: sha512-cz4ur7Vb0xS4/KUN0tPWe44eqxrIu31me+fbang3ijiNscE129POzipJJA6zniq2C/Z6sJCjMimjS8Lc/GAs8Q==}
 
-  balanced-match@1.0.2:
-    resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
+  balanced-match@4.0.4:
+    resolution: {integrity: sha512-BLrgEcRTwX2o6gGxGOCNyMvGSp35YofuYzw9h1IMTRmKqttAZZVU67bdb9Pr2vUHA8+j3i2tJfjO6C6+4myGTA==}
+    engines: {node: 18 || 20 || >=22}
 
   base-x@3.0.11:
     resolution: {integrity: sha512-xz7wQ8xDhdyP7tQxwdteLYeFfS68tSMNCZ/Y37WJ4bhGfKPpqEIlmIyueQHqOyoPhE6xNUqjzRr8ra0eF9VRvA==}
@@ -1308,8 +1309,9 @@ packages:
   bl@4.1.0:
     resolution: {integrity: sha512-1W07cM9gS6DcLperZfFSj+bWLtaPGSOHWhPiGzXmvVJbRLdG82sH/Kn8EtW1VqWVA54AKf2h5k5BbnIbwF3h6w==}
 
-  brace-expansion@2.0.2:
-    resolution: {integrity: sha512-Jt0vHyM+jmUBqojB7E1NIYadt0vI0Qxjxd2TErW94wDz+E2LAm5vKMXXwg6ZZBTHPuUlDgQHKXvjGBdfcF1ZDQ==}
+  brace-expansion@5.0.3:
+    resolution: {integrity: sha512-fy6KJm2RawA5RcHkLa1z/ScpBeA762UF9KmZQxwIbDtRJrgLzM10depAiEQ+CXYcoiqW1/m96OAAoke2nE9EeA==}
+    engines: {node: 18 || 20 || >=22}
 
   browserslist@4.28.1:
     resolution: {integrity: sha512-ZC5Bd0LgJXgwGqUknZY/vkUQ04r8NXnJZ3yYi4vDmSiZmC/pdSN0NbNRPxZpbtO4uAfDUAFffO8IZoM3Gj8IkA==}
@@ -1529,8 +1531,8 @@ packages:
   fast-uri@3.1.0:
     resolution: {integrity: sha512-iPeeDKJSWf4IEOasVVrknXpaBV0IApz/gp7S2bb7Z4Lljbl2MGJRqInZiUrQwV16cpzw/D3S5j5Julj/gT52AA==}
 
-  fast-xml-parser@5.3.6:
-    resolution: {integrity: sha512-QNI3sAvSvaOiaMl8FYU4trnEzCwiRr8XMWgAHzlrWpTSj+QaCSvOf1h82OEP1s4hiAXhnbXSyFWCf4ldZzZRVA==}
+  fast-xml-parser@5.3.7:
+    resolution: {integrity: sha512-JzVLro9NQv92pOM/jTCR6mHlJh2FGwtomH8ZQjhFj/R29P2Fnj38OgPJVtcvYw6SuKClhgYuwUZf5b3rd8u2mA==}
     hasBin: true
 
   fdir@6.5.0:
@@ -1820,15 +1822,15 @@ packages:
     resolution: {integrity: sha512-OqbOk5oEQeAZ8WXWydlu9HJjz9WVdEIvamMCcXmuqUYjTknH/sqsWvhQ3vgwKFRR1HpjvNBKQ37nbJgYzGqGcg==}
     engines: {node: '>=6'}
 
-  minimatch@9.0.5:
-    resolution: {integrity: sha512-G6T0ZX48xgozx7587koeX9Ys2NYy6Gmv//P89sEte9V9whIapMNF4idKxnW2QtCcLiTWlb/wfCabAtAFWhhBow==}
+  minimatch@9.0.6:
+    resolution: {integrity: sha512-kQAVowdR33euIqeA0+VZTDqU+qo1IeVY+hrKYtZMio3Pg0P0vuh/kwRylLUddJhB6pf3q/botcOvRtx4IN1wqQ==}
     engines: {node: '>=16 || 14 >=14.17'}
 
   minimist@1.2.8:
     resolution: {integrity: sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==}
 
-  minipass@7.1.2:
-    resolution: {integrity: sha512-qOOzS1cBTWYF4BH8fVePDBOO9iptMnGUEZwNc/cMWnTV2nVLZ7VoNWEPHkYczZA0pdoA7dl6e7FL659nX9S2aw==}
+  minipass@7.1.3:
+    resolution: {integrity: sha512-tEBHqDnIoM/1rXME1zgka9g6Q2lcoCkxHLuc7ODJ5BxbP5d4c2Z5cGgtXAku59200Cx7diuHTOYfSBD8n6mm8A==}
     engines: {node: '>=16 || 14 >=14.17'}
 
   ms@2.0.0:
@@ -2220,7 +2222,7 @@ snapshots:
       package-manager-detector: 1.6.0
       tinyexec: 1.0.2
 
-  '@datadog/datadog-ci-base@5.7.0(@datadog/datadog-ci-plugin-coverage@5.7.0)(@datadog/datadog-ci-plugin-deployment@5.7.0)(@datadog/datadog-ci-plugin-dora@5.7.0)(@datadog/datadog-ci-plugin-gate@5.7.0)(@datadog/datadog-ci-plugin-junit@5.7.0)(@datadog/datadog-ci-plugin-sarif@5.7.0)(@datadog/datadog-ci-plugin-sbom@5.7.0)':
+  '@datadog/datadog-ci-base@5.8.0(@datadog/datadog-ci-plugin-coverage@5.8.0)(@datadog/datadog-ci-plugin-deployment@5.8.0)(@datadog/datadog-ci-plugin-dora@5.8.0)(@datadog/datadog-ci-plugin-gate@5.8.0)(@datadog/datadog-ci-plugin-junit@5.8.0)(@datadog/datadog-ci-plugin-sarif@5.8.0)(@datadog/datadog-ci-plugin-sbom@5.8.0)':
     dependencies:
       '@antfu/install-pkg': 1.1.0
       '@types/datadog-metrics': 0.6.1
@@ -2231,7 +2233,7 @@ snapshots:
       datadog-metrics: 0.9.3
       debug: 4.4.3
       deep-extend: 0.6.0
-      fast-xml-parser: 5.3.6
+      fast-xml-parser: 5.3.7
       form-data: 4.0.5
       glob: 10.5.0
       inquirer: 8.2.7
@@ -2245,23 +2247,23 @@ snapshots:
       typanion: 3.14.0
       upath: 2.0.1
     optionalDependencies:
-      '@datadog/datadog-ci-plugin-coverage': 5.7.0(@datadog/datadog-ci-base@5.7.0)
-      '@datadog/datadog-ci-plugin-deployment': 5.7.0(@datadog/datadog-ci-base@5.7.0)
-      '@datadog/datadog-ci-plugin-dora': 5.7.0(@datadog/datadog-ci-base@5.7.0)
-      '@datadog/datadog-ci-plugin-gate': 5.7.0(@datadog/datadog-ci-base@5.7.0)
-      '@datadog/datadog-ci-plugin-junit': 5.7.0(@datadog/datadog-ci-base@5.7.0)
-      '@datadog/datadog-ci-plugin-sarif': 5.7.0(@datadog/datadog-ci-base@5.7.0)
-      '@datadog/datadog-ci-plugin-sbom': 5.7.0(@datadog/datadog-ci-base@5.7.0)
+      '@datadog/datadog-ci-plugin-coverage': 5.8.0(@datadog/datadog-ci-base@5.8.0)
+      '@datadog/datadog-ci-plugin-deployment': 5.8.0(@datadog/datadog-ci-base@5.8.0)
+      '@datadog/datadog-ci-plugin-dora': 5.8.0(@datadog/datadog-ci-base@5.8.0)
+      '@datadog/datadog-ci-plugin-gate': 5.8.0(@datadog/datadog-ci-base@5.8.0)
+      '@datadog/datadog-ci-plugin-junit': 5.8.0(@datadog/datadog-ci-base@5.8.0)
+      '@datadog/datadog-ci-plugin-sarif': 5.8.0(@datadog/datadog-ci-base@5.8.0)
+      '@datadog/datadog-ci-plugin-sbom': 5.8.0(@datadog/datadog-ci-base@5.8.0)
     transitivePeerDependencies:
       - '@types/node'
       - supports-color
 
-  '@datadog/datadog-ci-plugin-coverage@5.7.0(@datadog/datadog-ci-base@5.7.0)':
+  '@datadog/datadog-ci-plugin-coverage@5.8.0(@datadog/datadog-ci-base@5.8.0)':
     dependencies:
-      '@datadog/datadog-ci-base': 5.7.0(@datadog/datadog-ci-plugin-coverage@5.7.0)(@datadog/datadog-ci-plugin-deployment@5.7.0)(@datadog/datadog-ci-plugin-dora@5.7.0)(@datadog/datadog-ci-plugin-gate@5.7.0)(@datadog/datadog-ci-plugin-junit@5.7.0)(@datadog/datadog-ci-plugin-sarif@5.7.0)(@datadog/datadog-ci-plugin-sbom@5.7.0)
+      '@datadog/datadog-ci-base': 5.8.0(@datadog/datadog-ci-plugin-coverage@5.8.0)(@datadog/datadog-ci-plugin-deployment@5.8.0)(@datadog/datadog-ci-plugin-dora@5.8.0)(@datadog/datadog-ci-plugin-gate@5.8.0)(@datadog/datadog-ci-plugin-junit@5.8.0)(@datadog/datadog-ci-plugin-sarif@5.8.0)(@datadog/datadog-ci-plugin-sbom@5.8.0)
       axios: 1.13.5(debug@4.4.3)
       chalk: 3.0.0
-      fast-xml-parser: 5.3.6
+      fast-xml-parser: 5.3.7
       form-data: 4.0.5
       simple-git: 3.16.0
       upath: 2.0.1
@@ -2269,9 +2271,9 @@ snapshots:
       - debug
       - supports-color
 
-  '@datadog/datadog-ci-plugin-deployment@5.7.0(@datadog/datadog-ci-base@5.7.0)':
+  '@datadog/datadog-ci-plugin-deployment@5.8.0(@datadog/datadog-ci-base@5.8.0)':
     dependencies:
-      '@datadog/datadog-ci-base': 5.7.0(@datadog/datadog-ci-plugin-coverage@5.7.0)(@datadog/datadog-ci-plugin-deployment@5.7.0)(@datadog/datadog-ci-plugin-dora@5.7.0)(@datadog/datadog-ci-plugin-gate@5.7.0)(@datadog/datadog-ci-plugin-junit@5.7.0)(@datadog/datadog-ci-plugin-sarif@5.7.0)(@datadog/datadog-ci-plugin-sbom@5.7.0)
+      '@datadog/datadog-ci-base': 5.8.0(@datadog/datadog-ci-plugin-coverage@5.8.0)(@datadog/datadog-ci-plugin-deployment@5.8.0)(@datadog/datadog-ci-plugin-dora@5.8.0)(@datadog/datadog-ci-plugin-gate@5.8.0)(@datadog/datadog-ci-plugin-junit@5.8.0)(@datadog/datadog-ci-plugin-sarif@5.8.0)(@datadog/datadog-ci-plugin-sbom@5.8.0)
       axios: 1.13.5(debug@4.4.3)
       chalk: 3.0.0
       simple-git: 3.16.0
@@ -2279,9 +2281,9 @@ snapshots:
       - debug
       - supports-color
 
-  '@datadog/datadog-ci-plugin-dora@5.7.0(@datadog/datadog-ci-base@5.7.0)':
+  '@datadog/datadog-ci-plugin-dora@5.8.0(@datadog/datadog-ci-base@5.8.0)':
     dependencies:
-      '@datadog/datadog-ci-base': 5.7.0(@datadog/datadog-ci-plugin-coverage@5.7.0)(@datadog/datadog-ci-plugin-deployment@5.7.0)(@datadog/datadog-ci-plugin-dora@5.7.0)(@datadog/datadog-ci-plugin-gate@5.7.0)(@datadog/datadog-ci-plugin-junit@5.7.0)(@datadog/datadog-ci-plugin-sarif@5.7.0)(@datadog/datadog-ci-plugin-sbom@5.7.0)
+      '@datadog/datadog-ci-base': 5.8.0(@datadog/datadog-ci-plugin-coverage@5.8.0)(@datadog/datadog-ci-plugin-deployment@5.8.0)(@datadog/datadog-ci-plugin-dora@5.8.0)(@datadog/datadog-ci-plugin-gate@5.8.0)(@datadog/datadog-ci-plugin-junit@5.8.0)(@datadog/datadog-ci-plugin-sarif@5.8.0)(@datadog/datadog-ci-plugin-sbom@5.8.0)
       axios: 1.13.5(debug@4.4.3)
       chalk: 3.0.0
       simple-git: 3.16.0
@@ -2289,9 +2291,9 @@ snapshots:
       - debug
       - supports-color
 
-  '@datadog/datadog-ci-plugin-gate@5.7.0(@datadog/datadog-ci-base@5.7.0)':
+  '@datadog/datadog-ci-plugin-gate@5.8.0(@datadog/datadog-ci-base@5.8.0)':
     dependencies:
-      '@datadog/datadog-ci-base': 5.7.0(@datadog/datadog-ci-plugin-coverage@5.7.0)(@datadog/datadog-ci-plugin-deployment@5.7.0)(@datadog/datadog-ci-plugin-dora@5.7.0)(@datadog/datadog-ci-plugin-gate@5.7.0)(@datadog/datadog-ci-plugin-junit@5.7.0)(@datadog/datadog-ci-plugin-sarif@5.7.0)(@datadog/datadog-ci-plugin-sbom@5.7.0)
+      '@datadog/datadog-ci-base': 5.8.0(@datadog/datadog-ci-plugin-coverage@5.8.0)(@datadog/datadog-ci-plugin-deployment@5.8.0)(@datadog/datadog-ci-plugin-dora@5.8.0)(@datadog/datadog-ci-plugin-gate@5.8.0)(@datadog/datadog-ci-plugin-junit@5.8.0)(@datadog/datadog-ci-plugin-sarif@5.8.0)(@datadog/datadog-ci-plugin-sbom@5.8.0)
       '@types/uuid': 9.0.8
       axios: 1.13.5(debug@4.4.3)
       chalk: 3.0.0
@@ -2299,23 +2301,23 @@ snapshots:
     transitivePeerDependencies:
       - debug
 
-  '@datadog/datadog-ci-plugin-junit@5.7.0(@datadog/datadog-ci-base@5.7.0)':
+  '@datadog/datadog-ci-plugin-junit@5.8.0(@datadog/datadog-ci-base@5.8.0)':
     dependencies:
-      '@datadog/datadog-ci-base': 5.7.0(@datadog/datadog-ci-plugin-coverage@5.7.0)(@datadog/datadog-ci-plugin-deployment@5.7.0)(@datadog/datadog-ci-plugin-dora@5.7.0)(@datadog/datadog-ci-plugin-gate@5.7.0)(@datadog/datadog-ci-plugin-junit@5.7.0)(@datadog/datadog-ci-plugin-sarif@5.7.0)(@datadog/datadog-ci-plugin-sbom@5.7.0)
+      '@datadog/datadog-ci-base': 5.8.0(@datadog/datadog-ci-plugin-coverage@5.8.0)(@datadog/datadog-ci-plugin-deployment@5.8.0)(@datadog/datadog-ci-plugin-dora@5.8.0)(@datadog/datadog-ci-plugin-gate@5.8.0)(@datadog/datadog-ci-plugin-junit@5.8.0)(@datadog/datadog-ci-plugin-sarif@5.8.0)(@datadog/datadog-ci-plugin-sbom@5.8.0)
       axios: 1.13.5(debug@4.4.3)
       chalk: 3.0.0
-      fast-xml-parser: 5.3.6
+      fast-xml-parser: 5.3.7
       form-data: 4.0.5
       upath: 2.0.1
       uuid: 9.0.1
     transitivePeerDependencies:
       - debug
 
-  '@datadog/datadog-ci-plugin-sarif@5.7.0(@datadog/datadog-ci-base@5.7.0)':
+  '@datadog/datadog-ci-plugin-sarif@5.8.0(@datadog/datadog-ci-base@5.8.0)':
     dependencies:
-      '@datadog/datadog-ci-base': 5.7.0(@datadog/datadog-ci-plugin-coverage@5.7.0)(@datadog/datadog-ci-plugin-deployment@5.7.0)(@datadog/datadog-ci-plugin-dora@5.7.0)(@datadog/datadog-ci-plugin-gate@5.7.0)(@datadog/datadog-ci-plugin-junit@5.7.0)(@datadog/datadog-ci-plugin-sarif@5.7.0)(@datadog/datadog-ci-plugin-sbom@5.7.0)
-      ajv: 8.17.1
-      ajv-formats: 2.1.1(ajv@8.17.1)
+      '@datadog/datadog-ci-base': 5.8.0(@datadog/datadog-ci-plugin-coverage@5.8.0)(@datadog/datadog-ci-plugin-deployment@5.8.0)(@datadog/datadog-ci-plugin-dora@5.8.0)(@datadog/datadog-ci-plugin-gate@5.8.0)(@datadog/datadog-ci-plugin-junit@5.8.0)(@datadog/datadog-ci-plugin-sarif@5.8.0)(@datadog/datadog-ci-plugin-sbom@5.8.0)
+      ajv: 8.18.0
+      ajv-formats: 2.1.1(ajv@8.18.0)
       axios: 1.13.5(debug@4.4.3)
       chalk: 3.0.0
       form-data: 4.0.5
@@ -2326,11 +2328,11 @@ snapshots:
       - debug
       - supports-color
 
-  '@datadog/datadog-ci-plugin-sbom@5.7.0(@datadog/datadog-ci-base@5.7.0)':
+  '@datadog/datadog-ci-plugin-sbom@5.8.0(@datadog/datadog-ci-base@5.8.0)':
     dependencies:
-      '@datadog/datadog-ci-base': 5.7.0(@datadog/datadog-ci-plugin-coverage@5.7.0)(@datadog/datadog-ci-plugin-deployment@5.7.0)(@datadog/datadog-ci-plugin-dora@5.7.0)(@datadog/datadog-ci-plugin-gate@5.7.0)(@datadog/datadog-ci-plugin-junit@5.7.0)(@datadog/datadog-ci-plugin-sarif@5.7.0)(@datadog/datadog-ci-plugin-sbom@5.7.0)
-      ajv: 8.17.1
-      ajv-formats: 2.1.1(ajv@8.17.1)
+      '@datadog/datadog-ci-base': 5.8.0(@datadog/datadog-ci-plugin-coverage@5.8.0)(@datadog/datadog-ci-plugin-deployment@5.8.0)(@datadog/datadog-ci-plugin-dora@5.8.0)(@datadog/datadog-ci-plugin-gate@5.8.0)(@datadog/datadog-ci-plugin-junit@5.8.0)(@datadog/datadog-ci-plugin-sarif@5.8.0)(@datadog/datadog-ci-plugin-sbom@5.8.0)
+      ajv: 8.18.0
+      ajv-formats: 2.1.1(ajv@8.18.0)
       axios: 1.13.5(debug@4.4.3)
       chalk: 3.0.0
       packageurl-js: 2.0.1
@@ -2340,16 +2342,16 @@ snapshots:
       - debug
       - supports-color
 
-  '@datadog/datadog-ci@5.7.0':
+  '@datadog/datadog-ci@5.8.0':
     dependencies:
-      '@datadog/datadog-ci-base': 5.7.0(@datadog/datadog-ci-plugin-coverage@5.7.0)(@datadog/datadog-ci-plugin-deployment@5.7.0)(@datadog/datadog-ci-plugin-dora@5.7.0)(@datadog/datadog-ci-plugin-gate@5.7.0)(@datadog/datadog-ci-plugin-junit@5.7.0)(@datadog/datadog-ci-plugin-sarif@5.7.0)(@datadog/datadog-ci-plugin-sbom@5.7.0)
-      '@datadog/datadog-ci-plugin-coverage': 5.7.0(@datadog/datadog-ci-base@5.7.0)
-      '@datadog/datadog-ci-plugin-deployment': 5.7.0(@datadog/datadog-ci-base@5.7.0)
-      '@datadog/datadog-ci-plugin-dora': 5.7.0(@datadog/datadog-ci-base@5.7.0)
-      '@datadog/datadog-ci-plugin-gate': 5.7.0(@datadog/datadog-ci-base@5.7.0)
-      '@datadog/datadog-ci-plugin-junit': 5.7.0(@datadog/datadog-ci-base@5.7.0)
-      '@datadog/datadog-ci-plugin-sarif': 5.7.0(@datadog/datadog-ci-base@5.7.0)
-      '@datadog/datadog-ci-plugin-sbom': 5.7.0(@datadog/datadog-ci-base@5.7.0)
+      '@datadog/datadog-ci-base': 5.8.0(@datadog/datadog-ci-plugin-coverage@5.8.0)(@datadog/datadog-ci-plugin-deployment@5.8.0)(@datadog/datadog-ci-plugin-dora@5.8.0)(@datadog/datadog-ci-plugin-gate@5.8.0)(@datadog/datadog-ci-plugin-junit@5.8.0)(@datadog/datadog-ci-plugin-sarif@5.8.0)(@datadog/datadog-ci-plugin-sbom@5.8.0)
+      '@datadog/datadog-ci-plugin-coverage': 5.8.0(@datadog/datadog-ci-base@5.8.0)
+      '@datadog/datadog-ci-plugin-deployment': 5.8.0(@datadog/datadog-ci-base@5.8.0)
+      '@datadog/datadog-ci-plugin-dora': 5.8.0(@datadog/datadog-ci-base@5.8.0)
+      '@datadog/datadog-ci-plugin-gate': 5.8.0(@datadog/datadog-ci-base@5.8.0)
+      '@datadog/datadog-ci-plugin-junit': 5.8.0(@datadog/datadog-ci-base@5.8.0)
+      '@datadog/datadog-ci-plugin-sarif': 5.8.0(@datadog/datadog-ci-base@5.8.0)
+      '@datadog/datadog-ci-plugin-sbom': 5.8.0(@datadog/datadog-ci-base@5.8.0)
       axios: 1.13.5(debug@4.4.3)
       chalk: 3.0.0
       clipanion: 3.2.1(typanion@3.14.0)
@@ -3511,11 +3513,11 @@ snapshots:
 
   agent-base@7.1.4: {}
 
-  ajv-formats@2.1.1(ajv@8.17.1):
+  ajv-formats@2.1.1(ajv@8.18.0):
     optionalDependencies:
-      ajv: 8.17.1
+      ajv: 8.18.0
 
-  ajv@8.17.1:
+  ajv@8.18.0:
     dependencies:
       fast-deep-equal: 3.1.3
       fast-uri: 3.1.0
@@ -3558,7 +3560,7 @@ snapshots:
     transitivePeerDependencies:
       - debug
 
-  balanced-match@1.0.2: {}
+  balanced-match@4.0.4: {}
 
   base-x@3.0.11:
     dependencies:
@@ -3578,9 +3580,9 @@ snapshots:
       inherits: 2.0.4
       readable-stream: 3.6.2
 
-  brace-expansion@2.0.2:
+  brace-expansion@5.0.3:
     dependencies:
-      balanced-match: 1.0.2
+      balanced-match: 4.0.4
 
   browserslist@4.28.1:
     dependencies:
@@ -3789,7 +3791,7 @@ snapshots:
 
   fast-uri@3.1.0: {}
 
-  fast-xml-parser@5.3.6:
+  fast-xml-parser@5.3.7:
     dependencies:
       strnum: 2.1.2
 
@@ -3855,8 +3857,8 @@ snapshots:
     dependencies:
       foreground-child: 3.3.1
       jackspeak: 3.4.3
-      minimatch: 9.0.5
-      minipass: 7.1.2
+      minimatch: 9.0.6
+      minipass: 7.1.3
       package-json-from-dist: 1.0.1
       path-scurry: 1.11.1
 
@@ -4073,13 +4075,13 @@ snapshots:
 
   mimic-fn@2.1.0: {}
 
-  minimatch@9.0.5:
+  minimatch@9.0.6:
     dependencies:
-      brace-expansion: 2.0.2
+      brace-expansion: 5.0.3
 
   minimist@1.2.8: {}
 
-  minipass@7.1.2: {}
+  minipass@7.1.3: {}
 
   ms@2.0.0: {}
 
@@ -4194,7 +4196,7 @@ snapshots:
   path-scurry@1.11.1:
     dependencies:
       lru-cache: 10.4.3
-      minipass: 7.1.2
+      minipass: 7.1.3
 
   picocolors@1.1.1: {}
 
