@@ -59,10 +59,8 @@ test("builds and tree-shakes using vite", async (t) => {
         assert.doesNotMatch(builtFileAsyncAwait.code, /SHOULD BE REMOVED FROM BUNDLE TOP LEVEL AWAITED/);
     });
 
-    t.test("❌ FAILURE: tree shakes async modules import() whole module", () => {
-        assert.throws(() => {
+    t.test("tree shakes async modules import() whole module", () => {
             assert.doesNotMatch(builtFileAsyncModule.code, /SHOULD BE REMOVED FROM BUNDLE ASYNC WHOLE MODULE/)
-        })
     });
 
     t.test("tree shakes async modules import() + picked", () => {
