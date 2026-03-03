@@ -9,7 +9,7 @@
   },
   "packageManager": "pnpm@10.29.2",
   "volta": {
-    "node": "24.4.1",
+    "node": "24.13.1",
     "pnpm": "10.29.2"
   },
   "scripts": {
