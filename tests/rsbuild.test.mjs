@@ -27,7 +27,7 @@ test("builds and tree-shakes using rsbuild", async (t) => {
 
     const { stats } = await compiler.build();
 
-    const assets = stats.toJson().assets
+    const assets = stats.toJson({ assets: true }).assets
     const getCode = (asset) => fs.readFile(path.join(outDir, asset.name), 'utf8')
 
     const builtIndexAsset = assets.find((asset) => asset.name.includes('/index'));
@@ -51,16 +51,12 @@ test("builds and tree-shakes using rsbuild", async (t) => {
         assert.match(builtFileAsyncPickedCode, /TO KEEP IN BUNDLE ASYNC IMPORTED PICKED/)
     })
 
-    t.test("❌ FAILURE: tree shakes sync require destructuring", () => {
-        assert.throws(() => {
-            assert.doesNotMatch(builtIndexCode, /SHOULD BE REMOVED FROM BUNDLE SYNC REQUIRE DESTRUCTURING/)
-        })
+    t.test("tree shakes sync require destructuring", () => {
+        assert.doesNotMatch(builtIndexCode, /SHOULD BE REMOVED FROM BUNDLE SYNC REQUIRE DESTRUCTURING/)
     })
 
-    t.test("❌ FAILURE: tree shakes sync require module", () => {
-        assert.throws(() => {
-            assert.doesNotMatch(builtIndexCode, /SHOULD BE REMOVED FROM BUNDLE SYNC REQUIRE MODULE/)
-        })
+    t.test("tree shakes sync require module", () => {
+        assert.doesNotMatch(builtIndexCode, /SHOULD BE REMOVED FROM BUNDLE SYNC REQUIRE MODULE/)
     })
 
     t.test("tree shakes sync require chaining", () => {
