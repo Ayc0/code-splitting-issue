@@ -15,7 +15,9 @@
   "scripts": {
     "test": "node --test tests/*.test.mjs",
     "test:junit": "node --test --test-reporter junit --test-reporter-destination=tests-output.xml --test-reporter spec --test-reporter-destination=stdout tests/*.test.mjs",
-    "benchmark": "node benchmark.mjs"
+    "benchmark": "node benchmark.mjs",
+    "update-deps": "pnpm update -i --latest",
+    "regenerate-transitive-deps": "rm -rf node_modules pnpm-lock.yaml && pnpm install"
   },
   "browserslist": [
     "last 1 Chrome version"
